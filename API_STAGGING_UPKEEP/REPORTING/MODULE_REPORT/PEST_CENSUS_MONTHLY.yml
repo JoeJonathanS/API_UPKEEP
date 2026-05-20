@@ -1,0 +1,27 @@
+info:
+  name: PEST_CENSUS_MONTHLY
+  type: http
+  seq: 10
+
+http:
+  method: POST
+  url: "{{base_url}}/api/report-per-module/report-pest-cencus-monthly"
+  body:
+    type: multipart-form
+    data:
+      - name: EstateCode
+        type: text
+        value: MP
+      - name: DivisionCode
+        type: text
+        value: Div.III
+      - name: TransactionDate
+        type: text
+        value: 2025-10-23
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,46 @@
+info:
+  name: HARVEST_POST_DAILY_M1
+  type: http
+  seq: 6
+
+http:
+  method: POST
+  url: "{{base_url}}/api/report-verification/post-daily-attendance-m1"
+  body:
+    type: multipart-form
+    data:
+      - name: EstateID
+        type: text
+        value: CCFE3CA1-E76A-47B9-BB91-0584CCBA2F23
+        description: EstateID
+      - name: EstateCode
+        type: text
+        value: SG
+        description: EstateCode
+      - name: WorkingDivisionCode
+        type: text
+        value: Div.I
+        description: WorkingDivisionCode
+      - name: EmployeeNumber
+        type: text
+        value: "3853"
+        description: Assistant EmployeeNumber
+      - name: MandorEmployeeNumber
+        type: text
+        value: "1002054"
+        description: Mandor EmployeeNumber
+      - name: SheetNumber
+        type: text
+        value: 01/06/1002054
+        description: sheet number
+      - name: TransactionDate
+        type: text
+        value: 2025-12-13
+        description: Transaction date
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

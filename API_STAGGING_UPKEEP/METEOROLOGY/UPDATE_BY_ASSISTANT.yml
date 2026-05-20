@@ -1,0 +1,45 @@
+info:
+  name: UPDATE_BY_ASSISTANT
+  type: http
+  seq: 5
+
+http:
+  method: POST
+  url: "{{base_url}}/api/meteorology/update-meteorology-assistant"
+  body:
+    type: multipart-form
+    data:
+      - name: uuid
+        type: text
+        value: ""
+      - name: EstateCode
+        type: text
+        value: ""
+      - name: min_temperature
+        type: text
+        value: ""
+      - name: max_temperature
+        type: text
+        value: ""
+      - name: RainFallStationID
+        type: text
+        value: ""
+      - name: RainFallStationName
+        type: text
+        value: ""
+      - name: StartRain
+        type: text
+        value: ""
+      - name: EndRain
+        type: text
+        value: ""
+      - name: output
+        type: text
+        value: ""
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

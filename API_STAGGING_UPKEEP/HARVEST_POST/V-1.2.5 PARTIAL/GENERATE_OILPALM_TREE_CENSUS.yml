@@ -1,0 +1,48 @@
+info:
+  name: GENERATE_OILPALM_TREE_CENSUS
+  type: http
+  seq: 16
+
+http:
+  method: POST
+  url: "{{base_url}}/api/report-verification/generate-oil-palm-tree-census"
+  body:
+    type: multipart-form
+    data:
+      - name: EstateID
+        type: text
+        value: BBBC7F2E-E478-47D1-A9B7-DC4A479ABA65
+        description: EstateID
+      - name: EstateCode
+        type: text
+        value: AL
+        description: EstateCode
+      - name: EstateName
+        type: text
+        value: Aek Loba
+        description: WorkingDivisionCode
+      - name: DivisionID
+        type: text
+        value: E8DAB315-63AC-46BA-ACB8-E2FC9B00067B
+      - name: DivisionCode
+        type: text
+        value: Div.VI
+      - name: DivisionName
+        type: text
+        value: Division VI
+      - name: EmployeeNumber
+        type: text
+        value: "3825"
+      - name: TransactionDate
+        type: text
+        value: 2026-05-18
+      - name: EmployeeName
+        type: text
+        value: Amaludin Syahputra
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,42 @@
+info:
+  name: POST_OVERTIME_LATEX
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{base_url}}/api/report-verification/latex/send-latex-overtime"
+  body:
+    type: multipart-form
+    data:
+      - name: EstateCode
+        type: text
+        value: AL
+        description: EstateCode
+      - name: WorkingDivisionCode
+        type: text
+        value: Div.I
+        description: WorkingDivisionCode
+      - name: EmployeeNumber
+        type: text
+        value: "3764"
+        description: Assistant EmployeeNumber
+      - name: MandorEmployeeNumber
+        type: text
+        value: "2011356"
+        description: Mandor EmployeeNumber
+      - name: SheetNumber
+        type: text
+        value: 2025/SNBB/01/01/2011356
+        description: sheet number
+      - name: TransactionDate
+        type: text
+        value: 2025-06-20
+        description: Transaction date
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

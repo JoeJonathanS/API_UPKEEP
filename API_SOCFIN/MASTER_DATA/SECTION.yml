@@ -1,0 +1,29 @@
+info:
+  name: SECTION
+  type: http
+  seq: 37
+
+http:
+  method: GET
+  url: "{{base_url_socfin}}/masterupkeep/section/{{ou}}?EstateCode=AP&DivisionCode=Div. I"
+  headers:
+    - name: Authorization
+      value: 7ea740632817d8ec1b3902996d702e83.90f2eca3324e331e4f41b7ef3ed83de6
+  params:
+    - name: EstateCode
+      value: AP
+      type: query
+    - name: DivisionCode
+      value: Div. I
+      type: query
+  auth:
+    type: apikey
+    key: Authorization
+    value: "{{token}}"
+    placement: header
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

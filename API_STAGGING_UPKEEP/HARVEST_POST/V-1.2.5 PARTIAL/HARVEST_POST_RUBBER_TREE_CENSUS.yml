@@ -1,0 +1,42 @@
+info:
+  name: HARVEST_POST_RUBBER_TREE_CENSUS
+  type: http
+  seq: 15
+
+http:
+  method: POST
+  url: "{{base_url}}/api/report-verification/send-rubber-tree-census"
+  body:
+    type: multipart-form
+    data:
+      - name: EstateCode
+        type: text
+        value: AL
+        description: EstateCode
+      - name: DivisionCode
+        type: text
+        value: Div.I
+        description: WorkingDivisionCode
+      - name: EmployeeNumber
+        type: text
+        value: "3764"
+        description: Assistant EmployeeNumber
+      - name: MandorEmployeeNumber
+        type: text
+        value: "2011084"
+        description: Mandor EmployeeNumber
+      - name: SheetNumber
+        type: text
+        value: WP/AL/CP-2-1109
+        description: sheet number
+      - name: TransactionDate
+        type: text
+        value: 2025-08-29
+        description: Transaction date
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

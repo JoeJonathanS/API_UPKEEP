@@ -1,0 +1,38 @@
+info:
+  name: VERIFY_ACTIVITY_BY_ASSISTANT
+  type: http
+  seq: 15
+
+http:
+  method: POST
+  url: "{{base_url}}/api/activities/verify-assistant"
+  body:
+    type: multipart-form
+    data:
+      - name: AssistantEmployeeNumber
+        type: text
+        value: "3831"
+        description: Assistant User EmployeeNumber
+      - name: EmployeeID
+        type: text
+        value: EA64E7C1-C4D2-46FF-BC52-49F1A42DCCF4
+        description: Mandor User EmployeeNumber
+      - name: EstateCode
+        type: text
+        value: AL
+        description: Mandor User EstateCode
+      - name: DivisionCode
+        type: text
+        value: Div.I
+        description: Mandor User DivisionCode
+      - name: date
+        type: text
+        value: 2025-04-01
+        description: transaction date
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

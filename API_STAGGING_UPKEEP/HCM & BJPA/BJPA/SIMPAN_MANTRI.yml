@@ -1,0 +1,91 @@
+info:
+  name: SIMPAN_MANTRI
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{base_url}}/api/bjpa/store-by-mantri"
+  body:
+    type: multipart-form
+    data:
+      - name: uuid
+        type: text
+        value: BPJA-0012345-YMDHIS
+      - name: EstateID
+        type: text
+        value: E7E731CD-BDDD-4B73-A947-F5AFCD0CB1E4
+      - name: EstateCode
+        type: text
+        value: MP
+      - name: EstateName
+        type: text
+        value: Mata Pao
+      - name: DivisionID
+        type: text
+        value: 726ADDFA-9D3C-4A43-90EB-9B340C85A13D
+      - name: DivisionCode
+        type: text
+        value: Div.II
+      - name: DivisionName
+        type: text
+        value: Division II
+      - name: WorkingDivisionID
+        type: text
+        value: 726ADDFA-9D3C-4A43-90EB-9B340C85A13D
+      - name: WorkingDivisionCode
+        type: text
+        value: Div.II
+      - name: WorkingDivisionName
+        type: text
+        value: Division II
+      - name: MovedToAnotherDivision
+        type: text
+        value: "0"
+      - name: LokasiPenangkaranName
+        type: text
+        value: Penangkaran EK Div 2 MP
+      - name: ReceivedByMandorJson
+        type: text
+        value: '""'
+        description: '""'
+      - name: Internal_Nomor_Batch
+        type: text
+        value: "0"
+      - name: Internal_Jlh_Kantong
+        type: text
+        value: "1"
+      - name: Internal_Jlh_BJPA
+        type: text
+        value: "2"
+      - name: External_Nomor_Batch
+        type: text
+        value: "3"
+      - name: External_Jlh_Kantong
+        type: text
+        value: "4"
+      - name: External_Jlh_BJPA
+        type: text
+        value: "5"
+      - name: TotalPenerimaanBJPAEksternal
+        type: text
+        value: "6"
+      - name: MantriEmployeeID
+        type: text
+        value: "0012345"
+      - name: MantriEmployeeNumber
+        type: text
+        value: "0012345"
+      - name: MantriEmployeeName
+        type: text
+        value: Jokho Whi
+      - name: date
+        type: text
+        value: 2026-02-10
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

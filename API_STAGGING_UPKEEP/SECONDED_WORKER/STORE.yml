@@ -1,0 +1,114 @@
+info:
+  name: STORE
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{base_url}}/api/seconded-worker/store"
+  body:
+    type: multipart-form
+    data:
+      - name: EstateCode
+        type: text
+        value: BB
+      - name: DivisionID
+        type: text
+        value: B46C8203-8B33-4FF8-9A12-1BA60E134AEE
+      - name: DivisionCode
+        type: text
+        value: Div.II
+      - name: DivisionName
+        type: text
+        value: Division II
+      - name: EmployeeNumber
+        type: text
+        value: "1505211"
+      - name: date
+        type: text
+        value: 2025-01-15
+      - name: WorkingDivisionID
+        type: text
+        value: B46C8203-8B33-4FF8-9A12-1BA60E134AEE
+      - name: WorkingDivisionCode
+        type: text
+        value: Div.II
+      - name: WorkingDivisionName
+        type: text
+        value: Division II
+      - name: MovedToAnotherDivision
+        type: text
+        value: "0"
+      - name: Mandoran[0][EstateID]
+        type: text
+        value: C1CFE70B-5CD4-419A-B5E7-76358B16EE14
+      - name: Mandoran[0][EstateCode]
+        type: text
+        value: BB
+      - name: Mandoran[0][EstateName]
+        type: text
+        value: Bangun Bandar
+      - name: Mandoran[0][DivisionID]
+        type: text
+        value: B46C8203-8B33-4FF8-9A12-1BA60E134AEE
+      - name: Mandoran[0][DivisionCode]
+        type: text
+        value: Div.II
+      - name: Mandoran[0][DivisionName]
+        type: text
+        value: Division II
+      - name: Mandoran[0][WorkgroupID]
+        type: text
+        value: E1197134-1941-49F0-BC58-0D38BE3B2D33
+      - name: Mandoran[0][WorkgroupCode]
+        type: text
+        value: 2025/BTPM/02/01
+      - name: Mandoran[0][WorkgroupName]
+        type: text
+        value: 2025/BTPM/02/01
+      - name: Mandoran[0][WorkgroupTypeCode]
+        type: text
+        value: "125000"
+      - name: Mandoran[0][WorkgroupTypeName]
+        type: text
+        value: Harvester Group
+      - name: Mandoran[0][AllocationID]
+        type: text
+        value: 37B391E6-F8F4-4766-8F58-147F38E8D46F
+      - name: Mandoran[0][AllocationCode]
+        type: text
+        value: "200723"
+      - name: Mandoran[0][AllocationName]
+        type: text
+        value: Bongkar Tumbuhan Pengganggu - Manual
+      - name: Mandoran[0][IsWorkGroupLeader]
+        type: text
+        value: "0"
+      - name: Mandoran[0][EmployeeID]
+        type: text
+        value: D2F4CF1B-32EC-4DF3-9658-9AB7B060E537
+      - name: Mandoran[0][EmployeeNumber]
+        type: text
+        value: "1502549"
+      - name: Mandoran[0][EmployeeName]
+        type: text
+        value: Supriyani
+      - name: Mandoran[0][WorkgroupRoleID]
+        type: text
+        value: E9BADA46-0C0D-46EE-B987-B826D9BC661E
+      - name: Mandoran[0][WorkgroupRoleCode]
+        type: text
+        value: PHR
+      - name: Mandoran[0][WorkgroupRoleName]
+        type: text
+        value: Pekerja Harian
+      - name: Mandoran[0][tambahPekerjaDay]
+        type: text
+        value: "4"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

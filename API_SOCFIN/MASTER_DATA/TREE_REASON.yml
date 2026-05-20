@@ -1,0 +1,22 @@
+info:
+  name: TREE_REASON
+  type: http
+  seq: 35
+
+http:
+  method: GET
+  url: "{{base_url_socfin}}/masterupkeep/tree-reason/{{ou}}"
+  headers:
+    - name: Authorization
+      value: a87d05ed76467a90314f40a1af4f6bde.c5e9f69752853e283b41584f7c566395
+  auth:
+    type: apikey
+    key: Authorization
+    value: "{{token}}"
+    placement: header
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,115 @@
+info:
+  name: GET_FR_ASSISTANT
+  type: http
+  seq: 2
+
+http:
+  method: GET
+  url: "{{base_url}}/api/user-face/list-assistant/?EstateCode=MP&DivisionID=21BB709F-3507-420F-AE27-0DA6053E399E"
+  params:
+    - name: EstateCode
+      value: MP
+      type: query
+      description: C1CFE70B-5CD4-419A-B5E7-76358B16EE14
+    - name: DivisionID
+      value: 21BB709F-3507-420F-AE27-0DA6053E399E
+      type: query
+      description: FBE65292-5272-46F8-A829-9A307E49356D
+  auth: inherit
+
+runtime:
+  scripts:
+    - type: after-response
+      code: "var template = `\r
+
+        <style type=\"text/css\">\r
+
+        \    .tftable {font-size:14px;color:#333333;width:100%;border-width: 1px;border-color: #87ceeb;border-collapse: collapse;}\r
+
+        \    .tftable th {font-size:18px;background-color:#87ceeb;border-width: 1px;padding: 8px;border-style: solid;border-color: #87ceeb;text-align:left;}\r
+
+        \    .tftable tr {background-color:#ffffff;}\r
+
+        \    .tftable td {font-size:14px;border-width: 1px;padding: 8px;border-style: solid;border-color: #87ceeb;}\r
+
+        \    .tftable tr:hover {background-color:#e0ffff;}\r
+
+        </style>\r
+
+        \r
+
+        <table class=\"tftable\" border=\"1\">\r
+
+        \    <tr>\r
+
+        \        <th>ID</th>\r
+
+        \        <th>Estate Code</th>\r
+
+        \        <th>Division ID</th>\r
+
+        \        <th>Employee ID</th>\r
+
+        \        <th>Image Bit</th>\r
+
+        \        <th>Image</th>\r
+
+        \        <th>Created By</th>\r
+
+        \        <th>Created At</th>\r
+
+        \    </tr>\r
+
+        \    \r
+
+        \    {{#each response.data}}\r
+
+        \        <tr>\r
+
+        \            <td>{{id}}</td>\r
+
+        \            <td>{{EstateCode}}</td>\r
+
+        \            <td>{{DivisionID}}</td>\r
+
+        \            <td>{{EmployeeID}}</td>\r
+
+        \            <td>{{image_bit}}</td>\r
+
+        \            <td>{{image}}</td>\r
+
+        \            <td>{{created_by}}</td>\r
+
+        \            <td>{{created_at}}</td>\r
+
+        \        </tr>\r
+
+        \    {{/each}}\r
+
+        </table>\r
+
+        `;\r
+
+        \r
+
+        function constructVisualizerPayload() {\r
+
+        \    return {response: res.getBody()};\r
+
+        }\r
+
+        \r
+
+        bru.visualize(\"html\", {\r
+
+        \    template: template,\r
+
+        \    data: constructVisualizerPayload()\r
+
+        });"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

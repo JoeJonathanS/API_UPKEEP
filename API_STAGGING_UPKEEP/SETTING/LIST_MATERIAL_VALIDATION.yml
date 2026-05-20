@@ -1,0 +1,284 @@
+info:
+  name: LIST_MATERIAL_VALIDATION
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{base_url}}/api/setting/used-material-validation"
+  body:
+    type: multipart-form
+    data:
+      - name: EstateCode
+        type: text
+        value: NL
+      - name: TransactionDate
+        type: text
+        value: 2026-04-29
+      - name: EmployeeNumber
+        type: text
+        value: "1701716"
+        description: Mandor Employee Number
+        disabled: true
+  auth: inherit
+
+runtime:
+  scripts:
+    - type: after-response
+      code: "var template = `\r
+
+        <style type=\"text/css\">\r
+
+        \    .tftable {font-size:14px;color:#333333;width:100%;border-width: 1px;border-color: #87ceeb;border-collapse: collapse;}\r
+
+        \    .tftable th {font-size:18px;background-color:#87ceeb;border-width: 1px;padding: 8px;border-style: solid;border-color: #87ceeb;text-align:left;}\r
+
+        \    .tftable tr {background-color:#ffffff;}\r
+
+        \    .tftable td {font-size:14px;border-width: 1px;padding: 8px;border-style: solid;border-color: #87ceeb;}\r
+
+        \    .tftable tr:hover {background-color:#e0ffff;}\r
+
+        </style>\r
+
+        \r
+
+        <table class=\"tftable\" border=\"1\">\r
+
+        \    <tr>\r
+
+        \        <th>Estate ID</th>\r
+
+        \        <th>Estate Code</th>\r
+
+        \        <th>Estate Name</th>\r
+
+        \        <th>Date</th>\r
+
+        \        <th>Division ID</th>\r
+
+        \        <th>Division Name</th>\r
+
+        \        <th>Document No</th>\r
+
+        \        <th>Issue Number</th>\r
+
+        \        <th>Block ID</th>\r
+
+        \        <th>Block Code</th>\r
+
+        \        <th>Item ID</th>\r
+
+        \        <th>Item Code</th>\r
+
+        \        <th>Item Name</th>\r
+
+        \        <th>Issued Qty</th>\r
+
+        \        <th>Quantity Used</th>\r
+
+        \        <th>Available Quantity</th>\r
+
+        \        <th>UOM ID</th>\r
+
+        \        <th>UOM</th>\r
+
+        \        <th>CFN Allocation ID</th>\r
+
+        \        <th>PRS Allocation ID</th>\r
+
+        \        <th>Allocation Code</th>\r
+
+        \        <th>Allocation</th>\r
+
+        \    </tr>\r
+
+        \    \r
+
+        \    {{#each response.availableMaterial}}\r
+
+        \        <tr>\r
+
+        \            <td>{{EstateID}}</td>\r
+
+        \            <td>{{EstateCode}}</td>\r
+
+        \            <td>{{EstateName}}</td>\r
+
+        \            <td>{{Date}}</td>\r
+
+        \            <td>{{DivisionID}}</td>\r
+
+        \            <td>{{DivisionName}}</td>\r
+
+        \            <td>{{DocumentNo}}</td>\r
+
+        \            <td>{{IssueNumber}}</td>\r
+
+        \            <td>{{BlockID}}</td>\r
+
+        \            <td>{{BlockCode}}</td>\r
+
+        \            <td>{{ItemID}}</td>\r
+
+        \            <td>{{ItemCode}}</td>\r
+
+        \            <td>{{ItemName}}</td>\r
+
+        \            <td>{{IssuedQty}}</td>\r
+
+        \            <td>{{QuantityUsed}}</td>\r
+
+        \            <td>{{AvailableQuantity}}</td>\r
+
+        \            <td>{{UOMID}}</td>\r
+
+        \            <td>{{UOM}}</td>\r
+
+        \            <td>{{CFNAllocationID}}</td>\r
+
+        \            <td>{{PRSAllocationID}}</td>\r
+
+        \            <td>{{AllocationCode}}</td>\r
+
+        \            <td>{{Allocation}}</td>\r
+
+        \        </tr>\r
+
+        \    {{/each}}\r
+
+        </table>\r
+
+        \r
+
+        <br/><br/>\r
+
+        \r
+
+        <table class=\"tftable\" border=\"1\">\r
+
+        \    <tr>\r
+
+        \        <th>UUID</th>\r
+
+        \        <th>Estate ID</th>\r
+
+        \        <th>Estate Code</th>\r
+
+        \        <th>Estate Name</th>\r
+
+        \        <th>Block ID</th>\r
+
+        \        <th>Block Code</th>\r
+
+        \        <th>Division Code</th>\r
+
+        \        <th>Division Name</th>\r
+
+        \        <th>Working Division ID</th>\r
+
+        \        <th>Working Division Code</th>\r
+
+        \        <th>Working Division Name</th>\r
+
+        \        <th>Moved To Another Division</th>\r
+
+        \        <th>Workgroup Task Definition ID</th>\r
+
+        \        <th>Workgroup Task Definition Name</th>\r
+
+        \        <th>Date</th>\r
+
+        \        <th>CFN Allocation ID</th>\r
+
+        \        <th>CFN Allocation Code</th>\r
+
+        \        <th>CFN Allocation Name</th>\r
+
+        \        <th>Output</th>\r
+
+        \        <th>UOM Code</th>\r
+
+        \        <th>Assignee ID</th>\r
+
+        \    </tr>\r
+
+        \    \r
+
+        \    {{#each response.activityRecord}}\r
+
+        \        <tr>\r
+
+        \            <td>{{uuid}}</td>\r
+
+        \            <td>{{EstateID}}</td>\r
+
+        \            <td>{{EstateCode}}</td>\r
+
+        \            <td>{{EstateName}}</td>\r
+
+        \            <td>{{BlockID}}</td>\r
+
+        \            <td>{{BlockCode}}</td>\r
+
+        \            <td>{{DivisionCode}}</td>\r
+
+        \            <td>{{DivisionName}}</td>\r
+
+        \            <td>{{WorkingDivisionID}}</td>\r
+
+        \            <td>{{WorkingDivisionCode}}</td>\r
+
+        \            <td>{{WorkingDivisionName}}</td>\r
+
+        \            <td>{{MovedToAnotherDivision}}</td>\r
+
+        \            <td>{{WorkgroupTaskDefinitionID}}</td>\r
+
+        \            <td>{{WorkgroupTaskDefinitionName}}</td>\r
+
+        \            <td>{{date}}</td>\r
+
+        \            <td>{{CFNAllocationID}}</td>\r
+
+        \            <td>{{CFNAllocationCode}}</td>\r
+
+        \            <td>{{CFNAllocationName}}</td>\r
+
+        \            <td>{{output}}</td>\r
+
+        \            <td>{{UOMCode}}</td>\r
+
+        \            <td>{{assignee_id}}</td>\r
+
+        \        </tr>\r
+
+        \    {{/each}}\r
+
+        </table>\r
+
+        `;\r
+
+        \r
+
+        function constructVisualizerPayload() {\r
+
+        \    return { response: res.getBody() };\r
+
+        }\r
+
+        \r
+
+        bru.visualize(\"html\", {\r
+
+        \    template: template,\r
+
+        \    data: constructVisualizerPayload()\r
+
+        });"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

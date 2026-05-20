@@ -1,0 +1,192 @@
+info:
+  name: MANDORAN
+  type: http
+  seq: 3
+
+http:
+  method: GET
+  url: "{{base_url}}/api/sync/master-mandoran?request_date=2026-04-07&EstateCode=TG"
+  params:
+    - name: AllocationID
+      value: A46D5450-DF1B-4120-85EF-0F8F366FBC67
+      type: query
+      description: optional
+      disabled: true
+    - name: DivisionID
+      value: 5165EF21-EA9A-412F-8A2F-99E9C1EC5F0A
+      type: query
+      description: optional
+      disabled: true
+    - name: WorkgroupRoleID
+      value: 040A90A1-A039-466B-B98B-58012A0D8C2E
+      type: query
+      description: optional
+      disabled: true
+    - name: WorkgroupID
+      value: 93434911-E4C5-4E09-8012-1069FC6A24E9
+      type: query
+      disabled: true
+    - name: request_date
+      value: 2026-04-07
+      type: query
+    - name: DivisionCode
+      value: Div.iV
+      type: query
+      disabled: true
+    - name: EstateCode
+      value: TG
+      type: query
+  auth: inherit
+
+runtime:
+  scripts:
+    - type: after-response
+      code: "var template = `\r
+
+        <style type=\"text/css\">\r
+
+        \    .tftable {font-size:14px;color:#333333;width:100%;border-width: 1px;border-color: #87ceeb;border-collapse: collapse;}\r
+
+        \    .tftable th {font-size:18px;background-color:#87ceeb;border-width: 1px;padding: 8px;border-style: solid;border-color: #87ceeb;text-align:left;}\r
+
+        \    .tftable tr {background-color:#ffffff;}\r
+
+        \    .tftable td {font-size:14px;border-width: 1px;padding: 8px;border-style: solid;border-color: #87ceeb;}\r
+
+        \    .tftable tr:hover {background-color:#e0ffff;}\r
+
+        </style>\r
+
+        \r
+
+        <table class=\"tftable\" border=\"1\">\r
+
+        \    <tr>\r
+
+        \        \r
+
+        \        <th>Estate Code</th>\r
+
+        \       \r
+
+        \       \r
+
+        \        <th>Division Code</th>\r
+
+        \      \r
+
+        \        \r
+
+        \        <th>Workgroup Code</th>\r
+
+        \        \r
+
+        \        \r
+
+        \        \r
+
+        \        <th>Allocation Code</th>\r
+
+        \        <th>Allocation Name</th>\r
+
+        \        \r
+
+        \        <th>Is WorkGroup Leader</th>\r
+
+        \        \r
+
+        \        <th>Employee Number</th>\r
+
+        \        <th>Employee Name</th>\r
+
+        \       \r
+
+        \        <th>Workgroup Role Code</th>\r
+
+        \        <th>Workgroup Role Name</th>\r
+
+        \        \r
+
+        \    </tr>\r
+
+        \    \r
+
+        \    {{#each response.data}}\r
+
+        \        <tr>\r
+
+        \           \r
+
+        \            <td>{{EstateCode}}</td>\r
+
+        \            \r
+
+        \            \r
+
+        \            <td>{{DivisionCode}}</td>\r
+
+        \           \r
+
+        \            \r
+
+        \            <td>{{WorkgroupCode}}</td>\r
+
+        \            \r
+
+        \            \r
+
+        \           \r
+
+        \            <td>{{AllocationCode}}</td>\r
+
+        \            <td>{{AllocationName}}</td>\r
+
+        \           \r
+
+        \            <td>{{IsWorkGroupLeader}}</td>\r
+
+        \            \r
+
+        \            <td>{{EmployeeNumber}}</td>\r
+
+        \            <td>{{EmployeeName}}</td>\r
+
+        \            \r
+
+        \            <td>{{WorkgroupRoleCode}}</td>\r
+
+        \            <td>{{WorkgroupRoleName}}</td>\r
+
+        \           \r
+
+        \        </tr>\r
+
+        \    {{/each}}\r
+
+        </table>\r
+
+        `;\r
+
+        \r
+
+        function constructVisualizerPayload() {\r
+
+        \    return {response: res.getBody()};\r
+
+        }\r
+
+        \r
+
+        bru.visualize(\"html\", {\r
+
+        \    template: template,\r
+
+        \    data: constructVisualizerPayload()\r
+
+        });"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

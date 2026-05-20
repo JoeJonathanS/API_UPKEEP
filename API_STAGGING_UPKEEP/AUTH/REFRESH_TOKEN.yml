@@ -1,0 +1,26 @@
+info:
+  name: REFRESH_TOKEN
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{base_url}}/api/auth/refresh"
+  body:
+    type: multipart-form
+    data:
+      - name: refresh_token
+        type: text
+        value: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ1cGtlZXAtYXBpIiwic3ViIjoibG9naW50b2tlbiIsImlhdCI6MTc0ODU3Mzg5NCwiZXhwIjoxNzQ5MTc4Njk0LCJ1c2VybmFtZSI6IlRlazF0ZXN0dGcifQ.JZ8VFtjx4m2z2mJKeVeQFLOgB75sTM6a0iaXOTuWmFo
+      - name: username
+        type: text
+        value: ittesting2
+  auth:
+    type: bearer
+    token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ1cGtlZXAtYXBpIiwic3ViIjoicmVmcmVzaHRva2VuIiwiaWF0IjoxNzIwMTQ4Nzg2LCJleHAiOjE3MjI3NDA3ODYsInVzZXJuYW1lIjoiZm9yZW1hbl8xIn0.FtXTW7hOmg2Qj0uxtaXIPQ0yDuiXx6DizysvCtmYFIo
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

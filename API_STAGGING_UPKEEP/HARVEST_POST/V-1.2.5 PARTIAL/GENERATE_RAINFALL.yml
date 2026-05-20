@@ -1,0 +1,45 @@
+info:
+  name: GENERATE_RAINFALL
+  type: http
+  seq: 18
+
+http:
+  method: POST
+  url: "{{base_url}}/api/report-verification/generate-rainfall"
+  body:
+    type: multipart-form
+    data:
+      - name: EstateID
+        type: text
+        value: BBBC7F2E-E478-47D1-A9B7-DC4A479ABA65
+        description: EstateID
+      - name: EstateCode
+        type: text
+        value: AL
+        description: EstateCode
+      - name: EstateName
+        type: text
+        value: Aek Loba
+        description: WorkingDivisionCode
+      - name: DivisionID
+        type: text
+        value: 88CCED05-6BF6-4FD8-BEF5-103C8AC8EDAD
+      - name: DivisionCode
+        type: text
+        value: Div.I
+      - name: DivisionName
+        type: text
+        value: Division I
+      - name: EmployeeNumber
+        type: text
+        value: "3815"
+      - name: TransactionDate
+        type: text
+        value: 2026-02-01
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

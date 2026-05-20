@@ -1,0 +1,30 @@
+info:
+  name: VERIFIED_BY_MANDOR
+  type: http
+  seq: 5
+
+http:
+  method: POST
+  url: "{{base_url}}/api/cencus/male-flower/verified-by-mandor"
+  body:
+    type: multipart-form
+    data:
+      - name: EstateCode
+        type: text
+        value: TG
+      - name: MandorEmployeeNumber
+        type: text
+        value: "2602305"
+      - name: date
+        type: text
+        value: 2025-03-03
+      - name: CFNAllocationCode
+        type: text
+        value: "510112"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

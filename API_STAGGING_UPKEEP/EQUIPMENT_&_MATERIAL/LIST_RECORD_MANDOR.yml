@@ -1,0 +1,38 @@
+info:
+  name: LIST_RECORD_MANDOR
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{base_url}}/api/activity-equipment-and-material/list-record-mandor"
+  body:
+    type: multipart-form
+    data:
+      - name: EstateCode
+        type: text
+        value: BB
+      - name: EmployeeNumber
+        type: text
+        value: "1605047"
+      - name: date
+        type: text
+        value: 2025-10-28
+        description: optional, use to get specific record by date. if using date range read description below.
+      - name: start_date
+        type: text
+        value: 2025-01-07
+        description: optional, use to get record using date range. both start_date and end_date is required when using this.
+        disabled: true
+      - name: end_date
+        type: text
+        value: 2025-01-24
+        description: dont use "date" when using range ! choose 1 in 1 request
+        disabled: true
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

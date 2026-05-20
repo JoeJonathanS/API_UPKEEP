@@ -1,0 +1,9 @@
+info:
+  name: API_STAGGING_UPKEEP
+  type: folder
+  seq: 2
+
+request:
+  auth:
+    type: bearer
+    token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ1cGtlZXAtYXBpIiwic3ViIjoibG9naW50b2tlbiIsImlhdCI6MTc3OTA4NjI0OCwiZXhwIjoxNzc5NjkxMDQ4LCJ1c2VybmFtZSI6IjM4MTYifQ.7OImwxGwDO3ad8iqQ5-8hUGx7QVkYjmEnDFGdh2T9os

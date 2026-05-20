@@ -1,0 +1,55 @@
+info:
+  name: SET_FINISHED
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: "{{base_url}}/api/status-activity-checking/set-finished"
+  body:
+    type: multipart-form
+    data:
+      - name: uuid
+        type: text
+        value: PemeriksaanCheck-1807856-2026-04-14
+      - name: EstateCode
+        type: text
+        value: BB
+      - name: DivisionCode
+        type: text
+        value: DIV02
+      - name: WorkingDivisionCode
+        type: text
+        value: WD02
+      - name: PRSAllocationCode
+        type: text
+        value: PRS0
+      - name: MandorEmployeeNumber
+        type: text
+        value: MDR001
+      - name: EmployeeNumber
+        type: text
+        value: EMP001
+      - name: date
+        type: text
+        value: 2026-04-20
+        description: tanggal diselesaikannya
+      - name: finished_at
+        type: text
+        value: 2026-04-20
+      - name: FinishedEmployeeID
+        type: text
+        value: MDR001
+      - name: FinishedEmployeeNumber
+        type: text
+        value: MDR001
+      - name: FinishedEmployeeName
+        type: text
+        value: MDR001
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,313 @@
+info:
+  name: STORE_UPKEEP
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{base_url}}/api/work-plan/store-work-plan-upkeep"
+  body:
+    type: multipart-form
+    data:
+      - name: uuid
+        type: text
+        value: DWP-U-3735-202501172
+        description: UUID
+      - name: EstateCode
+        type: text
+        value: BB
+        description: The Estate Code
+      - name: DivisionCode
+        type: text
+        value: Div.I
+        description: The Division Code
+      - name: AssistantEmployeeID
+        type: text
+        value: 13C88F76-F426-4289-BF39-51705720C3F7
+      - name: AssistantEmployeeNumber
+        type: text
+        value: "3735"
+      - name: AssistantEmployeeName
+        type: text
+        value: Rio Elvandari Lubis
+      - name: date
+        type: text
+        value: 2025-01-07
+      - name: rkh_date
+        type: text
+        value: 2025-01-08
+      - name: send_hour
+        type: text
+        value: 10:06:46.000
+      - name: day_flagging
+        type: text
+        value: "0"
+        description: 0 normal day, 1 friday
+      - name: employee[0][EmployeeNumber]
+        type: text
+        value: "1505511"
+      - name: employee[0][details][0][WorkingDivisionID]
+        type: text
+        value: E32FACDD-6C8B-4D2C-89E8-A474B080B261
+      - name: employee[0][details][0][WorkingDivisionCode]
+        type: text
+        value: Div.III
+      - name: employee[0][details][0][MovedToAnotherDivision]
+        type: text
+        value: "1"
+      - name: employee[0][details][0][PRSAllocationCode]
+        type: text
+        value: "300117"
+      - name: employee[0][details][0][UOMCode]
+        type: text
+        value: HA
+      - name: employee[0][details][0][AllocationTarget]
+        type: text
+        value: "2000"
+      - name: employee[0][details][0][jlh_PKWT]
+        type: text
+        value: "5"
+      - name: employee[0][details][0][jlh_Pemborong]
+        type: text
+        value: "10"
+      - name: employee[0][details][0][EmployeeCountPegawaiMale]
+        type: text
+        value: "5"
+      - name: employee[0][details][0][EmployeeCountPegawaiFemale]
+        type: text
+        value: "2"
+      - name: employee[0][details][0][EmployeeCountKaryawanMale]
+        type: text
+        value: "5"
+      - name: employee[0][details][0][EmployeeCountKaryawanFemale]
+        type: text
+        value: "3"
+      - name: employee[0][details][0][Blocks][0][BlockCode]
+        type: text
+        value: 072/19
+      - name: employee[0][details][0][Blocks][0][BlockTarget]
+        type: text
+        value: "30.15"
+      - name: employee[0][details][0][Blocks][0][Material][0][DocumentID]
+        type: text
+        value: 00DF4430-1184-4D56-AB69-C0DFA0C201C9
+      - name: employee[0][details][0][Blocks][0][Material][0][DocumentNo]
+        type: text
+        value: GSIR/BB/24/12/1735608797398
+      - name: employee[0][details][0][Blocks][0][Material][0][ItemID]
+        type: text
+        value: DAF25DB9-BD59-421B-ADFE-19A42C8D794B
+      - name: employee[0][details][0][Blocks][0][Material][0][ItemCode]
+        type: text
+        value: "7066105"
+      - name: employee[0][details][0][Blocks][0][Material][0][Date]
+        type: text
+        value: 2025-01-04
+      - name: employee[0][details][0][Blocks][0][Material][0][ItemQuantityUsed]
+        type: text
+        value: "4000"
+      - name: employee[0][details][0][Blocks][1][BlockCode]
+        type: text
+        value: 073/19
+      - name: employee[0][details][0][Blocks][1][BlockTarget]
+        type: text
+        value: "25.55"
+      - name: employee[0][details][0][Blocks][1][Material][0][DocumentID]
+        type: text
+        value: 395A6F4C-7D07-4E59-87D2-C01D8BCC1E69
+      - name: employee[0][details][0][Blocks][1][Material][0][DocumentNo]
+        type: text
+        value: GSIR/BB/24/12/1735609054452
+      - name: employee[0][details][0][Blocks][1][Material][0][ItemID]
+        type: text
+        value: DAF25DB9-BD59-421B-ADFE-19A42C8D794B
+      - name: employee[0][details][0][Blocks][1][Material][0][ItemCode]
+        type: text
+        value: "7066105"
+      - name: employee[0][details][0][Blocks][1][Material][0][Date]
+        type: text
+        value: 2025-01-04
+      - name: employee[0][details][0][Blocks][1][Material][0][ItemQuantityUsed]
+        type: text
+        value: "8000"
+      - name: employee[0][details][1][WorkingDivisionID]
+        type: text
+        value: E32FACDD-6C8B-4D2C-89E8-A474B080B261
+      - name: employee[0][details][1][WorkingDivisionCode]
+        type: text
+        value: Div.III
+      - name: employee[0][details][1][MovedToAnotherDivision]
+        type: text
+        value: "1"
+      - name: employee[0][details][1][PRSAllocationCode]
+        type: text
+        value: "200962"
+      - name: employee[0][details][1][UOMCode]
+        type: text
+        value: HA
+      - name: employee[0][details][1][AllocationTarget]
+        type: text
+        value: "15"
+      - name: employee[0][details][1][jlh_PKWT]
+        type: text
+        value: "5"
+      - name: employee[0][details][1][jlh_Pemborong]
+        type: text
+        value: "10"
+      - name: employee[0][details][1][EmployeeCountPegawaiMale]
+        type: text
+        value: "5"
+      - name: employee[0][details][1][EmployeeCountPegawaiFemale]
+        type: text
+        value: "5"
+      - name: employee[0][details][1][EmployeeCountKaryawanMale]
+        type: text
+        value: "5"
+      - name: employee[0][details][1][EmployeeCountKaryawanFemale]
+        type: text
+        value: "5"
+      - name: employee[0][details][1][Blocks][0][BlockCode]
+        type: text
+        value: 081/18
+      - name: employee[0][details][1][Blocks][0][BlockTarget]
+        type: text
+        value: "30.15"
+      - name: employee[0][details][1][Blocks][0][Material][0][DocumentID]
+        type: text
+        value: 9FCE276A-5027-4767-BF4F-080ED1BE9774
+      - name: employee[0][details][1][Blocks][0][Material][0][DocumentNo]
+        type: text
+        value: GSIR/BB/25/01/1736584200798
+      - name: employee[0][details][1][Blocks][0][Material][0][ItemID]
+        type: text
+        value: 48443AA0-56D0-443E-BBD1-B7E91BE0A806
+      - name: employee[0][details][1][Blocks][0][Material][0][ItemCode]
+        type: text
+        value: "7011191"
+      - name: employee[0][details][1][Blocks][0][Material][0][Date]
+        type: text
+        value: 2025-01-11
+      - name: employee[0][details][1][Blocks][0][Material][0][ItemQuantityUsed]
+        type: text
+        value: "2"
+      - name: employee[0][details][1][Blocks][0][Material][1][DocumentID]
+        type: text
+        value: 9FCE276A-5027-4767-BF4F-080ED1BE9774
+      - name: employee[0][details][1][Blocks][0][Material][1][DocumentNo]
+        type: text
+        value: GSIR/BB/25/01/1736584200798
+      - name: employee[0][details][1][Blocks][0][Material][1][ItemID]
+        type: text
+        value: 40EAC453-8CE4-4FB9-9044-27751E6B885F
+      - name: employee[0][details][1][Blocks][0][Material][1][ItemCode]
+        type: text
+        value: "7074706"
+      - name: employee[0][details][1][Blocks][0][Material][1][Date]
+        type: text
+        value: 2025-01-11
+      - name: employee[0][details][1][Blocks][0][Material][1][ItemQuantityUsed]
+        type: text
+        value: "49.8"
+      - name: employee[0][details][1][Blocks][0][Material][2][DocumentID]
+        type: text
+        value: 9FCE276A-5027-4767-BF4F-080ED1BE9774
+      - name: employee[0][details][1][Blocks][0][Material][2][DocumentNo]
+        type: text
+        value: GSIR/BB/25/01/1736584200798
+      - name: employee[0][details][1][Blocks][0][Material][2][ItemID]
+        type: text
+        value: 15FE260E-2A52-44B2-849D-6C9AD416ED65
+      - name: employee[0][details][1][Blocks][0][Material][2][ItemCode]
+        type: text
+        value: "7016734"
+      - name: employee[0][details][1][Blocks][0][Material][2][Date]
+        type: text
+        value: 2025-01-11
+      - name: employee[0][details][1][Blocks][0][Material][2][ItemQuantityUsed]
+        type: text
+        value: "26.7"
+      - name: employee[1][EmployeeNumber]
+        type: text
+        value: "1505264"
+      - name: employee[1][details][0][PRSAllocationCode]
+        type: text
+        value: "300117"
+      - name: employee[1][details][0][UOMCode]
+        type: text
+        value: HA
+      - name: employee[1][details][0][AllocationTarget]
+        type: text
+        value: "8574"
+      - name: employee[1][details][0][jlh_PKWT]
+        type: text
+        value: "5"
+      - name: employee[1][details][0][jlh_Pemborong]
+        type: text
+        value: "10"
+      - name: employee[1][details][0][EmployeeCountPegawaiMale]
+        type: text
+        value: "5"
+      - name: employee[1][details][0][EmployeeCountPegawaiFemale]
+        type: text
+        value: "2"
+      - name: employee[1][details][0][EmployeeCountKaryawanMale]
+        type: text
+        value: "5"
+      - name: employee[1][details][0][EmployeeCountKaryawanFemale]
+        type: text
+        value: "3"
+      - name: employee[1][details][0][Blocks][0][BlockCode]
+        type: text
+        value: 075/10
+      - name: employee[1][details][0][Blocks][0][BlockTarget]
+        type: text
+        value: "2032"
+      - name: employee[1][details][0][Blocks][0][Material][0][DocumentID]
+        type: text
+        value: B416FF09-54EB-46E9-B069-AB499347119A
+      - name: employee[1][details][0][Blocks][0][Material][0][DocumentNo]
+        type: text
+        value: GSIR/BB/25/01/1736160037029
+      - name: employee[1][details][0][Blocks][0][Material][0][ItemID]
+        type: text
+        value: DAF25DB9-BD59-421B-ADFE-19A42C8D794B
+      - name: employee[1][details][0][Blocks][0][Material][0][ItemCode]
+        type: text
+        value: "7066105"
+      - name: employee[1][details][0][Blocks][0][Material][0][Date]
+        type: text
+        value: 2025-01-06
+      - name: employee[1][details][0][Blocks][0][Material][0][ItemQuantityUsed]
+        type: text
+        value: "2032"
+      - name: employee[1][details][0][Blocks][1][BlockCode]
+        type: text
+        value: 077/13
+      - name: employee[1][details][0][Blocks][1][BlockTarget]
+        type: text
+        value: "6542"
+      - name: employee[1][details][0][Blocks][1][Material][0][DocumentID]
+        type: text
+        value: 56B04471-C458-4F12-AC12-D2625394D4D3
+      - name: employee[1][details][0][Blocks][1][Material][0][DocumentNo]
+        type: text
+        value: GSIR/BB/25/01/1736158578970
+      - name: employee[1][details][0][Blocks][1][Material][0][ItemID]
+        type: text
+        value: DAF25DB9-BD59-421B-ADFE-19A42C8D794B
+      - name: employee[1][details][0][Blocks][1][Material][0][ItemCode]
+        type: text
+        value: "7066105"
+      - name: employee[1][details][0][Blocks][1][Material][0][Date]
+        type: text
+        value: 2025-01-06
+      - name: employee[1][details][0][Blocks][1][Material][0][ItemQuantityUsed]
+        type: text
+        value: "6542"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

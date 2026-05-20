@@ -1,0 +1,57 @@
+info:
+  name: UPDATE_CONTRACTOR
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{base_url}}/api/activities-contractor/update-contractor"
+  body:
+    type: multipart-form
+    data:
+      - name: uuid
+        type: text
+        value: asdasd-zx3ss
+        description: transaction uuid
+      - name: EstateCode
+        type: text
+        value: AL
+        description: EstateCode
+      - name: output
+        type: text
+        value: "10"
+        description: Output
+      - name: mutu_sesuai
+        type: text
+        value: "8"
+        description: mutu_sesuai
+      - name: mutu_tidak_sesuai
+        type: text
+        value: "2"
+        description: mutu_tidak_sesuai
+      - name: hb
+        type: text
+        value: "10"
+        description: HB
+      - name: notes
+        type: text
+        value: ChukuaMem
+      - name: EmployeeID
+        type: text
+        value: 1127E513-BADB-405F-B73C-6BE2FDE1388D
+        description: informasi siapa yang update
+      - name: EmployeeNumber
+        type: text
+        value: "2012695"
+        description: informasi siapa yang update
+      - name: EmployeeName
+        type: text
+        value: Joko
+        description: informasi siapa yang update
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

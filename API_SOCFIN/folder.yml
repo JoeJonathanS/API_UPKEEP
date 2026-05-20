@@ -1,0 +1,7 @@
+info:
+  name: API_SOCFIN
+  type: folder
+  seq: 1
+
+request:
+  auth: inherit

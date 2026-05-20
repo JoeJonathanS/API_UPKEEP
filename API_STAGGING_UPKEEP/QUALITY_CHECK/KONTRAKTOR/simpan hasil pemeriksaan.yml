@@ -1,0 +1,79 @@
+info:
+  name: simpan hasil pemeriksaan
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{base_url}}/api/quality-check-contractor/store-result"
+  body:
+    type: multipart-form
+    data:
+      - name: EstateCode
+        type: text
+        value: SY
+        description: EstateCode
+      - name: activity_check_uuid
+        type: text
+        value: PAKM1-1107494-20250815
+        description: the QC activity uuid, get it from the list end-point
+      - name: QualityCheckReportUUID
+        type: text
+        value: QCC-PAKM1-1107494-20250815
+        description: QualityCheckReportUUID the report uuid
+      - name: QualityCheckResultUUID
+        type: text
+        value: O-QC-RESULT-MandorEmployeeNum-Dates
+        description: QualityCheckResultUUID
+      - name: qc_verified_date
+        type: text
+        value: 2024-08-01
+        description: qc verified date ( tanggal pemeriksaan mutu ancak diverifikasi)
+      - name: is_eligible
+        type: text
+        value: "0"
+        description: true or false
+      - name: notes
+        type: text
+        value: buset, pohon sawitnya sampe gundul semua
+        description: note ( keterangan jika ada)
+      - name: Latitude
+        type: text
+        value: "99.999"
+        description: latitude
+      - name: Longitude
+        type: text
+        value: "43.1123"
+        description: longitude
+      - name: EmployeeNumber
+        type: text
+        value: "1807053"
+        description: EmployeeNumber of the user
+      - name: EmployeeName
+        type: text
+        value: Jokodidodo
+        description: EmployeeName of the user
+      - name: EmployeeRole
+        type: text
+        value: Mandor Tunas Pokok
+        description: EmployeeRole of the user
+      - name: created_hour
+        type: text
+        value: 11:12:23
+        description: EmployeeRole of the user
+      - name: image_qc[0]
+        type: file
+        value:
+          - /C:/Users/Asus/Pictures/Screenshots/Screenshot 2024-12-02 194848.png
+        description: "image of qc proof "
+      - name: image_qc[1]
+        type: file
+        value:
+          - /C:/Users/Asus/Pictures/Screenshots/Screenshot 2025-02-02 095942.png
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

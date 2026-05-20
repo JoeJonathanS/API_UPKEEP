@@ -1,0 +1,36 @@
+info:
+  name: VERIFY_ASSISTANT
+  type: http
+  seq: 7
+
+http:
+  method: POST
+  url: "{{base_url}}/api/quality-check/verify-assistant"
+  body:
+    type: multipart-form
+    data:
+      - name: EstateCode
+        type: text
+        value: SL
+      - name: DivisionCode
+        type: text
+        value: Div.I
+        description: asisten user EmployeeNumber
+      - name: EmployeeNumber
+        type: text
+        value: "1807053"
+        description: asisten user EmployeeNumber
+      - name: EmployeeName
+        type: text
+        value: Mega Whachy
+        description: asisten user EmployeeName
+      - name: uuid
+        type: text
+        value: XXX-XXX-XXX
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

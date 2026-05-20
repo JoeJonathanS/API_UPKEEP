@@ -1,0 +1,41 @@
+info:
+  name: simpan tanggal mutu ancak asisten
+  type: http
+  seq: 5
+
+http:
+  method: POST
+  url: "{{base_url}}/api/activity-checking-contractor/store-assistant"
+  body:
+    type: multipart-form
+    data:
+      - name: uuid
+        type: text
+        value: PRSOPTKTR-2011084-20250901103719
+      - name: EstateCode
+        type: text
+        value: AL
+      - name: date
+        type: text
+        value: 2025-08-01
+      - name: IsQualityCheck
+        type: text
+        value: "1"
+        description: 0 jika tidak perlu mutu ancak, 1 jika perlu
+      - name: QualityCheckDate
+        type: text
+        value: 2025-09-03
+        description: kosong jika tidak perlu mutu ancak, tanggal mutu ancak jika perlu
+      - name: EmployeeNumber
+        type: text
+        value: "3333"
+      - name: EmployeeName
+        type: text
+        value: Sudi Widodo
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

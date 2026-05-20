@@ -1,0 +1,159 @@
+info:
+  name: STORE_PETUGAS
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{base_url}}/api/cencus/disease/rubber/store"
+  body:
+    type: multipart-form
+    data:
+      - name: uuid
+        type: text
+        value: AP-NomorMandor-YMDHI
+      - name: EstateID
+        type: text
+        value: 8F54AB13-F946-42DF-98A8-D46DFAD67395
+      - name: EstateCode
+        type: text
+        value: AP
+      - name: EstateName
+        type: text
+        value: Aek Pamienke
+      - name: DivisionID
+        type: text
+        value: 114071EE-CA33-4610-AF49-F6D1DE664F39
+      - name: DivisionCode
+        type: text
+        value: Div. V
+      - name: DivisionName
+        type: text
+        value: Division V
+      - name: WorkingDivisionID
+        type: text
+        value: 114071EE-CA33-4610-AF49-F6D1DE664F39
+      - name: WorkingDivisionCode
+        type: text
+        value: Div. V
+      - name: WorkingDivisionName
+        type: text
+        value: Division V
+      - name: MovedToAnotherDivision
+        type: text
+        value: "0"
+      - name: BlockID
+        type: text
+        value: 2BFB4A5C-66BC-4C63-ADF0-B00644BAA97C
+      - name: BlockCode
+        type: text
+        value: 127/11
+      - name: BlockName
+        type: text
+        value: Block 127/11
+      - name: date
+        type: text
+        value: 2025-11-06
+      - name: TotalTreeCounted
+        type: text
+        value: "2"
+      - name: MandorEmployeeID
+        type: text
+        value: asd
+      - name: MandorEmployeeNumber
+        type: text
+        value: "123"
+      - name: MandorEmployeeName
+        type: text
+        value: jokowow
+        description: Tree type id
+      - name: EmployeeID
+        type: text
+        value: asd
+        description: Tree type code
+      - name: EmployeeNumber
+        type: text
+        value: "123"
+        description: Tree type name
+      - name: EmployeeName
+        type: text
+        value: jokowow
+      - name: BarisPetak[0][baris_ke]
+        type: text
+        value: "1"
+      - name: BarisPetak[0][petak_ke]
+        type: text
+        value: "1"
+      - name: BarisPetak[0][tree_counted]
+        type: text
+        value: "2"
+      - name: BarisPetak[0][normal_tree_counted]
+        type: text
+        value: "0"
+      - name: BarisPetak[0][sick_tree_counted]
+        type: text
+        value: "2"
+      - name: BarisPetak[0][send_batch]
+        type: text
+        value: "1"
+      - name: BarisPetak[0][Detail][0][tree_number]
+        type: text
+        value: "1"
+      - name: BarisPetak[0][Detail][0][lat]
+        type: text
+        value: "1"
+      - name: BarisPetak[0][Detail][0][long]
+        type: text
+        value: "1"
+      - name: BarisPetak[0][Detail][0][PestDiseaseID]
+        type: text
+        value: 882EF297-2B1F-496D-B3AE-2DC123F72358
+      - name: BarisPetak[0][Detail][0][PestDiseaseCode]
+        type: text
+        value: "20523702"
+      - name: BarisPetak[0][Detail][0][PestDiseaseName]
+        type: text
+        value: Bark Necrosis/BN - Tetap disadap
+      - name: BarisPetak[0][Detail][0][notes]
+        type: text
+        value: " daun menguning dan getah berkurang meski dipuding"
+      - name: BarisPetak[0][Detail][0][photo_name]
+        type: text
+        value: " 14567.jpg"
+      - name: BarisPetak[0][Detail][0][photo_path]
+        type: text
+        value: " .../.../...."
+      - name: BarisPetak[0][Detail][1][tree_number]
+        type: text
+        value: "2"
+      - name: BarisPetak[0][Detail][1][lat]
+        type: text
+        value: "2"
+      - name: BarisPetak[0][Detail][1][long]
+        type: text
+        value: "2"
+      - name: BarisPetak[0][Detail][1][PestDiseaseID]
+        type: text
+        value: 882EF297-2B1F-496D-B3AE-2DC123F72358
+      - name: BarisPetak[0][Detail][1][PestDiseaseCode]
+        type: text
+        value: "20523702"
+      - name: BarisPetak[0][Detail][1][PestDiseaseName]
+        type: text
+        value: Bark Necrosis/BN - Tetap disadap
+      - name: BarisPetak[0][Detail][1][notes]
+        type: text
+        value: " daun menguning dan getah berkurang meski dipuding"
+      - name: BarisPetak[0][Detail][1][photo_name]
+        type: text
+        value: " 14567.jpg"
+      - name: BarisPetak[0][Detail][1][photo_path]
+        type: text
+        value: " .../.../...."
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

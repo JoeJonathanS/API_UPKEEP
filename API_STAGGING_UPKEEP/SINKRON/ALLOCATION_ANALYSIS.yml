@@ -1,0 +1,35 @@
+info:
+  name: ALLOCATION_ANALYSIS
+  type: http
+  seq: 31
+
+http:
+  method: GET
+  url: "{{base_url}}/api/sync/master-allocation-analysis/?EstateCode=MP"
+  params:
+    - name: GeneralAllocationCode
+      value: "012401"
+      type: query
+      disabled: true
+    - name: AnalysisCodeID
+      value: 5A572CBA-33C8-4554-9936-1AEBEBF3A93B
+      type: query
+      disabled: true
+    - name: AnalysisTypeCod
+      value: ""
+      type: query
+      disabled: true
+    - name: AnalysisCode
+      value: "012401"
+      type: query
+      disabled: true
+    - name: EstateCode
+      value: MP
+      type: query
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

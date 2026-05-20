@@ -1,0 +1,30 @@
+info:
+  name: LATEX_OVERTIME
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: "{{base_url}}/api/report-verification/history/latex-overtime"
+  body:
+    type: multipart-form
+    data:
+      - name: EstateCode
+        type: text
+        value: AP
+        description: EstateCode
+      - name: WorkingDivisionCode
+        type: text
+        value: Div. I
+        description: WorkingDivisionCode
+      - name: TransactionDate
+        type: text
+        value: 2025-11-07
+        description: Transaction date
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

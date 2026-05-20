@@ -1,0 +1,50 @@
+info:
+  name: GENERATE_UNIT_CONTRACT
+  type: http
+  seq: 12
+
+http:
+  method: POST
+  url: "{{base_url}}/api/report-verification/generate-report-contractor"
+  body:
+    type: multipart-form
+    data:
+      - name: EstateID
+        type: text
+        value: BBBC7F2E-E478-47D1-A9B7-DC4A479ABA65
+        description: EstateID
+      - name: EstateCode
+        type: text
+        value: AL
+        description: EstateCode
+      - name: EstateName
+        type: text
+        value: AEK LOBA
+        description: WorkingDivisionCode
+      - name: DivisionID
+        type: text
+        value: 5560FE69-D2AF-40FF-8EEF-8BD2DAA724EE
+      - name: DivisionCode
+        type: text
+        value: Div.II
+        description: Transaction date
+      - name: DivisionName
+        type: text
+        value: Division II
+        description: Transaction date
+      - name: EmployeeNumber
+        type: text
+        value: "3751"
+      - name: WeekdayName
+        type: text
+        value: Tuesday
+      - name: TransactionDate
+        type: text
+        value: 2026-02-06
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,44 @@
+info:
+  name: VERIFY_BY_ASSISTANT
+  type: http
+  seq: 8
+
+http:
+  method: POST
+  url: "{{base_url}}/api/hcm-application/verify-hcm-application-assistant"
+  body:
+    type: multipart-form
+    data:
+      - name: uuid
+        type: text
+        value: HCMAPP-...-...
+        description: The Estate Code
+      - name: EstateCode
+        type: text
+        value: BB
+        description: The Estate Code
+      - name: DivisionCode
+        type: text
+        value: Div.I
+        description: The Division Code
+      - name: date
+        type: text
+        value: 2026-02-03
+      - name: AssistantEmployeeID
+        type: text
+        value: "37035"
+        description: mandor pembuat dokumen
+      - name: AssistantEmployeeNumber
+        type: text
+        value: "37035"
+        description: mandor pembuat dokumen
+      - name: AssistantEmployeeName
+        type: text
+        value: Ria Elvani
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

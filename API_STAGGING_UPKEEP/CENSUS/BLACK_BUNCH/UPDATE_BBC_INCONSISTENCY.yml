@@ -1,0 +1,49 @@
+info:
+  name: UPDATE_BBC_INCONSISTENCY
+  type: http
+  seq: 6
+
+http:
+  method: POST
+  url: "{{base_url}}/api/cencus/black-bunch/update-inconsistency"
+  body:
+    type: multipart-form
+    data:
+      - name: EmployeeNumber
+        type: text
+        value: "3840"
+        description: Assistant Employee Number
+      - name: EstateCode
+        type: text
+        value: TG
+        description: Estate Code
+      - name: DivisionCode
+        type: text
+        value: Div.III
+        description: Working Division
+      - name: TransactionDate
+        type: text
+        value: 2025-03-03
+        description: transaction date
+      - name: cencus_type
+        type: text
+        value: BlackBunchCencus
+      - name: BlockCode
+        type: text
+        value: 060/06
+      - name: MandorEmployeeNumber
+        type: text
+        value: "2602305"
+      - name: NoLine
+        type: text
+        value: Baris-12
+      - name: NoTS
+        type: text
+        value: TS-121
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

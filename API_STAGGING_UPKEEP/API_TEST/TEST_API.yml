@@ -1,0 +1,32 @@
+info:
+  name: TEST_API
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{base_url}}/api/test"
+  body:
+    type: multipart-form
+    data:
+      - name: EstateCode
+        type: text
+        value: SY
+        description: Mandor User EstateCode
+      - name: Division
+        type: text
+        value: 134D6419-6771-48C8-B2C6-9659D4FE6180,Div.I
+      - name: BlockCode
+        type: text
+        value: all
+      - name: date
+        type: text
+        value: 2025-05-09
+        description: transaction date
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

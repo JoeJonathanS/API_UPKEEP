@@ -1,0 +1,31 @@
+info:
+  name: DISEASE_CENCUS_DETAIL
+  type: http
+  seq: 9
+
+http:
+  method: POST
+  url: "{{base_url}}/api/report-per-module/report-disease-cencus"
+  headers:
+    - name: USER_CREDENTIALS
+      value: '{"EstateCode": "AL","APKVersion": "0.2.32","UserDevice": {"Brand": "Infinix","Model": "Infinix X669C"},"DivisionCode": "Div.I","WorkingDivisionCode": "Div.I","MovedToAnotherDivision":"0","EmployeeNumber": "2011084","EmployeeName": "Agus Riadi"}'
+      disabled: true
+  body:
+    type: multipart-form
+    data:
+      - name: BlockID
+        type: text
+        value: D0AD9F4C-42C6-473B-9E8E-7DD5E15CB9C5
+      - name: BlockCode
+        type: text
+        value: 048/12
+      - name: TransactionDate
+        type: text
+        value: 2026-02-26
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

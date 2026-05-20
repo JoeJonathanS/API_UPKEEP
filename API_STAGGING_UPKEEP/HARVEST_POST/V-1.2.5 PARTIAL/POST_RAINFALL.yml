@@ -1,0 +1,36 @@
+info:
+  name: POST_RAINFALL
+  type: http
+  seq: 19
+
+http:
+  method: POST
+  url: "{{base_url}}/api/report-verification/send-rainfall"
+  body:
+    type: multipart-form
+    data:
+      - name: EstateCode
+        type: text
+        value: AL
+        description: EstateCode
+      - name: DivisionCode
+        type: text
+        value: Div.VIII
+        description: DivisionCode
+      - name: EmployeeNumber
+        type: text
+        value: "3815"
+        description: EmployeeNumber
+      - name: MandorEmployeeNumber
+        type: text
+        value: "2010686"
+      - name: SheetNumber
+        type: text
+        value: AL/Div.VIII/2010686/2026-01-20
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

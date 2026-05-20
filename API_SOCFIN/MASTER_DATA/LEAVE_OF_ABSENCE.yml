@@ -1,0 +1,19 @@
+info:
+  name: LEAVE_OF_ABSENCE
+  type: http
+  seq: 32
+
+http:
+  method: GET
+  url: "{{base_url_socfin}}/masterupkeep/leave-of-absence/BB/2025-07-11"
+  auth:
+    type: apikey
+    key: Authorization
+    value: "{{token}}"
+    placement: header
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

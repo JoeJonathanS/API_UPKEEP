@@ -1,0 +1,52 @@
+info:
+  name: POST_RAINFALL
+  type: http
+  seq: 5
+
+http:
+  method: POST
+  url: "{{base_url_socfin}}/rainfall-reading"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"rainfallReading\": {\r
+
+      \        \"businessLocationID\": \"BBBC7F2E-E478-47D1-A9B7-DC4A479ABA65\",\r
+
+      \        \"estate\": \"AL\",\r
+
+      \        \"vUserID\": \"SOCFIN-ID\\\\astes2\",\r
+
+      \        \"rainfallDate\": \"2026-01-20\",\r
+
+      \        \"administrativeUnitID\": \"BBBC7F2E-E478-47D1-A9B7-DC4A479ABA65\",\r
+
+      \        \"administrativeUnitName\": \"AL\",\r
+
+      \        \"rainfallStationID\": \"BC840A4B-D9C1-49F7-94FC-492BBE9A961F\",\r
+
+      \        \"rainfallStationName\": \"Penakaran Curah Hujan Div.VIII\",\r
+
+      \        \"rainfallInMM\": 0,\r
+
+      \        \"remarks\": \"Hujan mulai pukul  wib -  wib\",\r
+
+      \        \"SheetNumber\": \"AL/Div.VIII/2010686/2026-01-20\",\r
+
+      \        \"EmployeeNumber\": \"2010686\"\r
+
+      \    }\r
+
+      }"
+  auth:
+    type: apikey
+    key: Authorization
+    value: 38a9b4b327b48c9d85e16ad533e08858.8a737d89fc852758a6703f5d32872d57
+    placement: header
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

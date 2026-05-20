@@ -1,0 +1,46 @@
+info:
+  name: SET_PENGENDALIAN_MANDOR
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: "{{base_url}}/api/cencus/pest/set-normal-pest-pengendalian"
+  body:
+    type: multipart-form
+    data:
+      - name: EstateCode
+        type: text
+        value: AL
+      - name: WorkingDivisionCode
+        type: text
+        value: Div.I
+      - name: uuid
+        type: text
+        value: SensusHama-AL-Div.I-008/01-2011356-20250922
+      - name: is_consolidation
+        type: text
+        value: "1"
+      - name: TS[0][NoTS]
+        type: text
+        value: TS-1
+        description: Nomor TS
+      - name: TS[0][pengendalian]
+        type: text
+        value: "1"
+        description: status pengendalian, 1 atau 0. 1 pengendalian, 0 tidak.
+      - name: TS[1][NoTS]
+        type: text
+        value: TS-2
+        description: Nomor TS
+      - name: TS[1][pengendalian]
+        type: text
+        value: "1"
+        description: status pengendalian, 1 atau 0. 1 pengendalian, 0 tidak.
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

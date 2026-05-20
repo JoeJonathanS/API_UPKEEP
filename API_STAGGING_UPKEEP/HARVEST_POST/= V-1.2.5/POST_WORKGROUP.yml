@@ -1,0 +1,35 @@
+info:
+  name: POST_WORKGROUP
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{base_url}}/api/harvest/generate-workgroup-attendance"
+  body:
+    type: multipart-form
+    data:
+      - name: EstateID
+        type: text
+        value: C1CFE70B-5CD4-419A-B5E7-76358B16EE14
+      - name: EstateCode
+        type: text
+        value: BB
+      - name: DivisionCode
+        type: text
+        value: Div.IV
+      - name: EmployeeNumber
+        type: text
+        value: "3748"
+        description: assistant number code
+      - name: TransactionDate
+        type: text
+        value: 2024-12-14
+        description: transaction date
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

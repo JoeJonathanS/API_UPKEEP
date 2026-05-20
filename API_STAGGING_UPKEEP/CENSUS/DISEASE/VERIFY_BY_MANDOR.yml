@@ -1,0 +1,30 @@
+info:
+  name: VERIFY_BY_MANDOR
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: "{{base_url}}/api/cencus/disease/verified-by-mandor"
+  body:
+    type: multipart-form
+    data:
+      - name: EstateCode
+        type: text
+        value: TG
+      - name: DivisionCode
+        type: text
+        value: Div.II
+      - name: MandorEmployeeNumber
+        type: text
+        value: "1807247"
+      - name: date
+        type: text
+        value: 2026-02-24
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,37 @@
+info:
+  name: GET_FOR_WORKER
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{base_url}}/api/cencus/pest/get-by-worker"
+  body:
+    type: multipart-form
+    data:
+      - name: EstateCode
+        type: text
+        value: AL
+        description: Estate Code
+      - name: WorkingDivisionCode
+        type: text
+        value: Div.III
+        description: Working Division Code
+      - name: MandorEmployeeNumber
+        type: text
+        value: "1505415"
+        description: mandor employee number
+      - name: date
+        type: text
+        value: 2026-04-20
+      - name: EmployeeNumber
+        type: text
+        value: "1502554"
+        description: employee num of user
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

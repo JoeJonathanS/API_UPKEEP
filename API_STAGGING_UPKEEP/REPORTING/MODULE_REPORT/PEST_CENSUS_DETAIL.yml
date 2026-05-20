@@ -1,0 +1,27 @@
+info:
+  name: PEST_CENSUS_DETAIL
+  type: http
+  seq: 11
+
+http:
+  method: POST
+  url: "{{base_url}}/api/report-per-module/report-pest-cencus-detail"
+  body:
+    type: multipart-form
+    data:
+      - name: EstateCode
+        type: text
+        value: AL
+      - name: DivisionCode
+        type: text
+        value: Div.I
+      - name: uuid
+        type: text
+        value: SensusHama-AL-Div.I-013/23-2011356-20251013-Khusus
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

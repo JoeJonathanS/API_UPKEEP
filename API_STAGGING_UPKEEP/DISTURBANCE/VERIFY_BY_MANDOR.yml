@@ -1,0 +1,35 @@
+info:
+  name: VERIFY_BY_MANDOR
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: "{{base_url}}/api/disturbance-output/verify-mandor"
+  body:
+    type: multipart-form
+    data:
+      - name: EstateCode
+        type: text
+        value: SL
+      - name: DivisionCode
+        type: text
+        value: Div.I
+      - name: MandorEmployeeNumber
+        type: text
+        value: "1304939"
+        description: mandor employee number
+      - name: MandorEmployeeName
+        type: text
+        value: sarman
+        description: mandor employee name
+      - name: date
+        type: text
+        value: 2025-05-16
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

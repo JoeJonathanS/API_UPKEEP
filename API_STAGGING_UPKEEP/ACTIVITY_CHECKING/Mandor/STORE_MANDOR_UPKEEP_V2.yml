@@ -1,0 +1,103 @@
+info:
+  name: STORE_MANDOR_UPKEEP_V2
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{base_url}}/api/activity-checking/store-mandor-upkeep-v2"
+  body:
+    type: multipart-form
+    data:
+      - name: EstateID
+        type: text
+        value: BBBC7F2E-E478-47D1-A9B7-DC4A479ABA65
+      - name: EstateCode
+        type: text
+        value: AL
+      - name: DivisionID
+        type: text
+        value: 88CCED05-6BF6-4FD8-BEF5-103C8AC8EDAD
+      - name: DivisionCode
+        type: text
+        value: Div.I
+      - name: WorkingDivisionID
+        type: text
+        value: 88CCED05-6BF6-4FD8-BEF5-103C8AC8EDAD
+      - name: WorkingDivisionCode
+        type: text
+        value: Div.I
+      - name: MovedToAnotherDivision
+        type: text
+        value: "0"
+      - name: date
+        type: text
+        value: 2026-03-17
+      - name: CFNAllocationID
+        type: text
+        value: C68C625B-2C15-4CD9-959C-5F90F42733BA
+        description: CFNAllocationID, from AllocationID in mandoran master data
+      - name: PRSAllocationCode
+        type: text
+        value: "200721"
+        description: PRSAllocationCode
+      - name: WorkgroupID
+        type: text
+        value: 16940E0F-1A8E-4AE6-BFCD-A3104C957CD8
+        description: WorkgroupID
+      - name: WorkgroupCode
+        type: text
+        value: 2025/SSKM/01/01
+        description: WorkgroupCode
+      - name: IsQualityCheck
+        type: text
+        value: "1"
+      - name: QualityCheckDate
+        type: text
+        value: 2025-02-05
+      - name: uuid
+        type: text
+        value: PM
+      - name: EmployeeNumber
+        type: text
+        value: "2011809"
+        description: Mandor EmployeeNumber
+      - name: labour[0][IsManual]
+        type: text
+        value: "0"
+      - name: labour[0][EmployeeNumber]
+        type: text
+        value: "2704047"
+      - name: labour[0][BlockCode]
+        type: text
+        value: 012/24
+      - name: labour[0][NoTS]
+        type: text
+        value: TS-70
+      - name: labour[0][Latitude]
+        type: text
+        value: "99.999"
+      - name: labour[0][Longitude]
+        type: text
+        value: "99.999"
+      - name: labour[0][notes]
+        type: text
+        value: s1-11
+      - name: labour[0][created_hour]
+        type: text
+        value: 11:00:00
+      - name: labour[0][image][0]
+        type: file
+        value:
+          - /C:/Users/Asus/Desktop/1745805240_52362fe10f9bff3a3793.jpg
+      - name: labour[0][image][1]
+        type: file
+        value:
+          - /C:/Users/Asus/Pictures/Screenshots/Screenshot 2024-11-18 155428.png
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

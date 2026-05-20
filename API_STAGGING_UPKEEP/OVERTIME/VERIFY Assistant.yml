@@ -1,0 +1,56 @@
+info:
+  name: VERIFY Assistant
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{base_url}}/api/overtime/verify-assistant"
+  body:
+    type: multipart-form
+    data:
+      - name: uuid
+        type: text
+        value: ahsdhasdh-asd514
+      - name: assignee_id
+        type: text
+        value: "301001"
+        description: Mandoran ID
+      - name: mandor_id
+        type: text
+        value: asd
+        description: EmployeeID of user mandor assigneed task
+      - name: overtime_date
+        type: text
+        value: 2027-01-13
+        description: Lembur Date
+      - name: BlockID
+        type: text
+        value: 9E923FF2-9B87-493B-884C-03B9DFDBD5AD
+        description: Block ID ( target lembur )
+      - name: EmployeeNumber
+        type: text
+        value: aasd213
+        description: User Employee ID
+      - name: EstateID
+        type: text
+        value: C1CFE70B-5CD4-419A-B5E7-76358B16EE14
+      - name: labour[0][EmployeeID]
+        type: text
+        value: L4
+        description: Employee ID
+      - name: labour[0][is_active]
+        type: text
+        value: "0"
+        description: 1 = Active or 0 = not
+      - name: labour[1][EmployeeID]
+        type: text
+        value: L5
+        description: Employee ID
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

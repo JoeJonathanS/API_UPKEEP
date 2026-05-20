@@ -1,0 +1,32 @@
+info:
+  name: GET_MANTRI
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: "{{base_url}}/api/hcm-application/get-hcm-application-mantri"
+  body:
+    type: multipart-form
+    data:
+      - name: EstateCode
+        type: text
+        value: BB
+        description: The Estate Code
+      - name: DivisionCode
+        type: text
+        value: Div.I
+        description: The Division Code
+      - name: date
+        type: text
+        value: 2026-02-15
+      - name: WorkingDivisionCode
+        type: text
+        value: Div.I
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,111 @@
+info:
+  name: STORE_MANDOR
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{base_url}}/api/hcm-application/store-hcm-application-mandor"
+  body:
+    type: multipart-form
+    data:
+      - name: uuid
+        type: text
+        value: HCMAPP-...-...-2
+        description: UUID
+      - name: EstateID
+        type: text
+        value: BB
+        description: The Estate Detail
+      - name: EstateCode
+        type: text
+        value: BB
+      - name: EstateName
+        type: text
+        value: BB
+      - name: DivisionID
+        type: text
+        value: Div.I
+        description: Div Detail
+      - name: DivisionCode
+        type: text
+        value: Div.I
+      - name: DivisionName
+        type: text
+        value: Div.I
+      - name: MandorEmployeeID
+        type: text
+        value: 13C88F76-F426-4289-BF39-51705720C3F7
+      - name: MandorEmployeeNumber
+        type: text
+        value: "37035"
+      - name: MandorEmployeeName
+        type: text
+        value: Ria Elvani
+      - name: date
+        type: text
+        value: 2026-02-15
+      - name: Details[0][WorkingDivisionID]
+        type: text
+        value: Div.I
+      - name: Details[0][WorkingDivisionCode]
+        type: text
+        value: Div.I
+      - name: Details[0][WorkingDivisionName]
+        type: text
+        value: Div.I
+      - name: Details[0][BlockID]
+        type: text
+        value: BlockID1
+      - name: Details[0][BlockCode]
+        type: text
+        value: BlockID1
+      - name: Details[0][BlockName]
+        type: text
+        value: BlockID1
+      - name: Details[0][LuasBlock]
+        type: text
+        value: "123"
+      - name: Details[0][HasilAkhir]
+        type: text
+        value: "120"
+      - name: Details[0][HB]
+        type: text
+        value: "5"
+      - name: Details[0][Photo][0]
+        type: file
+        value:
+          - /C:/Users/Asus/Pictures/Screenshots/Screenshot 2026-03-03 144300.png
+      - name: Details[0][Penangkaran][0][GramAplikasiEK]
+        type: text
+        value: "30.5"
+      - name: Details[0][Penangkaran][0][LokasiPenangkaran]
+        type: text
+        value: Penangkaran Div.I
+      - name: Details[0][Penangkaran][0][TimeTake]
+        type: text
+        value: ""
+      - name: Details[0][Penangkaran][1][GramAplikasiEK]
+        type: text
+        value: "1.5"
+      - name: Details[0][Penangkaran][1][LokasiPenangkaran]
+        type: text
+        value: Penangkaran Div.II
+      - name: Details[0][Penangkaran][1][TimeTake]
+        type: text
+        value: ""
+      - name: Details[0][Photo][2]
+        type: file
+        value:
+          - /C:/Users/Asus/Pictures/Screenshots/Screenshot 2026-03-04 111718.png
+      - name: Details[0][Photo][1]
+        type: file
+        value:
+          - /C:/Users/Asus/Pictures/Screenshots/Screenshot 2026-03-04 111718.png
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

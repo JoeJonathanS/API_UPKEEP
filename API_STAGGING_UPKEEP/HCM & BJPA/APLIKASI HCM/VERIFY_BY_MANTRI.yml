@@ -1,0 +1,44 @@
+info:
+  name: VERIFY_BY_MANTRI
+  type: http
+  seq: 6
+
+http:
+  method: POST
+  url: "{{base_url}}/api/hcm-application/verify-hcm-application-mantri"
+  body:
+    type: multipart-form
+    data:
+      - name: uuid
+        type: text
+        value: HCMAPP-...-...
+        description: The Estate Code
+      - name: EstateCode
+        type: text
+        value: BB
+        description: The Estate Code
+      - name: DivisionCode
+        type: text
+        value: Div.I
+        description: The Division Code
+      - name: date
+        type: text
+        value: 2026-02-03
+      - name: MantriEmployeeID
+        type: text
+        value: "1001"
+        description: mandor pembuat dokumen
+      - name: MantriEmployeeNumber
+        type: text
+        value: "1001"
+        description: mandor pembuat dokumen
+      - name: MantriEmployeeName
+        type: text
+        value: Rio
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

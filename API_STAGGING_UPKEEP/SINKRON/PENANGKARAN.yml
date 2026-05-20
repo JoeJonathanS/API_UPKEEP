@@ -1,0 +1,19 @@
+info:
+  name: PENANGKARAN
+  type: http
+  seq: 41
+
+http:
+  method: GET
+  url: "{{base_url}}/api/sync/master-penangkaran/?EstateCode=MP"
+  params:
+    - name: EstateCode
+      value: MP
+      type: query
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

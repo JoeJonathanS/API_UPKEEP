@@ -1,0 +1,38 @@
+info:
+  name: VERIFY_MANDOR
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: "{{base_url}}/api/quality-check/verify-mandor"
+  body:
+    type: multipart-form
+    data:
+      - name: EstateID
+        type: text
+        value: 0557B3E2-B268-4DCC-8EA5-48994C28878D
+      - name: activity_check_uuid
+        type: text
+        value: PM-2025/RLKMB/01/01-20250421060448
+      - name: QualityCheckResultUUID
+        type: text
+        value: O-QC-RESULT-MandorEmployeeNum-Date
+      - name: EmployeeNumber
+        type: text
+        value: "1807053"
+        description: user EmployeeNumber
+      - name: EmployeeName
+        type: text
+        value: Jokodidodo
+        description: user EmployeeName
+      - name: qc_verified_date
+        type: text
+        value: 2024-08-01
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,104 @@
+info:
+  name: POST_UNIT_CONTRACT_WORK_PROGRESS
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: "{{base_url_socfin}}/unit-contract-work-progress"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"unitContractWorkProgress\": {\r
+
+      \        \"workProgressNumber\": \"WP/SL/CP-1-130\",\r
+
+      \        \"referenceNumber\": \"111\",\r
+
+      \        \"estateID\": \"0557B3E2-B268-4DCC-8EA5-48994C28878D\",\r
+
+      \        \"estateCode\": \"SL\",\r
+
+      \        \"estate\": \"Sei Liput\",\r
+
+      \        \"date\": \"2026-01-22\",\r
+
+      \        \"vUserID\": \"SOCFIN-ID\\\\tek1testsl\",\r
+
+      \        \"contractID\": \"D82935AE-3351-46ED-A6AE-3FE86BAA2DD7\",\r
+
+      \        \"contractNumber\": \"CP-1-130\",\r
+
+      \        \"details\": [\r
+
+      \            {\r
+
+      \                \"allocationID\": \"4B3065BB-2F2C-47C5-B1CE-F760E1BB99B7\",\r
+
+      \                \"allocationName\": \"Penyiraman\",\r
+
+      \                \"allocationGroupID\": \"1AB0B43E-6B27-49DF-92A4-20C26FEB756E\",\r
+
+      \                \"allocationGroupName\": \"Maintenance\",\r
+
+      \                \"workCompletionInPercentage\": 4,\r
+
+      \                \"workCompletionInFlat\": 2,\r
+
+      \                \"flatPercentageID\": \"5B0001DD-4674-4FF7-8461-55219FC43776\",\r
+
+      \                \"flatPercentageName\": \"%\",\r
+
+      \                \"UOMID\": \"90213AD4-4781-4526-B8E1-41C33242114E\",\r
+
+      \                \"UOM\": \"Hari Buruh\",\r
+
+      \                \"fromDate\": \"2026-01-20 00:00:00.000\",\r
+
+      \                \"toDate\": \"2026-01-31 00:00:00.000\",\r
+
+      \                \"amount\": 0,\r
+
+      \                \"details\": [\r
+
+      \                    {\r
+
+      \                        \"divisionID\": \"B1E2C408-4E1F-4680-B20A-8C66E101EA96\",\r
+
+      \                        \"divisionName\": \"Division I\",\r
+
+      \                        \"blockID\": null,\r
+
+      \                        \"blockCode\": null,\r
+
+      \                        \"quantity\": 2,\r
+
+      \                        \"UOMID\": \"90213AD4-4781-4526-B8E1-41C33242114E\",\r
+
+      \                        \"UOM\": \"Hari Buruh\",\r
+
+      \                        \"rate\": 0\r
+
+      \                    }\r
+
+      \                ]\r
+
+      \            }\r
+
+      \        ]\r
+
+      \    }\r
+
+      }"
+  auth:
+    type: apikey
+    key: Authorization
+    value: 9736020b54a92ec32993148ba0b8701a.ddcda5c22f981be8efc5ecc4c477618c
+    placement: header
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

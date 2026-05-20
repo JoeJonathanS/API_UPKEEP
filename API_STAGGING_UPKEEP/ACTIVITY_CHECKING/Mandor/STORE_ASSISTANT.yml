@@ -1,0 +1,141 @@
+info:
+  name: STORE_ASSISTANT
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: "{{base_url}}/api/activity-checking/store-assistant"
+  body:
+    type: multipart-form
+    data:
+      - name: EstateID
+        type: text
+        value: E7E731CD-BDDD-4B73-A947-F5AFCD0CB1E4
+      - name: EstateCode
+        type: text
+        value: MP
+      - name: DivisionID
+        type: text
+        value: 21BB709F-3507-420F-AE27-0DA6053E399E
+      - name: DivisionCode
+        type: text
+        value: Div.III
+      - name: WorkingDivisionID
+        type: text
+        value: 21BB709F-3507-420F-AE27-0DA6053E399E
+      - name: WorkingDivisionCode
+        type: text
+        value: Div.III
+      - name: MovedToAnotherDivision
+        type: text
+        value: "0"
+      - name: date
+        type: text
+        value: 2025-02-06
+      - name: CFNAllocationID
+        type: text
+        value: F6267132-A490-47C2-BB91-F7D857FF4261
+        description: CFNAllocationID, from AllocationID in mandoran master data
+      - name: PRSAllocationCode
+        type: text
+        value: "200812"
+        description: PRSAllocationCode
+      - name: WorkgroupID
+        type: text
+        value: 1D1A4C06-3D50-42BF-88B0-8024CA81DC30
+        description: WorkgroupID
+      - name: WorkgroupCode
+        type: text
+        value: 2025/TNSU/03/01
+        description: WorkgroupCode
+      - name: IsQualityCheck
+        type: text
+        value: "1"
+      - name: QualityCheckDate
+        type: text
+        value: 2025-02-05
+      - name: uuid
+        type: text
+        value: PM
+      - name: EmployeeNumber
+        type: text
+        value: "1405414"
+        description: Assistant EmployeeNumber
+      - name: labour[0][IsManual]
+        type: text
+        value: "0"
+      - name: labour[0][EmployeeNumber]
+        type: text
+        value: "1405570"
+      - name: labour[0][BlockCode]
+        type: text
+        value: 003/07
+      - name: labour[0][NoTS]
+        type: text
+        value: TS-25
+      - name: labour[0][notes]
+        type: text
+        value: s1-11
+      - name: labour[0][created_hour]
+        type: text
+        value: 11:00:00
+      - name: labour[0][image][0]
+        type: file
+        value:
+          - /C:/Users/Asus/Pictures/Screenshots/Screenshot 2024-11-18 112502.png
+      - name: labour[0][image][1]
+        type: file
+        value:
+          - /C:/Users/Asus/Pictures/Screenshots/Screenshot 2024-11-18 104135.png
+      - name: labour[1][IsManual]
+        type: text
+        value: "1"
+      - name: labour[1][EmployeeNumber]
+        type: text
+        value: "1405543"
+      - name: labour[1][BlockCode]
+        type: text
+        value: 003/07
+      - name: labour[1][NoTS]
+        type: text
+        value: TS-2
+      - name: labour[1][notes]
+        type: text
+        value: s
+      - name: labour[1][created_hour]
+        type: text
+        value: 11:00:00
+      - name: labour[1][image][0]
+        type: file
+        value:
+          - /C:/Users/Asus/Pictures/Screenshots/Screenshot 2024-11-20 091334.png
+      - name: labour[2][IsManual]
+        type: text
+        value: "0"
+      - name: labour[2][EmployeeNumber]
+        type: text
+        value: "1405421"
+      - name: labour[2][BlockCode]
+        type: text
+        value: 003/11
+      - name: labour[2][NoTS]
+        type: text
+        value: TS-2
+      - name: labour[2][notes]
+        type: text
+        value: s
+      - name: labour[2][created_hour]
+        type: text
+        value: 11:00:00
+      - name: labour[2][image][0]
+        type: file
+        value:
+          - /C:/Users/Asus/Pictures/Screenshots/Screenshot 2024-11-20 112546.png
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

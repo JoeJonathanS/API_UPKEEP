@@ -1,0 +1,22 @@
+info:
+  name: ESTATE
+  type: http
+  seq: 2
+
+http:
+  method: GET
+  url: "{{base_url_socfin}}/masterupkeep/estate/all"
+  headers:
+    - name: Authorization
+      value: 0cb8c2886f561bd7a813a1ab67476fa1.e24499ade0e18841b3e60ccc58b561f3
+  auth:
+    type: apikey
+    key: Authorization
+    value: "{{token}}"
+    placement: header
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

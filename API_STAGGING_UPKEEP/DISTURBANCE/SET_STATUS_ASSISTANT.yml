@@ -1,0 +1,50 @@
+info:
+  name: SET_STATUS_ASSISTANT
+  type: http
+  seq: 6
+
+http:
+  method: POST
+  url: "{{base_url}}/api/disturbance-output/set-status"
+  body:
+    type: multipart-form
+    data:
+      - name: uuid
+        type: text
+        value: Report-2011356-20250615142816
+      - name: EstateCode
+        type: text
+        value: AL
+      - name: DivisionCode
+        type: text
+        value: Div.I
+      - name: EmployeeNumber
+        type: text
+        value: "2602305"
+        description: asisten employee number
+      - name: EmployeeName
+        type: text
+        value: Joko
+        description: asisten employee name
+      - name: date
+        type: text
+        value: 2025-06-15
+        description: tanggal dokumen
+      - name: finish
+        type: text
+        value: "1"
+        description: 0 atau 1, tidak selesai / selesai
+      - name: action_date
+        type: text
+        value: 2025-06-15
+        description: tanggal aksi
+      - name: notes
+        type: text
+        value: cocok gas
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

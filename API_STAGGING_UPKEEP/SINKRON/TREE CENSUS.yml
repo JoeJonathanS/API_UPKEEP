@@ -1,0 +1,25 @@
+info:
+  name: TREE CENSUS
+  type: http
+  seq: 40
+
+http:
+  method: GET
+  url: "{{base_url}}/api/sync/master-tree-census/?EstateCode=AL&DivisionID=E8DAB315-63AC-46BA-ACB8-E2FC9B00067B&request_date=2026-05-18"
+  params:
+    - name: EstateCode
+      value: AL
+      type: query
+    - name: DivisionID
+      value: E8DAB315-63AC-46BA-ACB8-E2FC9B00067B
+      type: query
+    - name: request_date
+      value: 2026-05-18
+      type: query
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

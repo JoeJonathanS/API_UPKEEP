@@ -1,0 +1,38 @@
+info:
+  name: VERIFIED_BY_ASSISTANT
+  type: http
+  seq: 9
+
+http:
+  method: POST
+  url: "{{base_url}}/api/cencus/male-flower/verified-by-assistant"
+  body:
+    type: multipart-form
+    data:
+      - name: EstateCode
+        type: text
+        value: TG
+        description: estate code
+      - name: DivisionCode
+        type: text
+        value: Div.III
+        description: division Code
+      - name: EmployeeNumber
+        type: text
+        value: "3840"
+        description: employee num of assistant
+      - name: EmployeeName
+        type: text
+        value: "3840"
+        description: employee name of assistant
+      - name: date
+        type: text
+        value: 2025-03-03
+        description: transaction date
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

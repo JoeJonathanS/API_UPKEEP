@@ -1,0 +1,122 @@
+info:
+  name: STORE_CONSOLIDATION_RESULT_ASSISTANT_V2
+  type: http
+  seq: 10
+
+http:
+  method: POST
+  url: "{{base_url}}/api/activities/store-consolidation-result-assistant-v2"
+  body:
+    type: multipart-form
+    data:
+      - name: EmployeeID
+        type: text
+        value: "3815"
+        description: Assistant EmployeeNumber
+      - name: labour[0][uuid]
+        type: text
+        value: PCTOPT-1701798-20250319144837
+        description: mandatory, uuid of activity
+      - name: labour[0][EstateCode]
+        type: text
+        value: TB
+        description: mandatory
+      - name: labour[0][EmployeeID]
+        type: text
+        value: FD4FFDC2-EE7C-4F01-8A5C-BC8523DA5B45
+        description: mandatory
+      - name: labour[0][BlockID]
+        type: text
+        value: 75448624-C06B-4B9E-9CBB-757DA17276A7
+        description: mandatory
+      - name: labour[0][DivisionCode]
+        type: text
+        value: Div. I
+        description: mandatory
+      - name: labour[0][CFNAllocationCode]
+        type: text
+        value: "520201"
+        description: mandatory
+      - name: labour[0][assignee_id]
+        type: text
+        value: "1701798"
+        description: Nomor pekerja mandor
+      - name: labour[0][status]
+        type: text
+        value: "1"
+        description: "1 approved in consolidation ,0 if mangkir "
+      - name: labour[0][work_type]
+        type: text
+        value: "1"
+        description: mandatory, 1 if dinas, 0 if contractor
+      - name: labour[0][date]
+        type: text
+        value: 2025-03-19
+        description: mandatory
+      - name: labour[0][output]
+        type: text
+        value: "10"
+        description: jumlah output terbaru, jika tidak ada pembaharuan diisi output yang lama
+      - name: labour[0][notes]
+        type: text
+        value: ""
+        description: optional
+      - name: labour[0][notes_assistant]
+        type: text
+        value: ""
+        description: optional
+      - name: labour[1][uuid]
+        type: text
+        value: O-s1234561s
+        disabled: true
+      - name: labour[1][EmployeeID]
+        type: text
+        value: 36ED1E42-5641-4C89-B47F-E168B654C9AE
+        disabled: true
+      - name: labour[1][BlockID]
+        type: text
+        value: 7F2EA43E-3E75-41C0-9054-44B92781C645
+        disabled: true
+      - name: labour[1][EstateCode]
+        type: text
+        value: TG
+        disabled: true
+      - name: labour[1][DivisionCode]
+        type: text
+        value: Div.I
+        disabled: true
+      - name: labour[1][CFNAllocationCode]
+        type: text
+        value: "200711"
+        disabled: true
+      - name: labour[1][status]
+        type: text
+        value: "1"
+        disabled: true
+      - name: labour[1][work_type]
+        type: text
+        value: "1"
+        disabled: true
+      - name: labour[1][date]
+        type: text
+        value: 2024-10-15
+        disabled: true
+      - name: labour[1][output]
+        type: text
+        value: "10"
+        disabled: true
+      - name: labour[1][notes]
+        type: text
+        value: haha hihi
+        disabled: true
+      - name: labour[1][assignee_id]
+        type: text
+        value: "1807053"
+        disabled: true
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

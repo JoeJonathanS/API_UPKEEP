@@ -1,0 +1,22 @@
+info:
+  name: MANGKIR_ELIGIBILITY
+  type: http
+  seq: 21
+
+http:
+  method: GET
+  url: "{{base_url_socfin}}/masterupkeep/mangkir-eligibility/BB"
+  headers:
+    - name: Authorization
+      value: 79ce516be363d4e3ef96c8b58eb0c492.0a920875675c412ca65ff590f4bb8ac3
+  auth:
+    type: apikey
+    key: Authorization
+    value: afede3cc0d3d4344f22d5acbf6b19ca3.b613d1fc8254d96068a5927aa5a22005
+    placement: header
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

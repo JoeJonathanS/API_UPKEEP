@@ -1,0 +1,67 @@
+info:
+  name: UPDATE_ACTIVITY
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: "{{base_url}}/api/activities/update-activity-mandor"
+  body:
+    type: multipart-form
+    data:
+      - name: uuid
+        type: text
+        value: O-1112
+        description: daily activity or activity from RKH uuid from mobile
+      - name: EstateID
+        type: text
+        value: 1CC0C388-41D3-450C-8561-A1D0B0C805AE
+        description: Estate ID
+      - name: BlockID
+        type: text
+        value: X-Y-Z
+        description: Block id
+      - name: BlockCode
+        type: text
+        value: X-Y-Z
+        description: BlockCode
+      - name: WorkgroupTaskDefinitionID
+        type: text
+        value: X-Y-Z
+        description: BlockCode
+      - name: WorkgroupTaskDefinitionName
+        type: text
+        value: X-Y-Z
+        description: BlockCode
+      - name: EmployeeID
+        type: text
+        value: "10010"
+        description: user EmployeeID
+      - name: date
+        type: text
+        value: 2024-09-18
+        description: transasction date
+      - name: labour[0][output]
+        type: text
+        value: "20"
+        description: activity
+      - name: labour[0][EmployeeID]
+        type: text
+        value: 2B660D98-A846-48B3-8AF5-C2744E592ADC
+        description: Mandatory for Dinas
+      - name: labour[0][CFNAllocationCode]
+        type: text
+        value: "5000"
+        description: optional
+      - name: labour[0][PartyID]
+        type: text
+        value: ""
+        description: Mandotory for Contractor
+        disabled: true
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

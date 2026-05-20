@@ -1,0 +1,47 @@
+info:
+  name: POST_CONTRACTOR
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: "{{base_url}}/api/harvest/generate-contractor"
+  body:
+    type: multipart-form
+    data:
+      - name: EstateID
+        type: text
+        value: 1CC0C388-41D3-450C-8561-A1D0B0C805AE
+        description: Estate ID
+      - name: EstateCode
+        type: text
+        value: TG
+        description: Estate Code
+      - name: EstateName
+        type: text
+        value: Tanah Gambus
+        description: Estate Name
+      - name: DivisionID
+        type: text
+        value: D9F25FA9-025D-47CA-9F0D-CF8EACD7E0A6
+      - name: DivisionCode
+        type: text
+        value: Div.I
+      - name: DivisionName
+        type: text
+        value: Division I
+      - name: EmployeeNumber
+        type: text
+        value: "3804"
+        description: assistant number code
+      - name: TransactionDate
+        type: text
+        value: 2024-11-15
+        description: Today
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

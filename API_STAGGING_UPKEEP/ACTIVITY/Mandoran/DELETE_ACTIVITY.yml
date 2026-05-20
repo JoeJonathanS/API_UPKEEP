@@ -1,0 +1,38 @@
+info:
+  name: DELETE_ACTIVITY
+  type: http
+  seq: 16
+
+http:
+  method: POST
+  url: "{{base_url}}/api/activities/remove-activity"
+  body:
+    type: multipart-form
+    data:
+      - name: EstateCode
+        type: text
+        value: BB
+        description: estate code
+      - name: uuid
+        type: text
+        value: PCTOPT-1605373-20241218182353
+        description: uuid of transaction
+      - name: EmployeeNumber
+        type: text
+        value: "1605373"
+        description: mandor EmployeeNumber
+      - name: CFNAllocationCode
+        type: text
+        value: "300213"
+        description: cfn allocationCode
+      - name: date
+        type: text
+        value: 2024-12-18
+        description: date
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

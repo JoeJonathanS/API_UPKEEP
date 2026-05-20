@@ -1,0 +1,42 @@
+info:
+  name: SET_FINISHED_MANDOR
+  type: http
+  seq: 5
+
+http:
+  method: POST
+  url: "{{base_url}}/api/status-activity-checking/set-finished-mandor"
+  body:
+    type: multipart-form
+    data:
+      - name: uuid
+        type: text
+        value: PemeriksaanCheck-1807856-2026-04-14
+      - name: EstateCode
+        type: text
+        value: BB
+      - name: MandorEmployeeNumber
+        type: text
+        value: MAN001
+      - name: finished_at
+        type: text
+        value: 2026-04-20
+      - name: FinishedEmployeeID
+        type: text
+        value: MDR001
+        description: Mandor Data
+      - name: FinishedEmployeeNumber
+        type: text
+        value: MDR001
+        description: Mandor Data
+      - name: FinishedEmployeeName
+        type: text
+        value: MDR001
+        description: Mandor Data
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

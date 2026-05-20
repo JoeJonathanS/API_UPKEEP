@@ -1,0 +1,42 @@
+info:
+  name: HARVEST_POST_UNIT_CONTRACT
+  type: http
+  seq: 13
+
+http:
+  method: POST
+  url: "{{base_url}}/api/report-verification/post-contractor"
+  body:
+    type: multipart-form
+    data:
+      - name: EstateCode
+        type: text
+        value: AL
+        description: EstateCode
+      - name: WorkingDivisionCode
+        type: text
+        value: Div.V
+        description: WorkingDivisionCode
+      - name: EmployeeNumber
+        type: text
+        value: "3826"
+        description: Assistant EmployeeNumber
+      - name: MandorEmployeeNumber
+        type: text
+        value: "2010970"
+        description: Mandor EmployeeNumber
+      - name: SheetNumber
+        type: text
+        value: WP/AL/CP-1-823
+        description: sheet number
+      - name: TransactionDate
+        type: text
+        value: 2026-01-15
+        description: Transaction date
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

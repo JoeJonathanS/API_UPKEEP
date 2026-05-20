@@ -1,0 +1,34 @@
+info:
+  name: GET_FOR_WORKER/MANDOR
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: "{{base_url}}/api/cencus/male-flower/get-by-worker"
+  body:
+    type: multipart-form
+    data:
+      - name: EstateCode
+        type: text
+        value: TG
+      - name: MandorEmployeeNumber
+        type: text
+        value: "2602305"
+      - name: date
+        type: text
+        value: 2025-03-03
+      - name: EmployeeNumber
+        type: text
+        value: "1807058"
+        description: employee num of user
+      - name: CFNAllocationCode
+        type: text
+        value: "510112"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

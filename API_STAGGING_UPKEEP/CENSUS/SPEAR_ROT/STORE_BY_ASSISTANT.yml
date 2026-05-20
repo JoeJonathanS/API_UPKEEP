@@ -1,0 +1,154 @@
+info:
+  name: STORE_BY_ASSISTANT
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{base_url}}/api/cencus/spear-rot/store"
+  body:
+    type: multipart-form
+    data:
+      - name: EstateID
+        type: text
+        value: 1CC0C388-41D3-450C-8561-A1D0B0C805AE
+      - name: EstateCode
+        type: text
+        value: TG
+      - name: DivisionID
+        type: text
+        value: FC02BA35-80A8-4BCC-AF9B-EF6683EBBD3D
+      - name: DivisionCode
+        type: text
+        value: Div.III
+      - name: DivisionName
+        type: text
+        value: Division III
+      - name: WorkingDivisionID
+        type: text
+        value: FC02BA35-80A8-4BCC-AF9B-EF6683EBBD3D
+      - name: WorkingDivisionCode
+        type: text
+        value: Div.III
+      - name: WorkingDivisionName
+        type: text
+        value: Division III
+      - name: MovedToAnotherDivision
+        type: text
+        value: "0"
+      - name: AllocationCode
+        type: text
+        value: 200C14
+      - name: MandorEmployeeID
+        type: text
+        value: 49DDA463-E793-434A-ABF6-1E7CE9F51450
+        description: Mandor employee ID
+      - name: MandorEmployeeNumber
+        type: text
+        value: "2602305"
+        description: Mandor Employee number
+      - name: MandorEmployeeName
+        type: text
+        value: Yuslina
+        description: Mandor employee name
+      - name: EmployeeID
+        type: text
+        value: 115D5565-66DD-4E6B-BFA1-3852FBCB9B6B
+        description: Assistant employee ID
+      - name: EmployeeNumber
+        type: text
+        value: "3840"
+        description: Assistant employee number
+      - name: EmployeeName
+        type: text
+        value: Samuel Choky T Sinaga
+        description: Assistant employee name
+      - name: employee_type
+        type: text
+        value: assistant
+        description: employee type
+      - name: date
+        type: text
+        value: 2025-03-03
+        description: date
+      - name: details[0][BlockID]
+        type: text
+        value: E1F024B3-90FB-4E58-9D13-CC3FCCC8994B
+      - name: details[0][BlockCode]
+        type: text
+        value: 060/06
+      - name: details[0][BlockName]
+        type: text
+        value: Block 060/06
+      - name: details[0][NoLine]
+        type: text
+        value: Baris-12
+      - name: details[0][NoTS]
+        type: text
+        value: TS-121
+      - name: details[0][Latitude]
+        type: text
+        value: "30.000"
+      - name: details[0][Longitude]
+        type: text
+        value: "99.000"
+      - name: details[0][IsManual]
+        type: text
+        value: "0"
+        description: pakai gps atau tidak (1 atau 0)
+      - name: details[0][jlh_pokok_normal]
+        type: text
+        value: "1"
+      - name: details[0][jlh_perlu_disisip]
+        type: text
+        value: "1"
+      - name: details[0][jlh_pokok_sakit]
+        type: text
+        value: "1"
+      - name: details[0][notes]
+        type: text
+        value: . . .
+      - name: details[1][BlockID]
+        type: text
+        value: E1F024B3-90FB-4E58-9D13-CC3FCCC8994B
+      - name: details[1][BlockCode]
+        type: text
+        value: 060/06
+      - name: details[1][BlockName]
+        type: text
+        value: Block 060/06
+      - name: details[1][NoLine]
+        type: text
+        value: Baris-13
+      - name: details[1][NoTS]
+        type: text
+        value: TS-123
+        description: pakai gps atau tidak (1 atau 0)
+      - name: details[1][Latitude]
+        type: text
+        value: "31.000"
+      - name: details[1][Longitude]
+        type: text
+        value: "99.500"
+      - name: details[1][IsManual]
+        type: text
+        value: "0"
+      - name: details[1][jlh_pokok_normal]
+        type: text
+        value: "1"
+      - name: details[1][jlh_perlu_disisip]
+        type: text
+        value: "1"
+      - name: details[1][jlh_pokok_sakit]
+        type: text
+        value: "1"
+      - name: details[1][notes]
+        type: text
+        value: . . .
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

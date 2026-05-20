@@ -1,0 +1,40 @@
+info:
+  name: LOGIN
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{base_url}}/api/auth/login"
+  headers:
+    - name: USER_CREDENTIALS
+      value: '{"APKVersion":"0.4.3"}'
+  body:
+    type: multipart-form
+    data:
+      - name: username
+        type: text
+        value: "3816"
+      - name: password
+        type: text
+        value: bypass_ajalah
+
+runtime:
+  scripts:
+    - type: after-response
+      code: "test(\"Successful POST request\", function () {\r
+
+        \    expect(res.getStatus()).to.be.oneOf([200, 201]);\r
+
+        });"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+docs: |-
+  This is a POST request, submitting data to an API via the request body. This request submits JSON data, and the data is reflected in the response.
+
+  A successful POST request typically returns a `200 OK` or `201 Created` response code.

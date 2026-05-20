@@ -1,0 +1,126 @@
+info:
+  name: LIST_RECORD_MANDOR_V2
+  type: http
+  seq: 6
+
+http:
+  method: POST
+  url: "{{base_url}}/api/activity-checking/list-record-mandor-v2"
+  body:
+    type: multipart-form
+    data:
+      - name: EstateCode
+        type: text
+        value: AL
+      - name: EmployeeNumber
+        type: text
+        value: "2011809"
+      - name: date
+        type: text
+        value: 2026-03-17
+  auth: inherit
+
+runtime:
+  scripts:
+    - type: after-response
+      code: "var template = `\r
+
+        <style type=\"text/css\">\r
+
+        \    .tftable {font-size:14px;color:#333333;width:100%;border-width: 1px;border-color: #87ceeb;border-collapse: collapse;}\r
+
+        \    .tftable th {font-size:18px;background-color:#87ceeb;border-width: 1px;padding: 8px;border-style: solid;border-color: #87ceeb;text-align:left;}\r
+
+        \    .tftable tr {background-color:#ffffff;}\r
+
+        \    .tftable td {font-size:14px;border-width: 1px;padding: 8px;border-style: solid;border-color: #87ceeb;}\r
+
+        \    .tftable tr:hover {background-color:#e0ffff;}\r
+
+        </style>\r
+
+        \r
+
+        <table class=\"tftable\" border=\"1\">\r
+
+        \    <tr>\r
+
+        \        <th>UUID</th>\r
+
+        \        <th>Estate ID</th>\r
+
+        \        <th>Estate Code</th>\r
+
+        \        <th>Division ID</th>\r
+
+        \        <th>Division Code</th>\r
+
+        \        <th>Employee Name</th>\r
+
+        \        <th>Date</th>\r
+
+        \        <th>Type</th>\r
+
+        \        <th>Workgroup Name</th>\r
+
+        \        <th>Member Count</th>\r
+
+        \    </tr>\r
+
+        \    \r
+
+        \    {{#each response.data}}\r
+
+        \        <tr>\r
+
+        \            <td>{{uuid}}</td>\r
+
+        \            <td>{{EstateID}}</td>\r
+
+        \            <td>{{EstateCode}}</td>\r
+
+        \            <td>{{DivisionID}}</td>\r
+
+        \            <td>{{DivisionCode}}</td>\r
+
+        \            <td>{{EmployeeName}}</td>\r
+
+        \            <td>{{date}}</td>\r
+
+        \            <td>{{type}}</td>\r
+
+        \            <td>{{WorkgroupName}}</td>\r
+
+        \            <td>{{member.length}}</td>\r
+
+        \        </tr>\r
+
+        \    {{/each}}\r
+
+        </table>\r
+
+        `;\r
+
+        \r
+
+        function constructVisualizerPayload() {\r
+
+        \    return {response: res.getBody()};\r
+
+        }\r
+
+        \r
+
+        bru.visualize(\"html\", {\r
+
+        \    template: template,\r
+
+        \    data: constructVisualizerPayload()\r
+
+        });"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

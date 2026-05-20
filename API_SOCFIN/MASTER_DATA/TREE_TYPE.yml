@@ -1,0 +1,22 @@
+info:
+  name: TREE_TYPE
+  type: http
+  seq: 34
+
+http:
+  method: GET
+  url: "{{base_url_socfin}}/masterupkeep/tree-type/{{ou}}"
+  headers:
+    - name: Authorization
+      value: a87d05ed76467a90314f40a1af4f6bde.c5e9f69752853e283b41584f7c566395
+  auth:
+    type: apikey
+    key: Authorization
+    value: "{{token}}"
+    placement: header
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

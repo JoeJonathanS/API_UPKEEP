@@ -1,0 +1,33 @@
+info:
+  name: VERIFY_BY_ASSISTANT
+  type: http
+  seq: 6
+
+http:
+  method: POST
+  url: "{{base_url}}/api/cencus/disease/verified-by-assistant"
+  body:
+    type: multipart-form
+    data:
+      - name: EstateCode
+        type: text
+        value: AL
+      - name: DivisionCode
+        type: text
+        value: Div.I
+      - name: date
+        type: text
+        value: 2025-06-09
+      - name: EmployeeNumber
+        type: text
+        value: "2011356"
+      - name: EmployeeName
+        type: text
+        value: JOKO
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

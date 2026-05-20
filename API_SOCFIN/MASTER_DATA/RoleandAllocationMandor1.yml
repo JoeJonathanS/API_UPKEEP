@@ -1,0 +1,22 @@
+info:
+  name: RoleandAllocationMandor1
+  type: http
+  seq: 26
+
+http:
+  method: GET
+  url: "{{base_url_socfin}}/masterupkeep/mandor1/BB"
+  headers:
+    - name: Authorization
+      value: 79ce516be363d4e3ef96c8b58eb0c492.0a920875675c412ca65ff590f4bb8ac3
+  auth:
+    type: apikey
+    key: Authorization
+    value: 3998543a11b027a29070d9821b2a4544.d3a0283f2c52eb082a7ba12597b58691
+    placement: header
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

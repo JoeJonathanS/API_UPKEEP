@@ -1,0 +1,28 @@
+info:
+  name: ANNUAL_LEAVE_ELIGIBILITY
+  type: http
+  seq: 21
+
+http:
+  method: GET
+  url: "{{base_url}}/api/sync/master-annual-leave-eligibility/?EstateCode=BB"
+  params:
+    - name: EstateCode
+      value: BB
+      type: query
+      description: Mandatory
+    - name: DivisionID
+      value: D9F25FA9-025D-47CA-9F0D-CF8EACD7E0A6
+      type: query
+      disabled: true
+    - name: EmployeeCategoryName
+      value: Karyawan
+      type: query
+      disabled: true
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

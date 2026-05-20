@@ -1,0 +1,124 @@
+info:
+  name: TASK_DEFINITION
+  type: http
+  seq: 13
+
+http:
+  method: GET
+  url: "{{base_url}}/api/sync/master-task-definition/?EstateCode=AP"
+  params:
+    - name: PRSAllocationCode
+      value: "200711"
+      type: query
+      disabled: true
+    - name: EstateCode
+      value: AP
+      type: query
+  auth: inherit
+
+runtime:
+  scripts:
+    - type: after-response
+      code: "var template = `\r
+
+        <style type=\"text/css\">\r
+
+        \    .tftable {font-size:14px;color:#333333;width:100%;border-width: 1px;border-color: #87ceeb;border-collapse: collapse;}\r
+
+        \    .tftable th {font-size:18px;background-color:#87ceeb;border-width: 1px;padding: 8px;border-style: solid;border-color: #87ceeb;text-align:left;}\r
+
+        \    .tftable tr {background-color:#ffffff;}\r
+
+        \    .tftable td {font-size:14px;border-width: 1px;padding: 8px;border-style: solid;border-color: #87ceeb;}\r
+
+        \    .tftable tr:hover {background-color:#e0ffff;}\r
+
+        </style>\r
+
+        \r
+
+        <table class=\"tftable\" border=\"1\">\r
+
+        \    <tr>\r
+
+        \       \r
+
+        \        <th>Estate Code</th>\r
+
+        \        \r
+
+        \        \r
+
+        \        \r
+
+        \        <th>Workgroup Task Definition Name</th>\r
+
+        \        <th>PRSAllocationCode</th>\r
+
+        \        <th>From Age</th>\r
+
+        \        <th>To Age</th>\r
+
+        \        <th>Basis</th>\r
+
+        \    </tr>\r
+
+        \    \r
+
+        \    {{#each response.data}}\r
+
+        \        <tr>\r
+
+        \            \r
+
+        \            <td>{{EstateCode}}</td>\r
+
+        \           \r
+
+        \            \r
+
+        \            \r
+
+        \            \r
+
+        \            <td>{{WorkgroupTaskDefinitionName}}</td>\r
+
+        \            <td>{{PRSAllocationCode}}</td>\r
+
+        \            <td>{{FromAge}}</td>\r
+
+        \            <td>{{ToAge}}</td>\r
+
+        \            <td>{{TaskQuantity}}</td>\r
+
+        \        </tr>\r
+
+        \    {{/each}}\r
+
+        </table>\r
+
+        `;\r
+
+        \r
+
+        function constructVisualizerPayload() {\r
+
+        \    return {response: res.getBody()};\r
+
+        }\r
+
+        \r
+
+        bru.visualize(\"html\", {\r
+
+        \    template: template,\r
+
+        \    data: constructVisualizerPayload()\r
+
+        });"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

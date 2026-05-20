@@ -1,0 +1,46 @@
+info:
+  name: HARVEST_POST_DAILY_M_UPKEEP
+  type: http
+  seq: 9
+
+http:
+  method: POST
+  url: "{{base_url}}/api/report-verification/post-daily-attendance-m-upkeep"
+  body:
+    type: multipart-form
+    data:
+      - name: EstateID
+        type: text
+        value: E7E731CD-BDDD-4B73-A947-F5AFCD0CB1E4
+        description: EstateID
+      - name: EstateCode
+        type: text
+        value: MP
+        description: EstateCode
+      - name: WorkingDivisionCode
+        type: text
+        value: Div.III
+        description: WorkingDivisionCode
+      - name: EmployeeNumber
+        type: text
+        value: "3727"
+        description: Assistant EmployeeNumber
+      - name: MandorEmployeeNumber
+        type: text
+        value: "1401909"
+        description: Mandor EmployeeNumber
+      - name: SheetNumber
+        type: text
+        value: BTPM/2024/01/06/D/1401909/1
+        description: sheet number
+      - name: TransactionDate
+        type: text
+        value: 2024-12-27
+        description: Transaction date
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

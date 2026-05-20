@@ -1,0 +1,118 @@
+info:
+  name: STORE_CONTRACTOR
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{base_url}}/api/activities-contractor/store-contractor"
+  body:
+    type: multipart-form
+    data:
+      - name: uuid
+        type: text
+        value: asdasd-zx3ssz
+        description: transaction uuid
+      - name: EstateID
+        type: text
+        value: BBBC7F2E-E478-47D1-A9B7-DC4A479ABA65
+        description: Estate ID (mandatory)
+      - name: EstateCode
+        type: text
+        value: AL
+        description: Estate Code(mandatory)
+      - name: EstateName
+        type: text
+        value: Aek Loba
+        description: Estate Name (mandatory)
+      - name: DivisionID
+        type: text
+        value: 88CCED05-6BF6-4FD8-BEF5-103C8AC8EDAD
+        description: DivisionID(mandatory)
+      - name: DivisionCode
+        type: text
+        value: Div.I
+        description: DivisionCode(mandatory)
+      - name: DivisionName
+        type: text
+        value: Division I
+        description: DivisionName(mandatory)
+      - name: BlockID
+        type: text
+        value: 2B93347C-61FE-4713-AEC3-2E4406BA698A
+        description: block id (mandatory)
+      - name: BlockCode
+        type: text
+        value: 017/25
+        description: block code(mandatory)
+      - name: BlockName
+        type: text
+        value: Block 017/25
+        description: block name (mandatory)
+      - name: AllocationID
+        type: text
+        value: C49A5627-F71F-495D-B28E-BE436F5270A0
+        description: activity (mandatory)
+      - name: AllocationCode
+        type: text
+        value: "200413"
+        description: activity (mandatory)
+      - name: PartyID
+        type: text
+        value: C3E1FB03-5583-4201-BD90-44BDBB387066
+        description: party ID Contractor (mandatory)
+      - name: PartyCode
+        type: text
+        value: AL031
+        description: party Code Contractor (mandatory)
+      - name: PartyName
+        type: text
+        value: ""
+        description: party Name Contractor (mandatory)
+      - name: ContractNumber
+        type: text
+        value: CP-2-982
+        description: Contract Number (mandatory)
+      - name: date
+        type: text
+        value: 2024-09-26
+        description: (mandatory)
+      - name: notes
+        type: text
+        value: ""
+        description: Notes
+      - name: output
+        type: text
+        value: "20"
+        description: output of the activity
+      - name: mutu_sesuai
+        type: text
+        value: "20"
+        description: mutu_sesuai
+      - name: mutu_tidak_sesuai
+        type: text
+        value: "0"
+        description: mutu_tidak_sesuai
+      - name: hb
+        type: text
+        value: "20"
+        description: hb of the activity
+      - name: EmployeeID
+        type: text
+        value: 1127E513-BADB-405F-B73C-6BE2FDE1388D
+        description: EmployeeID
+      - name: EmployeeNumber
+        type: text
+        value: "2012695"
+        description: user EmployeeNumber (mandatory)
+      - name: EmployeeName
+        type: text
+        value: joko
+        description: EmployeeName
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

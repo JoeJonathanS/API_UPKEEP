@@ -1,0 +1,26 @@
+info:
+  name: DELETE_CONTRACTOR
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{base_url}}/api/activities-contractor/delete-contractor"
+  body:
+    type: multipart-form
+    data:
+      - name: uuid
+        type: text
+        value: asdasd-zx3ss
+        description: transaction uuid
+      - name: EstateCode
+        type: text
+        value: AL
+        description: Estate Code (mandatory)
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

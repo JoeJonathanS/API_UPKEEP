@@ -1,0 +1,148 @@
+info:
+  name: STORE_CONSOLIDATION_RESULT
+  type: http
+  seq: 6
+
+http:
+  method: POST
+  url: "{{base_url}}/api/activities/store-consolidation-result"
+  body:
+    type: multipart-form
+    data:
+      - name: EmployeeID
+        type: text
+        value: "2012303"
+        description: User EmployeeNumber
+      - name: date
+        type: text
+        value: 2026-02-16
+        description: User EmployeeNumber
+      - name: labour[0][uuid]
+        type: text
+        value: PCTOPT-2012303-20260216
+        description: mandatory
+      - name: labour[0][EstateCode]
+        type: text
+        value: AL
+        description: mandatory
+      - name: labour[0][BlockID]
+        type: text
+        value: 53A9AC3A-F8D6-4435-B81E-0FAB0264B725
+        description: mandatory
+      - name: labour[0][EmployeeID]
+        type: text
+        value: 3CBBA527-22C5-481A-9C09-711C889B51F2
+        description: mandatory
+      - name: labour[0][DivisionCode]
+        type: text
+        value: Div.VI
+        description: mandatory
+      - name: labour[0][CFNAllocationCode]
+        type: text
+        value: "200812"
+        description: mandatory
+      - name: labour[0][assignee_id]
+        type: text
+        value: "2012303"
+        description: mandatory
+      - name: labour[0][status]
+        type: text
+        value: "1"
+        description: "1 approved in consolidation ,0 if mangkir "
+      - name: labour[0][work_type]
+        type: text
+        value: "1"
+        description: mandatory, 1 if dinas, 0 if contractor
+      - name: labour[0][date]
+        type: text
+        value: 2026-02-16
+        description: mandatory
+      - name: labour[0][notes]
+        type: text
+        value: ""
+        description: optional
+      - name: labour[1][uuid]
+        type: text
+        value: PCTOPT-2012303-20260216
+      - name: labour[1][EmployeeID]
+        type: text
+        value: FFA9ADC2-9BA0-40C3-B113-6029B720481D
+      - name: labour[1][BlockID]
+        type: text
+        value: 53A9AC3A-F8D6-4435-B81E-0FAB0264B725
+      - name: labour[1][EstateCode]
+        type: text
+        value: AL
+      - name: labour[1][DivisionCode]
+        type: text
+        value: Div.VI
+      - name: labour[1][CFNAllocationCode]
+        type: text
+        value: "200812"
+      - name: labour[1][status]
+        type: text
+        value: "1"
+      - name: labour[1][work_type]
+        type: text
+        value: "1"
+      - name: labour[1][date]
+        type: text
+        value: 2026-02-16
+      - name: labour[1][notes]
+        type: text
+        value: haha hihi
+      - name: labour[1][assignee_id]
+        type: text
+        value: "2011356"
+        disabled: true
+      - name: labour[2][uuid]
+        type: text
+        value: PCTOPT-2011356-20250918153720
+        disabled: true
+      - name: labour[2][EmployeeID]
+        type: text
+        value: B9578D65-85E8-438F-A379-CF5D261478A6
+        disabled: true
+      - name: labour[2][BlockID]
+        type: text
+        value: C89347A8-CC06-4CB9-820A-7F99E66D1F60
+        disabled: true
+      - name: labour[2][EstateCode]
+        type: text
+        value: AL
+        disabled: true
+      - name: labour[2][DivisionCode]
+        type: text
+        value: Div.I
+        disabled: true
+      - name: labour[2][CFNAllocationCode]
+        type: text
+        value: "200721"
+        disabled: true
+      - name: labour[2][status]
+        type: text
+        value: "1"
+        disabled: true
+      - name: labour[2][work_type]
+        type: text
+        value: "1"
+        disabled: true
+      - name: labour[2][date]
+        type: text
+        value: 2025-09-18
+        disabled: true
+      - name: labour[2][notes]
+        type: text
+        value: haha hihi
+        disabled: true
+      - name: labour[2][assignee_id]
+        type: text
+        value: "2011356"
+        disabled: true
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

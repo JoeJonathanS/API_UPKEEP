@@ -1,0 +1,42 @@
+info:
+  name: SET_REPEAT_STATUS_CENSUS
+  type: http
+  seq: 6
+
+http:
+  method: POST
+  url: "{{base_url}}/api/cencus/pest/set-repeat-2-cencus-status"
+  body:
+    type: multipart-form
+    data:
+      - name: uuid
+        type: text
+        value: SensusHama-AL-Div.VI-2602305-2025-03-15
+      - name: EstateCode
+        type: text
+        value: AL
+      - name: WorkingDivisionCode
+        type: text
+        value: Div.VI
+      - name: EmployeeNumber
+        type: text
+        value: "2602305"
+        description: nomor pekerja asisten
+      - name: EmployeeName
+        type: text
+        value: Joko dok
+        description: nama pekerja asisten
+      - name: date
+        type: text
+        value: 2025-03-15
+      - name: butuh_sensus_ulang
+        type: text
+        value: "1"
+        description: jika butuh sensus ulang, maka value 1. jika tidak, maka 0.
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

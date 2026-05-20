@@ -1,0 +1,34 @@
+info:
+  name: VERIFY_ACTIVITY_BY_MANDOR
+  type: http
+  seq: 13
+
+http:
+  method: POST
+  url: "{{base_url}}/api/activities/verify-mandor"
+  body:
+    type: multipart-form
+    data:
+      - name: EmployeeID
+        type: text
+        value: "2308325"
+        description: Mandor User EmployeeNumber
+      - name: EstateCode
+        type: text
+        value: NL
+        description: Mandor User EstateCode
+      - name: DivisionCode
+        type: text
+        value: Div.I
+        description: Mandor User DivisionCode
+      - name: date
+        type: text
+        value: 2025-03-21
+        description: transaction date
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

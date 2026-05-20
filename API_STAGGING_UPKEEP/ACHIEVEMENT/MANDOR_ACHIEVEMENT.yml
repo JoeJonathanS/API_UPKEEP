@@ -1,0 +1,145 @@
+info:
+  name: MANDOR_ACHIEVEMENT
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{base_url}}/api/report-achievement/detail-achievement-mandor"
+  body:
+    type: multipart-form
+    data:
+      - name: EstateID
+        type: text
+        value: 0557B3E2-B268-4DCC-8EA5-48994C28878D
+        description: EstateID
+      - name: EstateCode
+        type: text
+        value: SL
+        description: EstateCode
+      - name: DivisionCode
+        type: text
+        value: Div.I
+        description: DivisionCode
+      - name: EmployeeName
+        type: text
+        value: Jokowow
+        description: Mandor EmployeeName
+      - name: EmployeeNumber
+        type: text
+        value: "1304540"
+        description: Mandor EmployeeNumber
+      - name: TransactionDate
+        type: text
+        value: 2025-04-01
+        description: Transaction date
+  auth: inherit
+
+runtime:
+  scripts:
+    - type: after-response
+      code: "var template = `\r
+
+        <style type=\"text/css\">\r
+
+        \    .tftable {font-size:14px;color:#333333;width:100%;border-width: 1px;border-color: #87ceeb;border-collapse: collapse;}\r
+
+        \    .tftable th {font-size:18px;background-color:#87ceeb;border-width: 1px;padding: 8px;border-style: solid;border-color: #87ceeb;text-align:left;}\r
+
+        \    .tftable tr {background-color:#ffffff;}\r
+
+        \    .tftable td {font-size:14px;border-width: 1px;padding: 8px;border-style: solid;border-color: #87ceeb;}\r
+
+        \    .tftable tr:hover {background-color:#e0ffff;}\r
+
+        </style>\r
+
+        \r
+
+        <table class=\"tftable\" border=\"1\">\r
+
+        \    <tr>\r
+
+        \        <th>CFN Allocation Code</th>\r
+
+        \        <th>CFN Allocation Name</th>\r
+
+        \        <th>Block Code</th>\r
+
+        \        <th>Date</th>\r
+
+        \        <th>Output</th>\r
+
+        \        <th>UOM Code</th>\r
+
+        \        <th>Material Item Code</th>\r
+
+        \        <th>Material Item Name</th>\r
+
+        \        <th>Used Quantity</th>\r
+
+        \        <th>Material UOM</th>\r
+
+        \    </tr>\r
+
+        \    \r
+
+        \    {{#each response.data}}\r
+
+        \        <tr>\r
+
+        \            <td>{{CFNAllocationCode}}</td>\r
+
+        \            <td>{{CFNAllocationName}}</td>\r
+
+        \            <td>{{record.BlockCode}}</td>\r
+
+        \            <td>{{record.date}}</td>\r
+
+        \            <td>{{record.output}}</td>\r
+
+        \            <td>{{record.UOMCode}}</td>\r
+
+        \            {{#each record.material}}\r
+
+        \                <td>{{ItemCode}}</td>\r
+
+        \                <td>{{ItemName}}</td>\r
+
+        \                <td>{{used_quantity}}</td>\r
+
+        \                <td>{{UOM}}</td>\r
+
+        \            {{/each}}\r
+
+        \        </tr>\r
+
+        \    {{/each}}\r
+
+        </table>\r
+
+        `;\r
+
+        \r
+
+        function constructVisualizerPayload() {\r
+
+        \    return { response: res.getBody() };\r
+
+        }\r
+
+        \r
+
+        bru.visualize(\"html\", {\r
+
+        \    template: template,\r
+
+        \    data: constructVisualizerPayload()\r
+
+        });"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,28 @@
+info:
+  name: verifikasi asisten
+  type: http
+  seq: 6
+
+http:
+  method: POST
+  url: "{{base_url}}/api/activity-checking-contractor/verify-assistant"
+  body:
+    type: multipart-form
+    data:
+      - name: EstateCode
+        type: text
+        value: SY
+      - name: date
+        type: text
+        value: 2025-08-15
+      - name: EmployeeNumber
+        type: text
+        value: "1107494"
+        description: Mandor EmployeNumber
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,37 @@
+info:
+  name: GET_ASISTEN
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: "{{base_url}}/api/cencus/tree/oil-palm/get-by-assistant"
+  body:
+    type: multipart-form
+    data:
+      - name: EstateCode
+        type: text
+        value: AL
+        description: Assistant estate code
+      - name: DivisionCode
+        type: text
+        value: Div.I
+        description: Assistant div code
+      - name: date
+        type: text
+        value: 2026-03-18
+        description: transaction date
+      - name: EmployeeNumber
+        type: text
+        value: "3816"
+        description: employee num of user
+      - name: WorkingDivisionCode
+        type: text
+        value: Div.I
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

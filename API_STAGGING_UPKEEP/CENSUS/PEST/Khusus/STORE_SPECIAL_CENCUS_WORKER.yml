@@ -1,0 +1,585 @@
+info:
+  name: STORE_SPECIAL_CENCUS_WORKER
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{base_url}}/api/cencus/pest/store-special"
+  body:
+    type: multipart-form
+    data:
+      - name: EstateID
+        type: text
+        value: BBBC7F2E-E478-47D1-A9B7-DC4A479ABA65
+      - name: EstateCode
+        type: text
+        value: AL
+      - name: DivisionID
+        type: text
+        value: E8DAB315-63AC-46BA-ACB8-E2FC9B00067B
+      - name: DivisionCode
+        type: text
+        value: Div.VI
+      - name: DivisionName
+        type: text
+        value: Division VI
+      - name: WorkingDivisionID
+        type: text
+        value: E8DAB315-63AC-46BA-ACB8-E2FC9B00067B
+      - name: WorkingDivisionCode
+        type: text
+        value: Div.VI
+      - name: WorkingDivisionName
+        type: text
+        value: Division VI
+      - name: MovedToAnotherDivision
+        type: text
+        value: "0"
+      - name: AllocationCode
+        type: text
+        value: 200C14
+      - name: MandorEmployeeID
+        type: text
+        value: 49DDA463-E793-434A-ABF6-1E7CE9F51450
+      - name: MandorEmployeeNumber
+        type: text
+        value: "2602305"
+      - name: MandorEmployeeName
+        type: text
+        value: Yuslina
+      - name: EmployeeID
+        type: text
+        value: CEB58272-B788-4BFE-A6A2-F63ED139BBFA
+      - name: EmployeeNumber
+        type: text
+        value: "1807638"
+      - name: EmployeeName
+        type: text
+        value: Depo Oji Kurniawan
+      - name: employee_type
+        type: text
+        value: labour
+      - name: date
+        type: text
+        value: 2025-03-15
+      - name: data[0][BlockCode]
+        type: text
+        value: 051/06
+      - name: data[0][luas_serangan_tikus]
+        type: text
+        value: "51"
+      - name: data[0][luas_serangan_bunga]
+        type: text
+        value: "52"
+      - name: data[0][luas_serangan_oryctes]
+        type: text
+        value: "53"
+      - name: data[0][result][0][NoTS]
+        type: text
+        value: TS-1
+      - name: data[0][result][0][mortalitas]
+        type: text
+        value: "12321"
+      - name: data[0][result][0][tsDetails][0][PestDiseaseID]
+        type: text
+        value: ""
+      - name: data[0][result][0][tsDetails][0][PestDiseaseCode]
+        type: text
+        value: ""
+      - name: data[0][result][0][tsDetails][0][PestDiseaseName]
+        type: text
+        value: ""
+      - name: data[0][result][0][tsDetails][0][PrimaryTree]
+        type: text
+        value: "0"
+      - name: data[0][result][0][tsDetails][0][NumberOfTree]
+        type: text
+        value: "2"
+      - name: data[0][result][0][tsDetails][0][SuspectedTree]
+        type: text
+        value: "3"
+      - name: data[0][result][0][tsDetails][0][SuspectedTreeNote]
+        type: text
+        value: "3"
+      - name: data[0][result][0][tsDetails][0][Latitude]
+        type: text
+        value: "30.000"
+      - name: data[0][result][0][tsDetails][0][Longitude]
+        type: text
+        value: "99.000"
+      - name: data[0][result][0][tsDetails][0][IsManual]
+        type: text
+        value: "0"
+      - name: data[0][result][0][tsDetails][0][notes]
+        type: text
+        value: . . .
+      - name: data[0][result][0][tsDetails][0][level_serangan]
+        type: text
+        value: tinggi
+      - name: data[0][result][0][tsDetails][0][ukuran_telur][0]
+        type: text
+        value: "0"
+      - name: data[0][result][0][tsDetails][0][jlh_telur][0]
+        type: text
+        value: "0"
+      - name: data[0][result][0][tsDetails][0][ukuran_telur][1]
+        type: text
+        value: "0"
+      - name: data[0][result][0][tsDetails][0][jlh_telur][1]
+        type: text
+        value: "0"
+      - name: data[0][result][0][tsDetails][0][ukuran_larva][0]
+        type: text
+        value: "0"
+      - name: data[0][result][0][tsDetails][0][jlh_larva][0]
+        type: text
+        value: "0"
+      - name: data[0][result][0][tsDetails][0][ukuran_larva][1]
+        type: text
+        value: "0"
+      - name: data[0][result][0][tsDetails][0][jlh_larva][1]
+        type: text
+        value: "0"
+      - name: data[0][result][0][tsDetails][0][ukuran_kepompong][0]
+        type: text
+        value: "0"
+      - name: data[0][result][0][tsDetails][0][jlh_kepompong][0]
+        type: text
+        value: "0"
+      - name: data[0][result][0][tsDetails][0][ukuran_kepompong][1]
+        type: text
+        value: "0"
+      - name: data[0][result][0][tsDetails][0][jlh_kepompong][1]
+        type: text
+        value: "0"
+      - name: data[0][result][0][tsDetails][1][PestDiseaseID]
+        type: text
+        value: 6CD86DA6-9594-4CBA-B2FD-33BAC688161B
+      - name: data[0][result][0][tsDetails][1][PestDiseaseCode]
+        type: text
+        value: Ac
+      - name: data[0][result][0][tsDetails][1][PestDiseaseName]
+        type: text
+        value: Adoretus compressus
+      - name: data[0][result][0][tsDetails][1][PrimaryTree]
+        type: text
+        value: "0"
+      - name: data[0][result][0][tsDetails][1][NumberOfTree]
+        type: text
+        value: "2"
+      - name: data[0][result][0][tsDetails][1][SuspectedTree]
+        type: text
+        value: "3"
+      - name: data[0][result][0][tsDetails][1][Latitude]
+        type: text
+        value: "30.000"
+      - name: data[0][result][0][tsDetails][1][Longitude]
+        type: text
+        value: "99.000"
+      - name: data[0][result][0][tsDetails][1][IsManual]
+        type: text
+        value: "0"
+      - name: data[0][result][0][tsDetails][1][notes]
+        type: text
+        value: . . .
+      - name: data[0][result][0][tsDetails][1][level_serangan]
+        type: text
+        value: tinggi
+      - name: data[0][result][0][tsDetails][1][ukuran_telur][0]
+        type: text
+        value: "0"
+      - name: data[0][result][0][tsDetails][1][jlh_telur][0]
+        type: text
+        value: "0"
+      - name: data[0][result][0][tsDetails][1][ukuran_telur][1]
+        type: text
+        value: "0"
+      - name: data[0][result][0][tsDetails][1][jlh_telur][1]
+        type: text
+        value: "0"
+      - name: data[0][result][0][tsDetails][1][ukuran_larva][0]
+        type: text
+        value: "0"
+      - name: data[0][result][0][tsDetails][1][jlh_larva][0]
+        type: text
+        value: "0"
+      - name: data[0][result][0][tsDetails][1][ukuran_larva][1]
+        type: text
+        value: "0"
+      - name: data[0][result][0][tsDetails][1][jlh_larva][1]
+        type: text
+        value: "0"
+      - name: data[0][result][0][tsDetails][1][ukuran_kepompong][0]
+        type: text
+        value: "0"
+      - name: data[0][result][0][tsDetails][1][jlh_kepompong][0]
+        type: text
+        value: "0"
+      - name: data[0][result][0][tsDetails][1][ukuran_kepompong][1]
+        type: text
+        value: "0"
+      - name: data[0][result][0][tsDetails][1][jlh_kepompong][1]
+        type: text
+        value: "0"
+      - name: data[0][result][0][tikus]
+        type: text
+        value: "0"
+      - name: data[0][result][0][bunga]
+        type: text
+        value: "0"
+      - name: data[0][result][0][oryctes]
+        type: text
+        value: "0"
+      - name: data[0][result][1][NoTS]
+        type: text
+        value: TS-2
+      - name: data[0][result][1][mortalitas]
+        type: text
+        value: "123"
+      - name: data[0][result][1][tsDetails][0][PestDiseaseID]
+        type: text
+        value: BE943676-4388-465B-9AAB-3941DD8D76A6
+      - name: data[0][result][1][tsDetails][0][PestDiseaseCode]
+        type: text
+        value: Pb
+      - name: data[0][result][1][tsDetails][0][PestDiseaseName]
+        type: text
+        value: Ploneta bradleyi
+      - name: data[0][result][1][tsDetails][0][PrimaryTree]
+        type: text
+        value: "1"
+      - name: data[0][result][1][tsDetails][0][NumberOfTree]
+        type: text
+        value: "2"
+      - name: data[0][result][1][tsDetails][0][SuspectedTree]
+        type: text
+        value: "3"
+      - name: data[0][result][1][tsDetails][0][SuspectedTreeNote]
+        type: text
+        value: "3"
+      - name: data[0][result][1][tsDetails][0][Latitude]
+        type: text
+        value: "30.000"
+      - name: data[0][result][1][tsDetails][0][Longitude]
+        type: text
+        value: "99.000"
+      - name: data[0][result][1][tsDetails][0][IsManual]
+        type: text
+        value: "0"
+      - name: data[0][result][1][tsDetails][0][notes]
+        type: text
+        value: . . .
+      - name: data[0][result][1][tsDetails][0][level_serangan]
+        type: text
+        value: tinggi
+      - name: data[0][result][1][tsDetails][0][ukuran_telur][0]
+        type: text
+        value: "0"
+      - name: data[0][result][1][tsDetails][0][jlh_telur][0]
+        type: text
+        value: "0"
+      - name: data[0][result][1][tsDetails][0][ukuran_telur][1]
+        type: text
+        value: "0"
+      - name: data[0][result][1][tsDetails][0][jlh_telur][1]
+        type: text
+        value: "0"
+      - name: data[0][result][1][tsDetails][0][ukuran_larva][0]
+        type: text
+        value: "0"
+      - name: data[0][result][1][tsDetails][0][jlh_larva][0]
+        type: text
+        value: "0"
+      - name: data[0][result][1][tsDetails][0][ukuran_larva][1]
+        type: text
+        value: "0"
+      - name: data[0][result][1][tsDetails][0][jlh_larva][1]
+        type: text
+        value: "0"
+      - name: data[0][result][1][tsDetails][0][ukuran_kepompong][0]
+        type: text
+        value: "0"
+      - name: data[0][result][1][tsDetails][0][jlh_kepompong][0]
+        type: text
+        value: "0"
+      - name: data[0][result][1][tsDetails][0][ukuran_kepompong][1]
+        type: text
+        value: "0"
+      - name: data[0][result][1][tsDetails][0][jlh_kepompong][1]
+        type: text
+        value: "0"
+      - name: data[0][result][1][tsDetails][1][PestDiseaseID]
+        type: text
+        value: 6CD86DA6-9594-4CBA-B2FD-33BAC688161B
+      - name: data[0][result][1][tsDetails][1][PestDiseaseCode]
+        type: text
+        value: Ac
+      - name: data[0][result][1][tsDetails][1][PestDiseaseName]
+        type: text
+        value: Adoretus compressus
+      - name: data[0][result][1][tsDetails][1][PrimaryTree]
+        type: text
+        value: "1"
+      - name: data[0][result][1][tsDetails][1][NumberOfTree]
+        type: text
+        value: "2"
+      - name: data[0][result][1][tsDetails][1][SuspectedTree]
+        type: text
+        value: "3"
+      - name: data[0][result][1][tsDetails][1][SuspectedTreeNote]
+        type: text
+        value: "3"
+      - name: data[0][result][1][tsDetails][1][Latitude]
+        type: text
+        value: "30.000"
+      - name: data[0][result][1][tsDetails][1][Longitude]
+        type: text
+        value: "99.000"
+      - name: data[0][result][1][tsDetails][1][IsManual]
+        type: text
+        value: "0"
+      - name: data[0][result][1][tsDetails][1][notes]
+        type: text
+        value: . . .
+      - name: data[0][result][1][tsDetails][1][level_serangan]
+        type: text
+        value: tinggi
+      - name: data[0][result][1][tsDetails][1][ukuran_telur][0]
+        type: text
+        value: "0"
+      - name: data[0][result][1][tsDetails][1][jlh_telur][0]
+        type: text
+        value: "0"
+      - name: data[0][result][1][tsDetails][1][ukuran_telur][1]
+        type: text
+        value: "0"
+      - name: data[0][result][1][tsDetails][1][jlh_telur][1]
+        type: text
+        value: "0"
+      - name: data[0][result][1][tsDetails][1][ukuran_larva][0]
+        type: text
+        value: "0"
+      - name: data[0][result][1][tsDetails][1][jlh_larva][0]
+        type: text
+        value: "0"
+      - name: data[0][result][1][tsDetails][1][ukuran_larva][1]
+        type: text
+        value: "0"
+      - name: data[0][result][1][tsDetails][1][jlh_larva][1]
+        type: text
+        value: "0"
+      - name: data[0][result][1][tsDetails][1][ukuran_kepompong][0]
+        type: text
+        value: "0"
+      - name: data[0][result][1][tsDetails][1][jlh_kepompong][0]
+        type: text
+        value: "0"
+      - name: data[0][result][1][tsDetails][1][ukuran_kepompong][1]
+        type: text
+        value: "0"
+      - name: data[0][result][1][tsDetails][1][jlh_kepompong][1]
+        type: text
+        value: "0"
+      - name: data[0][result][1][tikus]
+        type: text
+        value: "0"
+      - name: data[0][result][1][bunga]
+        type: text
+        value: "0"
+      - name: data[0][result][1][oryctes]
+        type: text
+        value: "0"
+      - name: data[1][BlockCode]
+        type: text
+        value: 061/06
+      - name: data[1][luas_serangan_tikus]
+        type: text
+        value: "51"
+      - name: data[1][luas_serangan_bunga]
+        type: text
+        value: "52"
+      - name: data[1][luas_serangan_oryctes]
+        type: text
+        value: "53"
+      - name: data[1][result][0][NoTS]
+        type: text
+        value: TS-1
+      - name: data[1][result][0][mortalitas]
+        type: text
+        value: "1"
+      - name: data[1][result][0][tsDetails][0][PestDiseaseID]
+        type: text
+        value: BE943676-4388-465B-9AAB-3941DD8D76A6
+      - name: data[1][result][0][tsDetails][0][PestDiseaseCode]
+        type: text
+        value: Pb
+      - name: data[1][result][0][tsDetails][0][PestDiseaseName]
+        type: text
+        value: Ploneta bradleyi
+      - name: data[1][result][0][tsDetails][0][PrimaryTree]
+        type: text
+        value: "1"
+      - name: data[1][result][0][tsDetails][0][NumberOfTree]
+        type: text
+        value: "2"
+      - name: data[1][result][0][tsDetails][0][SuspectedTree]
+        type: text
+        value: "3"
+      - name: data[1][result][0][tsDetails][0][SuspectedTreeNote]
+        type: text
+        value: "3"
+      - name: data[1][result][0][tsDetails][0][Latitude]
+        type: text
+        value: "30.000"
+      - name: data[1][result][0][tsDetails][0][Longitude]
+        type: text
+        value: "99.000"
+      - name: data[1][result][0][tsDetails][0][IsManual]
+        type: text
+        value: "0"
+      - name: data[1][result][0][tsDetails][0][notes]
+        type: text
+        value: . . .
+      - name: data[1][result][0][tsDetails][0][level_serangan]
+        type: text
+        value: tinggi
+      - name: data[1][result][0][tsDetails][0][ukuran_telur][0]
+        type: text
+        value: "0"
+      - name: data[1][result][0][tsDetails][0][jlh_telur][0]
+        type: text
+        value: "0"
+      - name: data[1][result][0][tsDetails][0][ukuran_telur][1]
+        type: text
+        value: "0"
+      - name: data[1][result][0][tsDetails][0][jlh_telur][1]
+        type: text
+        value: "0"
+      - name: data[1][result][0][tsDetails][0][ukuran_larva][0]
+        type: text
+        value: "0"
+      - name: data[1][result][0][tsDetails][0][jlh_larva][0]
+        type: text
+        value: "0"
+      - name: data[1][result][0][tsDetails][0][ukuran_larva][1]
+        type: text
+        value: "0"
+      - name: data[1][result][0][tsDetails][0][jlh_larva][1]
+        type: text
+        value: "0"
+      - name: data[1][result][0][tsDetails][0][ukuran_kepompong][0]
+        type: text
+        value: "0"
+      - name: data[1][result][0][tsDetails][0][jlh_kepompong][0]
+        type: text
+        value: "0"
+      - name: data[1][result][0][tsDetails][0][ukuran_kepompong][1]
+        type: text
+        value: "0"
+      - name: data[1][result][0][tsDetails][0][jlh_kepompong][1]
+        type: text
+        value: "0"
+      - name: data[1][result][0][tsDetails][1][PestDiseaseID]
+        type: text
+        value: 6CD86DA6-9594-4CBA-B2FD-33BAC688161B
+      - name: data[1][result][0][tsDetails][1][PestDiseaseCode]
+        type: text
+        value: Ac
+      - name: data[1][result][0][tsDetails][1][PestDiseaseName]
+        type: text
+        value: Adoretus compressus
+      - name: data[1][result][0][tsDetails][1][PrimaryTree]
+        type: text
+        value: "0"
+      - name: data[1][result][0][tsDetails][1][NumberOfTree]
+        type: text
+        value: "2"
+      - name: data[1][result][0][tsDetails][1][SuspectedTree]
+        type: text
+        value: "3"
+      - name: data[1][result][0][tsDetails][1][SuspectedTreeNote]
+        type: text
+        value: "3"
+      - name: data[1][result][0][tsDetails][1][Latitude]
+        type: text
+        value: "30.000"
+      - name: data[1][result][0][tsDetails][1][Longitude]
+        type: text
+        value: "99.000"
+      - name: data[1][result][0][tsDetails][1][IsManual]
+        type: text
+        value: "0"
+      - name: data[1][result][0][tsDetails][1][notes]
+        type: text
+        value: . . .
+      - name: data[1][result][0][tsDetails][1][level_serangan]
+        type: text
+        value: tinggi
+      - name: data[1][result][0][tsDetails][1][ukuran_telur][0]
+        type: text
+        value: "0"
+      - name: data[1][result][0][tsDetails][1][jlh_telur][0]
+        type: text
+        value: "0"
+      - name: data[1][result][0][tsDetails][1][ukuran_telur][1]
+        type: text
+        value: "0"
+      - name: data[1][result][0][tsDetails][1][jlh_telur][1]
+        type: text
+        value: "0"
+      - name: data[1][result][0][tsDetails][1][ukuran_larva][0]
+        type: text
+        value: "0"
+      - name: data[1][result][0][tsDetails][1][jlh_larva][0]
+        type: text
+        value: "0"
+      - name: data[1][result][0][tsDetails][1][ukuran_larva][1]
+        type: text
+        value: "0"
+      - name: data[1][result][0][tsDetails][1][jlh_larva][1]
+        type: text
+        value: "0"
+      - name: data[1][result][0][tsDetails][1][ukuran_kepompong][0]
+        type: text
+        value: "0"
+      - name: data[1][result][0][tsDetails][1][jlh_kepompong][0]
+        type: text
+        value: "0"
+      - name: data[1][result][0][tsDetails][1][ukuran_kepompong][1]
+        type: text
+        value: "0"
+      - name: data[1][result][0][tsDetails][1][jlh_kepompong][1]
+        type: text
+        value: "0"
+      - name: data[1][result][0][tikus]
+        type: text
+        value: "0"
+      - name: data[1][result][0][bunga]
+        type: text
+        value: "0"
+      - name: data[1][result][0][oryctes]
+        type: text
+        value: "0"
+      - name: data[1][result][1][NoTS]
+        type: text
+        value: TS-2
+      - name: data[1][result][1][mortalitas]
+        type: text
+        value: "2"
+      - name: data[1][result][1][tikus]
+        type: text
+        value: "0"
+      - name: data[1][result][1][bunga]
+        type: text
+        value: "0"
+      - name: data[1][result][1][oryctes]
+        type: text
+        value: "0"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

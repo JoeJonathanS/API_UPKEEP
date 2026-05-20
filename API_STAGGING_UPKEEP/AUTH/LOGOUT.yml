@@ -1,0 +1,26 @@
+info:
+  name: LOGOUT
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{base_url}}/api/auth/logout"
+  body:
+    type: multipart-form
+    data:
+      - name: username
+        type: text
+        value: foreman_1
+        disabled: true
+      - name: password
+        type: text
+        value: test001
+        disabled: true
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

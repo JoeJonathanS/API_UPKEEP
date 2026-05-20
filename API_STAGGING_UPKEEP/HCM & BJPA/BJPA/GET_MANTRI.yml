@@ -1,0 +1,27 @@
+info:
+  name: GET_MANTRI
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: "{{base_url}}/api/bjpa/get-by-mantri"
+  body:
+    type: multipart-form
+    data:
+      - name: EstateCode
+        type: text
+        value: MP
+      - name: WorkingDivisionCode
+        type: text
+        value: Div.II
+      - name: date
+        type: text
+        value: 2026-02-10
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

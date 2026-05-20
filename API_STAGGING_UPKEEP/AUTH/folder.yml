@@ -1,0 +1,9 @@
+info:
+  name: AUTH
+  type: folder
+  seq: 1
+
+request:
+  auth:
+    type: bearer
+    token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ1cGtlZXAtYXBpIiwic3ViIjoibG9naW50b2tlbiIsImlhdCI6MTc0NTkxNTEyOCwiZXhwIjoxNzQ2NTE5OTI4LCJ1c2VybmFtZSI6InBlcmFuZ2luYW5naW5qIn0.Ro0gKUMfms4Ogpez2RImG8K3IGxbNb0OX3Lcc4AClLs

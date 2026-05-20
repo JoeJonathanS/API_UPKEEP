@@ -1,0 +1,35 @@
+info:
+  name: VERIFY_MANDOR_ASSISTANT
+  type: http
+  seq: 10
+
+http:
+  method: POST
+  url: "{{base_url}}/api/activity-checking/verify-activity-checking-assistant"
+  body:
+    type: multipart-form
+    data:
+      - name: EstateCode
+        type: text
+        value: MP
+      - name: DivisionCode
+        type: text
+        value: Div.III
+      - name: date
+        type: text
+        value: 2025-01-31
+      - name: EmployeeNumber
+        type: text
+        value: ""
+        description: Assistant EmployeNumber
+      - name: EmployeeName
+        type: text
+        value: ""
+        description: Assistant EmployeName
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

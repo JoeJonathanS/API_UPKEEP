@@ -1,0 +1,28 @@
+info:
+  name: GET_FR_MANDOR
+  type: http
+  seq: 1
+
+http:
+  method: GET
+  url: "{{base_url}}/api/user-face/detail/?EstateCode=SL&DivisionID=B1E2C408-4E1F-4680-B20A-8C66E101EA96&EmployeeID=405E9926-AE91-47DD-99AB-CE67CD702078"
+  params:
+    - name: EstateCode
+      value: SL
+      type: query
+      description: C1CFE70B-5CD4-419A-B5E7-76358B16EE14
+    - name: DivisionID
+      value: B1E2C408-4E1F-4680-B20A-8C66E101EA96
+      type: query
+      description: FBE65292-5272-46F8-A829-9A307E49356D
+    - name: EmployeeID
+      value: 405E9926-AE91-47DD-99AB-CE67CD702078
+      type: query
+      description: "301001"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

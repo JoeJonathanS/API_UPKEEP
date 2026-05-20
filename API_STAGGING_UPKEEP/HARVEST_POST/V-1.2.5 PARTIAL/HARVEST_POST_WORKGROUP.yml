@@ -1,0 +1,46 @@
+info:
+  name: HARVEST_POST_WORKGROUP
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: "{{base_url}}/api/report-verification/post-workgroup-attendance"
+  body:
+    type: multipart-form
+    data:
+      - name: EstateID
+        type: text
+        value: 1CC0C388-41D3-450C-8561-A1D0B0C805AE
+        description: EstateID
+      - name: EstateCode
+        type: text
+        value: TG
+        description: EstateCode
+      - name: WorkingDivisionCode
+        type: text
+        value: Div.I
+        description: WorkingDivisionCode
+      - name: EmployeeNumber
+        type: text
+        value: "3804"
+        description: Assistant EmployeeNumber
+      - name: MandorEmployeeNumber
+        type: text
+        value: "1807127"
+        description: Mandor EmployeeNumber
+      - name: SheetNumber
+        type: text
+        value: 2026/RLKMA/04/01/1807127/1
+        description: sheet number
+      - name: TransactionDate
+        type: text
+        value: 2026-03-25
+        description: Transaction date
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

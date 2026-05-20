@@ -1,0 +1,54 @@
+info:
+  name: GENERATE_OVERTIME
+  type: http
+  seq: 10
+
+http:
+  method: POST
+  url: "{{base_url}}/api/report-verification/generate-report-overtime"
+  body:
+    type: multipart-form
+    data:
+      - name: EstateID
+        type: text
+        value: D60334A7-6AD6-47CD-B7DA-82391CD2475B
+        description: EstateID
+      - name: EstateCode
+        type: text
+        value: SY
+        description: EstateCode
+      - name: EstateName
+        type: text
+        value: Seumayam
+        description: WorkingDivisionCode
+      - name: WorkingDivisionID
+        type: text
+        value: 06A9192F-1043-4D6D-8EF5-73DF7FC23434
+      - name: WorkingDivisionCode
+        type: text
+        value: Div.II
+        description: Transaction date
+      - name: WorkingDivisionName
+        type: text
+        value: Division II
+        description: Transaction date
+      - name: EmployeeNumber
+        type: text
+        value: "3731"
+      - name: WeekdayName
+        type: text
+        value: Sunday
+      - name: TransactionDate
+        type: text
+        value: 2026-03-15
+      - name: inijoe
+        type: text
+        value: "1"
+        disabled: true
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

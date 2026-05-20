@@ -1,0 +1,75 @@
+info:
+  name: SUPERVISOR_IN
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{base_url}}/api/attendance/check-in"
+  body:
+    type: multipart-form
+    data:
+      - name: uuid
+        type: text
+        value: PRSSPV-1701798-20250620
+        description: uuid
+      - name: EstateID
+        type: text
+        value: DDD4D637-56B8-414A-ACCA-C009685BE084
+        description: Estate ID
+      - name: EmployeeID
+        type: text
+        value: F040F7E0-3526-4DE3-9AC6-0399B45BAB5C
+        description: Employee ID
+      - name: WorkingDivisionID
+        type: text
+        value: 9D0F0BDB-46F2-40D6-88D9-487C074573A0
+        description: WorkingDivisionID
+      - name: WorkingDivisionCode
+        type: text
+        value: Div. I
+        description: WorkingDivisionCode
+      - name: WorkingDivisionName
+        type: text
+        value: Division I
+        description: WorkingDivisionName
+      - name: MovedToAnotherDivision
+        type: text
+        value: "0"
+        description: MovedToAnotherDivision (boolean, 0 if in original division, 1 if work in other division)
+      - name: check_in
+        type: text
+        value: 06:49:02.0000000
+        description: check in time
+      - name: attendance_date
+        type: text
+        value: 2025-06-25
+        description: attendance date
+      - name: face_status_in
+        type: text
+        value: "1"
+        description: boolean, 0 if using manual cam, otherwise 1
+      - name: long_in
+        type: text
+        value: "99.0519646"
+        description: longitude check in
+      - name: lat_in
+        type: text
+        value: "3.3084177"
+        description: latitude check in
+      - name: day_flagging
+        type: text
+        value: "1"
+        description: if friday = 1, else 0
+      - name: face_image_in
+        type: file
+        value:
+          - /C:/Users/Asus/Pictures/Screenshots/Screenshot (7).png
+        description: image file
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,30 @@
+info:
+  name: PEST_DISEASE
+  type: http
+  seq: 17
+
+http:
+  method: GET
+  url: "{{base_url}}/api/sync/master-pest-disease?EstateCode=AL&request_date=2025-06-12"
+  params:
+    - name: EmployeeID
+      value: "20010"
+      type: query
+      disabled: true
+    - name: TypeID
+      value: B27935B4-7099-4E57-8790-053AA619B10B
+      type: query
+      disabled: true
+    - name: EstateCode
+      value: AL
+      type: query
+    - name: request_date
+      value: 2025-06-12
+      type: query
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,32 @@
+info:
+  name: GET_ALL_REPORT
+  type: http
+  seq: 6
+
+http:
+  method: POST
+  url: "{{base_url}}/api/meteorology/all-report"
+  body:
+    type: multipart-form
+    data:
+      - name: EstateCode
+        type: text
+        value: TG
+      - name: DivisionCode
+        type: text
+        value: Div.I
+      - name: EmployeeNumber
+        type: text
+        value: "1807053"
+        description: Employee Number of user
+      - name: date
+        type: text
+        value: 2024-09-30
+        disabled: true
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

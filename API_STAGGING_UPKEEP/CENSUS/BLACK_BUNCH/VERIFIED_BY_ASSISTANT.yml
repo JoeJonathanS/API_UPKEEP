@@ -1,0 +1,37 @@
+info:
+  name: VERIFIED_BY_ASSISTANT
+  type: http
+  seq: 9
+
+http:
+  method: POST
+  url: "{{base_url}}/api/cencus/black-bunch/verified-by-assistant"
+  body:
+    type: multipart-form
+    data:
+      - name: EstateCode
+        type: text
+        value: AL
+        description: estate code
+      - name: DivisionCode
+        type: text
+        value: Div.I
+        description: division Code
+      - name: EmployeeNumber
+        type: text
+        value: "3840"
+        description: employee num of assistant
+      - name: EmployeeName
+        type: text
+        value: Jokovi
+        description: employee name of assistant
+      - name: uuid[0]
+        type: text
+        value: SensusHama-AL-Div.I-001/04-2011356-20250831
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,28 @@
+info:
+  name: VERIFY_MANDOR_UPKEEP
+  type: http
+  seq: 8
+
+http:
+  method: POST
+  url: "{{base_url}}/api/activity-checking/verify-activity-checking-mandor-upkeep"
+  body:
+    type: multipart-form
+    data:
+      - name: EstateCode
+        type: text
+        value: TG
+      - name: date
+        type: text
+        value: 2025-02-18
+      - name: EmployeeNumber
+        type: text
+        value: "1405678"
+        description: Mandor EmployeNumber
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

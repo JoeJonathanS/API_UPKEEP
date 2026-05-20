@@ -1,0 +1,118 @@
+info:
+  name: CREATE
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{base_url}}/api/overtime/store"
+  body:
+    type: multipart-form
+    data:
+      - name: uuid
+        type: text
+        value: O-1
+      - name: isManual
+        type: text
+        value: "1"
+        description: Mandatory, 0 if asisstant, 1 if mandor (lembur manual)
+      - name: assignee_id
+        type: text
+        value: "301001"
+        description: Mandoran ID
+      - name: mandor_id
+        type: text
+        value: asd
+        description: EmployeeID if user mandor assigneed task
+      - name: WeekdayName
+        type: text
+        value: Monday
+        description: WeekdayName of overtime working day
+      - name: overtime_date
+        type: text
+        value: 2027-01-13
+        description: Lembur Date
+      - name: BlockID
+        type: text
+        value: 9E923FF2-9B87-493B-884C-03B9DFDBD5AD
+        description: Block ID ( blok tujuan lembur )
+      - name: DivisionID
+        type: text
+        value: ""
+        description: Division ID ( divisi tujuan lembur )
+      - name: EmployeeNumber
+        type: text
+        value: "10010"
+        description: User Employee Number
+      - name: WorkingDivisionID
+        type: text
+        value: X-Y-Z
+        description: WORKING DIVISON ID
+      - name: WorkingDivisionCode
+        type: text
+        value: X-Y-Z
+        description: WORKING DIVISON CODE
+      - name: WorkingDivisionName
+        type: text
+        value: X-Y-Z
+        description: WORKING DIVISON Name
+      - name: MovedToAnotherDivision
+        type: text
+        value: "0"
+        description: MovedToAnotherDivision Flag
+      - name: EstateID
+        type: text
+        value: C1CFE70B-5CD4-419A-B5E7-76358B16EE14
+      - name: labour[0][EmployeeID]
+        type: text
+        value: L4
+        description: uuid
+      - name: labour[0][BlockIDEmployee]
+        type: text
+        value: ""
+        description: block id employee for mandor 1 worker (use if needed , nullable)
+      - name: labour[0][BlockCodeEmployee]
+        type: text
+        value: ""
+        description: block code employee for mandor 1 worker (use if needed , nullable)
+      - name: labour[0][AnalysisCodeID]
+        type: text
+        value: ""
+        description: if needed
+      - name: labour[0][AnalysisCode]
+        type: text
+        value: ""
+        description: if needed
+      - name: labour[0][CFNAllocationID]
+        type: text
+        value: ""
+        description: if needed
+      - name: labour[0][CFNAllocationCode]
+        type: text
+        value: ""
+        description: if needed
+      - name: labour[0][CFNAllocationName]
+        type: text
+        value: ""
+        description: if needed
+      - name: labour[0][expected_duration_start]
+        type: text
+        value: 12:00
+        description: worker employee id
+      - name: labour[0][expected_duration_end]
+        type: text
+        value: 14:00
+      - name: labour[0][expected_total_duration]
+        type: text
+        value: "2"
+      - name: labour[0][is_active]
+        type: text
+        value: "1"
+        description: status aktif dari pekerja lembur, 1 jika aktif dan 0 jika tidak. jika 1 menandakan tidak dihapus dari data. jika 0, maka dia akan dihapus
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

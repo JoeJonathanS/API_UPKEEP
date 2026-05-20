@@ -1,0 +1,35 @@
+info:
+  name: GET_BY_ASSISTANT
+  type: http
+  seq: 5
+
+http:
+  method: POST
+  url: "{{base_url}}/api/disturbance-output/get-by-assistant"
+  body:
+    type: multipart-form
+    data:
+      - name: EstateCode
+        type: text
+        value: TG
+      - name: DivisionCode
+        type: text
+        value: Div.IV
+      - name: date
+        type: text
+        value: 2026-01-19
+      - name: start_date
+        type: text
+        value: 2026-01-01
+        description: jika perlu
+      - name: end_date
+        type: text
+        value: 2026-01-31
+        description: jika perlu
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

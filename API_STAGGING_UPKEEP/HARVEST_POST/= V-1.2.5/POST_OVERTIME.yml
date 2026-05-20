@@ -1,0 +1,51 @@
+info:
+  name: POST_OVERTIME
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{base_url}}/api/harvest/generate-overtime"
+  body:
+    type: multipart-form
+    data:
+      - name: EstateID
+        type: text
+        value: C1CFE70B-5CD4-419A-B5E7-76358B16EE14
+        description: Estate ID
+      - name: EstateCode
+        type: text
+        value: BB
+        description: Estate Code
+      - name: EstateName
+        type: text
+        value: Bangun Bandar
+        description: Estate Name
+      - name: WorkingDivisionID
+        type: text
+        value: 3EDF4F1F-9730-4045-8A8F-5F42659FA328
+      - name: WorkingDivisionCode
+        type: text
+        value: Div.I
+      - name: WorkingDivisionName
+        type: text
+        value: Division I
+      - name: EmployeeNumber
+        type: text
+        value: "3748"
+        description: assistant number code
+      - name: WeekdayName
+        type: text
+        value: Wednesday
+        description: working day name
+      - name: TransactionDate
+        type: text
+        value: 2024-11-13
+        description: Today
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

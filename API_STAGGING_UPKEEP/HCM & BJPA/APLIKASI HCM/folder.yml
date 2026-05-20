@@ -1,0 +1,7 @@
+info:
+  name: APLIKASI HCM
+  type: folder
+  seq: 2
+
+request:
+  auth: inherit

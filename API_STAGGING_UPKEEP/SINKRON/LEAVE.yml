@@ -1,0 +1,19 @@
+info:
+  name: LEAVE
+  type: http
+  seq: 9
+
+http:
+  method: GET
+  url: "{{base_url}}/api/sync/master-leave/?EstateCode=TB"
+  params:
+    - name: EstateCode
+      value: TB
+      type: query
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

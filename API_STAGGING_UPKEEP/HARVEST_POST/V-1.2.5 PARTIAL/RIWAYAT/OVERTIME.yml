@@ -1,0 +1,30 @@
+info:
+  name: OVERTIME
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{base_url}}/api/report-verification/history/overtime"
+  body:
+    type: multipart-form
+    data:
+      - name: EstateCode
+        type: text
+        value: AL
+        description: EstateCode
+      - name: WorkingDivisionCode
+        type: text
+        value: Div.I
+        description: WorkingDivisionCode
+      - name: TransactionDate
+        type: text
+        value: 2025-06-20
+        description: Transaction date
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

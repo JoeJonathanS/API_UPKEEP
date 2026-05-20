@@ -1,0 +1,35 @@
+info:
+  name: ALPHA_MATERIAL_LIST_ASSISTANT
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: "{{base_url}}/api/report-material-alpha/get-assistant"
+  body:
+    type: multipart-form
+    data:
+      - name: EstateID
+        type: text
+        value: BBBC7F2E-E478-47D1-A9B7-DC4A479ABA65
+      - name: EstateCode
+        type: text
+        value: AL
+      - name: WorkingDivisionCode
+        type: text
+        value: Div.I
+      - name: TransactionDate
+        type: text
+        value: 2025-09-09
+      - name: EmployeeNumber
+        type: text
+        value: "1605373"
+        description: used when the mandor need to check his latest working division
+        disabled: true
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

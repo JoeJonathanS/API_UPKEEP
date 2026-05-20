@@ -1,0 +1,30 @@
+info:
+  name: VERIFIED_PETUGAS
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{base_url}}/api/cencus/disease/rubber/verified-by-worker"
+  body:
+    type: multipart-form
+    data:
+      - name: EstateCode
+        type: text
+        value: AP
+      - name: MandorEmployeeNumber
+        type: text
+        value: "2602305"
+      - name: date
+        type: text
+        value: 2025-03-03
+      - name: uuid
+        type: text
+        value: xxx-yyy-zzz
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

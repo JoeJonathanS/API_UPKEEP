@@ -1,0 +1,7 @@
+info:
+  name: API_LATEX
+  type: folder
+  seq: 21
+
+request:
+  auth: inherit

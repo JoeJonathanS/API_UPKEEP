@@ -1,0 +1,102 @@
+info:
+  name: CHECK_CENSUS_ELIGIBILITY
+  type: http
+  seq: 9
+
+http:
+  method: POST
+  url: "{{base_url}}/api/cencus/check-worker-eligibility"
+  body:
+    type: multipart-form
+    data:
+      - name: EstateCode
+        type: text
+        value: AL
+        description: EstateCode Pekerja
+      - name: EmployeeNumber
+        type: text
+        value: "2012542"
+        description: EmployeeNumber pekerja
+      - name: date
+        type: text
+        value: 2025-04-30
+  auth: inherit
+
+runtime:
+  scripts:
+    - type: after-response
+      code: "var template = `\r
+
+        <style type=\"text/css\">\r
+
+        \    .tftable {font-size:14px;color:#333333;width:100%;border-width: 1px;border-color: #87ceeb;border-collapse: collapse;}\r
+
+        \    .tftable th {font-size:18px;background-color:#87ceeb;border-width: 1px;padding: 8px;border-style: solid;border-color: #87ceeb;text-align:left;}\r
+
+        \    .tftable tr {background-color:#ffffff;}\r
+
+        \    .tftable td {font-size:14px;border-width: 1px;padding: 8px;border-style: solid;border-color: #87ceeb;}\r
+
+        \    .tftable tr:hover {background-color:#e0ffff;}\r
+
+        </style>\r
+
+        \r
+
+        <table class=\"tftable\" border=\"1\">\r
+
+        \    <tr>\r
+
+        \        <th>Status</th>\r
+
+        \        <th>Message</th>\r
+
+        \        <th>Execution Time</th>\r
+
+        \        <th>Processing Time</th>\r
+
+        \        <th>Total Data</th>\r
+
+        \    </tr>\r
+
+        \    <tr>\r
+
+        \        <td>{{response.status}}</td>\r
+
+        \        <td>{{response.message}}</td>\r
+
+        \        <td>{{response.execution_time}}</td>\r
+
+        \        <td>{{response.processingTime}}</td>\r
+
+        \        <td>{{response.total_data}}</td>\r
+
+        \    </tr>\r
+
+        </table>\r
+
+        `;\r
+
+        \r
+
+        function constructVisualizerPayload() {\r
+
+        \    return {response: res.getBody()};\r
+
+        }\r
+
+        \r
+
+        bru.visualize(\"html\", {\r
+
+        \    template: template,\r
+
+        \    data: constructVisualizerPayload()\r
+
+        });"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

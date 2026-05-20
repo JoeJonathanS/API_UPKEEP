@@ -1,0 +1,7 @@
+info:
+  name: BLACK_BUNCH
+  type: folder
+  seq: 1
+
+request:
+  auth: inherit

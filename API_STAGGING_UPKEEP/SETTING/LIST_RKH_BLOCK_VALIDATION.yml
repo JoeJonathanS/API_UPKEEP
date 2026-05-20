@@ -1,0 +1,24 @@
+info:
+  name: LIST_RKH_BLOCK_VALIDATION
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{base_url}}/api/setting/rkh-block-validation"
+  body:
+    type: multipart-form
+    data:
+      - name: EstateCode
+        type: text
+        value: SY
+      - name: TransactionDate
+        type: text
+        value: 2025-05-09
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

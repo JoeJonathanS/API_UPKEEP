@@ -1,0 +1,31 @@
+info:
+  name: LIST_RECORD_ASSISTANT
+  type: http
+  seq: 7
+
+http:
+  method: POST
+  url: "{{base_url}}/api/activity-checking/list-record-assistant"
+  body:
+    type: multipart-form
+    data:
+      - name: EstateCode
+        type: text
+        value: SL
+      - name: DivisionCode
+        type: text
+        value: Div.IV
+      - name: EmployeeNumber
+        type: text
+        value: "1806985"
+        disabled: true
+      - name: date
+        type: text
+        value: 2025-04-15
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

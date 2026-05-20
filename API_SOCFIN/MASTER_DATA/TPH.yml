@@ -1,0 +1,18 @@
+info:
+  name: TPH
+  type: http
+  seq: 5
+
+http:
+  method: GET
+  url: http://smashapisvr.socfin.co.id/api/smash-up/dev/masterupkeep/workplace/NL
+  headers:
+    - name: Authorization
+      value: f9ffce0a0c85aa92956c025fbaac1a22.26a565a8f123a4437c7671dc1df737c7
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

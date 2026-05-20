@@ -1,0 +1,29 @@
+info:
+  name: SEED_TYPE
+  type: http
+  seq: 16
+
+http:
+  method: GET
+  url: "{{base_url}}/api/sync/master-seed-type?EstateCode=TB"
+  params:
+    - name: EstateCode
+      value: TB
+      type: query
+    - name: EmployeeID
+      value: "1807053"
+      type: query
+      disabled: true
+    - name: DivisionID
+      value: 3EDF4F1F-9730-4045-8A8F-5F42659FA328
+      type: query
+      disabled: true
+  body:
+    type: multipart-form
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

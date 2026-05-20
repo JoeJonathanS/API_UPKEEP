@@ -1,0 +1,155 @@
+info:
+  name: LABOUR_IN
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: "{{base_url}}/api/attendance/labour-check-in"
+  headers:
+    - name: u_employee_id
+      value: "1"
+      disabled: true
+    - name: data
+      value: "[]"
+      disabled: true
+  params:
+    - name: ""
+      value: ""
+      type: query
+      disabled: true
+  body:
+    type: multipart-form
+    data:
+      - name: EstateID
+        type: text
+        value: 0557B3E2-B268-4DCC-8EA5-48994C28878D
+      - name: EstateCode
+        type: text
+        value: SL
+      - name: EmployeeID
+        type: text
+        value: "1304633"
+        description: Mandor EmployeeNumber
+      - name: attendance_date
+        type: text
+        value: 2025-08-07
+      - name: DivisionID
+        type: text
+        value: B1E2C408-4E1F-4680-B20A-8C66E101EA96
+        description: Division ID
+      - name: WorkingDivisionID
+        type: text
+        value: B1E2C408-4E1F-4680-B20A-8C66E101EA96
+        description: Working Division ID
+      - name: WorkingDivisionCode
+        type: text
+        value: Div.I
+        description: Working Division Code
+      - name: WorkingDivisionName
+        type: text
+        value: Division I
+        description: Working Division Name
+      - name: MovedToAnotherDivision
+        type: text
+        value: "0"
+        description: Move to other division status
+      - name: workgroupJson
+        type: text
+        value: ""
+        description: additional worker (pekerja diperbantukan)
+      - name: labour[0][check_in]
+        type: text
+        value: 12:12:25.123
+      - name: labour[0][long_in]
+        type: text
+        value: "90.3223657"
+      - name: labour[0][lat_in]
+        type: text
+        value: "3.3223657"
+      - name: labour[0][uuid]
+        type: text
+        value: PRSMDR-1304633-2025-08-07
+      - name: labour[0][ExtendedDayCount]
+        type: text
+        value: "2"
+        description: jumlah hari
+      - name: labour[0][IsWorkGroupLeader]
+        type: text
+        value: "0"
+      - name: labour[0][EmployeeNumber]
+        type: text
+        value: "1304322"
+      - name: labour[0][EmployeeName]
+        type: text
+        value: Suparlan
+      - name: labour[0][EmployeeID]
+        type: text
+        value: 3744CEE8-14FB-4AF7-8FB7-A2FE94DC8670
+      - name: labour[0][tambahPekerjaMandoranId]
+        type: text
+        value: 9A0C9BD3-B379-404B-9646-D88E0D7EDE10
+        disabled: true
+      - name: labour[0][currentMandoranName]
+        type: text
+        value: 2025/KNTP/01/01
+        disabled: true
+      - name: labour[0][currentMandoran]
+        type: text
+        value: 37449C82-A364-4B0E-B912-758B49C31DA5
+      - name: labour[0][allocationCode]
+        type: text
+        value: "111255"
+      - name: labour[0][allocationName]
+        type: text
+        value: Pengendalian Gulma (Manual)
+      - name: labour[0][AnalysisCodeId]
+        type: text
+        value: 6E1C830F-32A4-40A7-A0B7-0B0A8D84C43A
+      - name: labour[0][AnalysisCode]
+        type: text
+        value: Nursery Program 2026
+        description: if friday = 1, else 0
+      - name: labour[1][EmployeeID]
+        type: text
+        value: L5
+        disabled: true
+      - name: labour[1][check_in]
+        type: text
+        value: 12:12:25.123
+        disabled: true
+      - name: labour[1][long_in]
+        type: text
+        value: "80.3223657"
+        disabled: true
+      - name: labour[1][lat_in]
+        type: text
+        value: "2.3223657"
+        disabled: true
+      - name: labour[1][uuid]
+        type: text
+        value: SKW-1321ASD
+        disabled: true
+      - name: labour[1][status]
+        type: text
+        value: C0B41B7B-0033-4131-A76E-0A12217C0501
+        disabled: true
+      - name: day_flagging
+        type: text
+        value: "0"
+      - name: labour[0][face_image_in]
+        type: file
+        value:
+          - /C:/Users/Asus/Desktop/1745805240_52362fe10f9bff3a3793.jpg
+      - name: labour[1][face_image_in]
+        type: file
+        value:
+          - /C:/Users/joena/Downloads/JUG.jpg
+        disabled: true
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

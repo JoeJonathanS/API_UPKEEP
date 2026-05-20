@@ -1,0 +1,30 @@
+info:
+  name: get data perlu tinjauan
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{base_url}}/api/quality-check-contractor/list"
+  body:
+    type: multipart-form
+    data:
+      - name: EstateCode
+        type: text
+        value: AL
+      - name: WorkingDivisionCode
+        type: text
+        value: Div.I
+      - name: start_date
+        type: text
+        value: 2025-08-15
+      - name: end_date
+        type: text
+        value: 2025-09-05
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

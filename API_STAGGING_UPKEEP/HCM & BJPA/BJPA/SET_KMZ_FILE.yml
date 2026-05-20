@@ -1,0 +1,44 @@
+info:
+  name: SET_KMZ_FILE
+  type: http
+  seq: 8
+
+http:
+  method: POST
+  url: "{{base_url}}/api/bjpa/upload-kmz"
+  body:
+    type: multipart-form
+    data:
+      - name: uuid
+        type: text
+        value: BJPA-1508823-20260709144022
+      - name: EstateCode
+        type: text
+        value: BB
+      - name: WorkingDivisionCode
+        type: text
+        value: Div.IV
+      - name: BlockID
+        type: text
+        value: 603D11B5-A440-4A92-BCF7-F2F1C557110C
+      - name: BlockCode
+        type: text
+        value: 073/19
+      - name: BlockName
+        type: text
+        value: Block 073/19
+      - name: Block_File_KMZ
+        type: file
+        value:
+          - /C:/Users/Asus/Downloads/Doc Socfindo/Patroli Sore.kmz
+      - name: date
+        type: text
+        value: 2026-07-09
+        description: tanggal transaksi dokumen
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

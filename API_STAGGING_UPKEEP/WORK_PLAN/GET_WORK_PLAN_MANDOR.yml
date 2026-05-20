@@ -1,0 +1,25 @@
+info:
+  name: GET_WORK_PLAN_MANDOR
+  type: http
+  seq: 5
+
+http:
+  method: GET
+  url: "{{base_url}}/api/work-plan/get-work-plan-mandor/?EstateCode=AP&EmployeeNumber=2108708&rkh_date=2025-10-12"
+  params:
+    - name: EstateCode
+      value: AP
+      type: query
+    - name: EmployeeNumber
+      value: "2108708"
+      type: query
+    - name: rkh_date
+      value: 2025-10-12
+      type: query
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

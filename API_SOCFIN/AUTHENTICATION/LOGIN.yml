@@ -1,0 +1,28 @@
+info:
+  name: LOGIN
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{base_url_socfin}}/login"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"username\": \"iwkupkeep\",\r
+
+      \    \"password\": \"Poligon8!2024\"\r
+
+      }"
+  auth:
+    type: apikey
+    key: Authorization
+    value: "{{token}}"
+    placement: header
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

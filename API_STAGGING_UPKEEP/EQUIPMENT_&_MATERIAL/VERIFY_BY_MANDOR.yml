@@ -1,0 +1,38 @@
+info:
+  name: VERIFY_BY_MANDOR
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: "{{base_url}}/api/activity-equipment-and-material/verify-mandor-material-and-equipment"
+  body:
+    type: multipart-form
+    data:
+      - name: EstateCode
+        type: text
+        value: SL
+      - name: DivisionCode
+        type: text
+        value: Div.II
+      - name: EmployeeNumber
+        type: text
+        value: "1304659"
+        description: Employee Number of user
+      - name: uuid
+        type: text
+        value: EQPMTR-1304659-20250510181912
+        description: uuid
+      - name: date
+        type: text
+        value: 2025-05-10
+      - name: transaction_date
+        type: text
+        value: 2025-05-10
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

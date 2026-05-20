@@ -1,0 +1,85 @@
+info:
+  name: LABOUR_OUT
+  type: http
+  seq: 5
+
+http:
+  method: POST
+  url: "{{base_url}}/api/attendance/labour-check-out"
+  headers:
+    - name: u_employee_id
+      value: "1"
+      disabled: true
+    - name: data
+      value: "[]"
+      disabled: true
+  params:
+    - name: ""
+      value: ""
+      type: query
+      disabled: true
+  body:
+    type: multipart-form
+    data:
+      - name: EstateID
+        type: text
+        value: 0557B3E2-B268-4DCC-8EA5-48994C28878D
+        description: estateID
+      - name: EmployeeID
+        type: text
+        value: "1304633"
+        description: user Employee ID
+      - name: attendance_date
+        type: text
+        value: 2025-08-07
+      - name: labour[0][EmployeeID]
+        type: text
+        value: 3744CEE8-14FB-4AF7-8FB7-A2FE94DC8670
+      - name: labour[0][check_out]
+        type: text
+        value: 17:12:25.123
+      - name: labour[0][long_out]
+        type: text
+        value: "90.3223657"
+      - name: labour[0][lat_out]
+        type: text
+        value: "3.3223657"
+      - name: labour[0][face_image_out]
+        type: file
+        value:
+          - /C:/Users/Asus/Pictures/Screenshots/Screenshot 2024-11-20 112546.png
+      - name: labour[0][uuid]
+        type: text
+        value: PRSMDR-1304633-2025-08-07
+      - name: labour[1][EmployeeID]
+        type: text
+        value: L5
+        disabled: true
+      - name: labour[1][check_out]
+        type: text
+        value: 12:12:25.123
+        disabled: true
+      - name: labour[1][long_out]
+        type: text
+        value: "80.3223657"
+        disabled: true
+      - name: labour[1][lat_out]
+        type: text
+        value: "2.3223657"
+        disabled: true
+      - name: labour[1][face_image_out]
+        type: file
+        value:
+          - /C:/Users/joena/Downloads/JUG.jpg
+        disabled: true
+      - name: labour[1][uuid]
+        type: text
+        value: SKW-1321ASD
+        disabled: true
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,7 @@
+info:
+  name: SENSUS_POKOK_SAWITT
+  type: folder
+  seq: 3
+
+request:
+  auth: inherit

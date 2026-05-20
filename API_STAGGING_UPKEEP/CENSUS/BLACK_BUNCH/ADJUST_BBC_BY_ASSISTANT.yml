@@ -1,0 +1,47 @@
+info:
+  name: ADJUST_BBC_BY_ASSISTANT
+  type: http
+  seq: 8
+
+http:
+  method: POST
+  url: "{{base_url}}/api/cencus/black-bunch/adjust-by-assistant"
+  body:
+    type: multipart-form
+    data:
+      - name: EstateCode
+        type: text
+        value: AL
+        description: Assistant estate code
+      - name: DivisionCode
+        type: text
+        value: Div.I
+        description: Assistant div code
+      - name: uuid
+        type: text
+        value: SensusHama-AL-Div.I-001/04-2011356-20250831
+      - name: ts[0][BlockCode]
+        type: text
+        value: 001/04
+      - name: ts[0][NoTS]
+        type: text
+        value: TS-1
+      - name: ts[0][plants][0][total_bunch]
+        type: text
+        value: "100"
+      - name: ts[0][plants][0][pokok_mati]
+        type: text
+        value: "0"
+      - name: ts[0][plants][0][total_bunch_assistant]
+        type: text
+        value: "10"
+      - name: ts[0][plants][0][pokok_mati_asistant]
+        type: text
+        value: "0"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

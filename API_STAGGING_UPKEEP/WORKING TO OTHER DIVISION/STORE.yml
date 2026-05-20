@@ -1,0 +1,55 @@
+info:
+  name: STORE
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{base_url}}/api/work-track/store-working-division"
+  body:
+    type: multipart-form
+    data:
+      - name: EstateCode
+        type: text
+        value: a
+      - name: DivisionID
+        type: text
+        value: a
+      - name: DivisionName
+        type: text
+        value: a
+      - name: DivisionCode
+        type: text
+        value: a
+      - name: EmployeeID
+        type: text
+        value: a
+      - name: EmployeeNumber
+        type: text
+        value: a
+      - name: EmployeeName
+        type: text
+        value: a
+      - name: WorkingDivisionID
+        type: text
+        value: a
+      - name: WorkingDivisionCode
+        type: text
+        value: a
+      - name: WorkingDivisionName
+        type: text
+        value: a
+      - name: MovedToAnotherDivision
+        type: text
+        value: "1"
+        description: 0 or 1
+      - name: date
+        type: text
+        value: 2024-11-21
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

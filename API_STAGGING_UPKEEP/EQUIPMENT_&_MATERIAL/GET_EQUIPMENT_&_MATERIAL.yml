@@ -1,0 +1,51 @@
+info:
+  name: GET_EQUIPMENT_&_MATERIAL
+  type: http
+  seq: 2
+
+http:
+  method: GET
+  url: "{{base_url}}/api/activity-equipment-and-material/list/?EstateCode=MP&date=2025-01-22&DivisionCode=Div.I"
+  params:
+    - name: uuid
+      value: ""
+      type: query
+      description: optional
+      disabled: true
+    - name: EstateCode
+      value: MP
+      type: query
+      description: mandatory
+    - name: date
+      value: 2025-01-22
+      type: query
+    - name: DivisionCode
+      value: Div.I
+      type: query
+    - name: assignee_id
+      value: ""
+      type: query
+      description: optional
+      disabled: true
+    - name: transaction_date
+      value: ""
+      type: query
+      description: optional
+      disabled: true
+    - name: DivisionCode
+      value: ""
+      type: query
+      description: optional
+      disabled: true
+    - name: BlockCode
+      value: ""
+      type: query
+      description: optional
+      disabled: true
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

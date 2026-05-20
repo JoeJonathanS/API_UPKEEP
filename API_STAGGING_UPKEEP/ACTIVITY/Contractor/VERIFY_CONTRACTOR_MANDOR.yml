@@ -1,0 +1,39 @@
+info:
+  name: VERIFY_CONTRACTOR_MANDOR
+  type: http
+  seq: 5
+
+http:
+  method: POST
+  url: "{{base_url}}/api/activities-contractor/verify-contractor-by-mandor"
+  body:
+    type: multipart-form
+    data:
+      - name: EstateCode
+        type: text
+        value: AL
+        description: Estate Code (mandatory)
+      - name: DivisionCode
+        type: text
+        value: Div.I
+        description: DivisionCode mandor
+      - name: EmployeeNumber
+        type: text
+        value: "2012695"
+        description: EmployeeNumber mandor
+      - name: date
+        type: text
+        value: 2024-09-26
+        description: transaction date
+      - name: ""
+        type: text
+        value: ""
+        description: method ini memberifikasi semua pencatatan kontraktor, jadi cukup ssekali verifikasi saja
+        disabled: true
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

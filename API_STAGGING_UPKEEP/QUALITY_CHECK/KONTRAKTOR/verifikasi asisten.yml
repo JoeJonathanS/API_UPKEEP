@@ -1,0 +1,35 @@
+info:
+  name: verifikasi asisten
+  type: http
+  seq: 5
+
+http:
+  method: POST
+  url: "{{base_url}}/api/quality-check-contractor/verify-assistant"
+  body:
+    type: multipart-form
+    data:
+      - name: EstateCode
+        type: text
+        value: SL
+      - name: DivisionCode
+        type: text
+        value: Div.I
+      - name: EmployeeNumber
+        type: text
+        value: "1807053"
+      - name: EmployeeName
+        type: text
+        value: Mega Whachy
+        description: user EmployeeNumber
+      - name: uuid
+        type: text
+        value: XXX-XXX-XXX
+        description: user EmployeeNumber
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,154 @@
+info:
+  name: POST_TREE_CENSUS
+  type: http
+  seq: 6
+
+http:
+  method: POST
+  url: "{{base_url_socfin}}/tree-census"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"treeCensus\": {\r
+
+      \        \"businessLocationID\": \"DDD4D637-56B8-414A-ACCA-C009685BE084\",\r
+
+      \        \"estate\": \"TB\",\r
+
+      \        \"vUserID\": \"SOCFIN-ID\\\\astes2\",\r
+
+      \        \"referenceNumber\": \"RTC/TB/Div.I/036O_19/2025-05-06\",\r
+
+      \        \"date\": \"2025-05-06\",\r
+
+      \        \"divisionID\": \"9D0F0BDB-46F2-40D6-88D9-487C074573A0\",\r
+
+      \        \"divisionName\": \"Division I\",\r
+
+      \        \"blockID\": \"D2F9B5BF-7B87-4711-83B5-A188C1129CF9\",\r
+
+      \        \"blockCode\": \"036O/19\",\r
+
+      \        \"noOfStandsCounted\": \"209\",\r
+
+      \        \"noOfInfill\": \"0\",\r
+
+      \        \"noOfCasualties\": 0,\r
+
+      \        \"standCountedDetails\": [\r
+
+      \            {\r
+
+      \                \"treeTypeID\": \"E8B0F623-C57C-4DAB-A22B-15255779ACB9\",\r
+
+      \                \"treeTypeName\": \"Angin\",\r
+
+      \                \"noOfTrees\": 1\r
+
+      \            },\r
+
+      \            {\r
+
+      \                \"treeTypeID\": \"86E08917-E1CC-46B3-9234-C4BE29F56FF8\",\r
+
+      \                \"treeTypeName\": \"Disadap\",\r
+
+      \                \"noOfTrees\": 200\r
+
+      \            },\r
+
+      \            {\r
+
+      \                \"treeTypeID\": \"FD0D91CE-663E-4CFA-9F1C-27619BD797E1\",\r
+
+      \                \"treeTypeName\": \"Fomes\",\r
+
+      \                \"noOfTrees\": 6\r
+
+      \            },\r
+
+      \            {\r
+
+      \                \"treeTypeID\": \"48E27469-09EE-4727-AE0A-8BABEE07BDED\",\r
+
+      \                \"treeTypeName\": \"Non-Valeur\",\r
+
+      \                \"noOfTrees\": 2\r
+
+      \            }\r
+
+      \        ],\r
+
+      \        \"reasonDetails\": [\r
+
+      \            {\r
+
+      \                \"reasonID\": \"E8B0F623-C57C-4DAB-A22B-15255779ACB9\",\r
+
+      \                \"reasonName\": \"Angin\",\r
+
+      \                \"noOfCasualties\": \"0\"\r
+
+      \            },\r
+
+      \            {\r
+
+      \                \"reasonID\": \"FD0D91CE-663E-4CFA-9F1C-27619BD797E1\",\r
+
+      \                \"reasonName\": \"Fomes\",\r
+
+      \                \"noOfCasualties\": \"2\"\r
+
+      \            },\r
+
+      \            {\r
+
+      \                \"reasonID\": \"6EB07FF7-4EBA-4D7D-B715-7C4BAE7D7A5E\",\r
+
+      \                \"reasonName\": \"Ganoderma\",\r
+
+      \                \"noOfCasualties\": \"0\"\r
+
+      \            },\r
+
+      \            {\r
+
+      \                \"reasonID\": \"48E27469-09EE-4727-AE0A-8BABEE07BDED\",\r
+
+      \                \"reasonName\": \"Non-Valeur\",\r
+
+      \                \"noOfCasualties\": \"0\"\r
+
+      \            },\r
+
+      \            {\r
+
+      \                \"reasonID\": \"98B085B2-DA7D-4A27-BFDA-D55736F73829\",\r
+
+      \                \"reasonName\": \"Others\",\r
+
+      \                \"noOfCasualties\": \"0\"\r
+
+      \            }\r
+
+      \        ],\r
+
+      \        \"EmployeeNumber\": \"1700901\",\r
+
+      \        \"EmployeeName\": \"Supriani\"\r
+
+      \    }\r
+
+      }"
+  auth:
+    type: apikey
+    key: Authorization
+    value: b08407be6a5780a233a4701e8c998018.a32f9e3523f6eea0cb88e6ed43f25e3b
+    placement: header
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

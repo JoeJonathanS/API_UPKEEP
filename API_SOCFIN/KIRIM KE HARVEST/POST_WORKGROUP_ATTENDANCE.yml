@@ -1,0 +1,256 @@
+info:
+  name: POST_WORKGROUP_ATTENDANCE
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{base_url_socfin}}/workgroup-att"
+  body:
+    type: json
+    data: "{\r
+
+      \  \"workgroupAttendance\": {\r
+
+      \    \"sheetNumber\": \"2026/BTPM/05/02/2208775/1\",\r
+
+      \    \"attendanceDetails\": {\r
+
+      \        \"mandor1\": null,\r
+
+      \        \"pekerja\": [\r
+
+      \            {\r
+
+      \                \"employeeHDRID\": \"0EA31D1B-6C8E-4919-AD57-26927437C04E\",\r
+
+      \                \"employeeNumber\": \"2208848\",\r
+
+      \                \"employeeName\": \"Iswadi\",\r
+
+      \                \"employeeHarvestCode\": null,\r
+
+      \                \"roleID\": \"D9B66C00-3578-4D23-A1FD-9DD64945E436\",\r
+
+      \                \"roleName\": \"PHR\",\r
+
+      \                \"employeeDivisionID\": \"114071EE-CA33-4610-AF49-F6D1DE664F39\",\r
+
+      \                \"employeeDivisionName\": \"Division V\",\r
+
+      \                \"WorkgroupTaskDefinitionID\": \"8F30C2B6-D1F1-4998-9248-20D8D3211B32\",\r
+
+      \                \"WorkgroupTaskDefinitionName\": \"200723 Bongkar Tumbuhan Pengganggu - Manual HL (N7,N9)\",\r
+
+      \                \"blocks\": [\r
+
+      \                    {\r
+
+      \                        \"blockID\": \"DF36BCD7-6B4F-453E-88F9-FB1186718EB2\",\r
+
+      \                        \"blockCode\": \"108/07\",\r
+
+      \                        \"hours\": 7,\r
+
+      \                        \"allocationID\": \"DE5ACF3F-4F00-4FC0-B24C-CA161DBA90A3\",\r
+
+      \                        \"allocationCode\": \"200723\",\r
+
+      \                        \"allocationName\": \"Bongkar Tumbuhan Pengganggu - Manual\",\r
+
+      \                        \"taskItemID\": \"69267965-416B-46E4-BB4A-E486E452ACEC\",\r
+
+      \                        \"taskItemName\": \"Jumlah Hectare (Upkeep)\",\r
+
+      \                        \"quantity\": 1,\r
+
+      \                        \"workPlace\": null\r
+
+      \                    }\r
+
+      \                ]\r
+
+      \            },\r
+
+      \            {\r
+
+      \                \"employeeHDRID\": \"82FB3D41-60FC-49B1-8625-B0823C99CF5C\",\r
+
+      \                \"employeeNumber\": \"2208790\",\r
+
+      \                \"employeeName\": \"Sudirman Siregar Siagian\",\r
+
+      \                \"employeeHarvestCode\": null,\r
+
+      \                \"roleID\": \"D9B66C00-3578-4D23-A1FD-9DD64945E436\",\r
+
+      \                \"roleName\": \"PHR\",\r
+
+      \                \"employeeDivisionID\": \"114071EE-CA33-4610-AF49-F6D1DE664F39\",\r
+
+      \                \"employeeDivisionName\": \"Division V\",\r
+
+      \                \"WorkgroupTaskDefinitionID\": \"8F30C2B6-D1F1-4998-9248-20D8D3211B32\",\r
+
+      \                \"WorkgroupTaskDefinitionName\": \"200723 Bongkar Tumbuhan Pengganggu - Manual HL (N7,N9)\",\r
+
+      \                \"blocks\": [\r
+
+      \                    {\r
+
+      \                        \"blockID\": \"DF36BCD7-6B4F-453E-88F9-FB1186718EB2\",\r
+
+      \                        \"blockCode\": \"108/07\",\r
+
+      \                        \"hours\": 7,\r
+
+      \                        \"allocationID\": \"DE5ACF3F-4F00-4FC0-B24C-CA161DBA90A3\",\r
+
+      \                        \"allocationCode\": \"200723\",\r
+
+      \                        \"allocationName\": \"Bongkar Tumbuhan Pengganggu - Manual\",\r
+
+      \                        \"taskItemID\": \"69267965-416B-46E4-BB4A-E486E452ACEC\",\r
+
+      \                        \"taskItemName\": \"Jumlah Hectare (Upkeep)\",\r
+
+      \                        \"quantity\": 1,\r
+
+      \                        \"workPlace\": null\r
+
+      \                    }\r
+
+      \                ]\r
+
+      \            },\r
+
+      \            {\r
+
+      \                \"employeeHDRID\": \"389D3B19-39AC-4F8A-9BB4-64EE8FF0E85B\",\r
+
+      \                \"employeeNumber\": \"2109260\",\r
+
+      \                \"employeeName\": \"Suherman\",\r
+
+      \                \"employeeHarvestCode\": null,\r
+
+      \                \"roleID\": \"D9B66C00-3578-4D23-A1FD-9DD64945E436\",\r
+
+      \                \"roleName\": \"PHR\",\r
+
+      \                \"employeeDivisionID\": \"114071EE-CA33-4610-AF49-F6D1DE664F39\",\r
+
+      \                \"employeeDivisionName\": \"Division V\",\r
+
+      \                \"WorkgroupTaskDefinitionID\": \"8F30C2B6-D1F1-4998-9248-20D8D3211B32\",\r
+
+      \                \"WorkgroupTaskDefinitionName\": \"200723 Bongkar Tumbuhan Pengganggu - Manual HL (N7,N9)\",\r
+
+      \                \"blocks\": [\r
+
+      \                    {\r
+
+      \                        \"blockID\": \"DF36BCD7-6B4F-453E-88F9-FB1186718EB2\",\r
+
+      \                        \"blockCode\": \"108/07\",\r
+
+      \                        \"hours\": 7,\r
+
+      \                        \"allocationID\": \"DE5ACF3F-4F00-4FC0-B24C-CA161DBA90A3\",\r
+
+      \                        \"allocationCode\": \"200723\",\r
+
+      \                        \"allocationName\": \"Bongkar Tumbuhan Pengganggu - Manual\",\r
+
+      \                        \"taskItemID\": \"69267965-416B-46E4-BB4A-E486E452ACEC\",\r
+
+      \                        \"taskItemName\": \"Jumlah Hectare (Upkeep)\",\r
+
+      \                        \"quantity\": 1,\r
+
+      \                        \"workPlace\": null\r
+
+      \                    }\r
+
+      \                ]\r
+
+      \            }\r
+
+      \        ],\r
+
+      \        \"assistant\": {\r
+
+      \            \"userLogin\": \"setiawanmt\",\r
+
+      \            \"employeeHDRID\": \"A60F41D5-21D1-47CF-850D-97DADDA63E8C\",\r
+
+      \            \"employeeNumber\": \"2439\",\r
+
+      \            \"employeeName\": \"Muhammad Taufik Setiawan\"\r
+
+      \        },\r
+
+      \        \"mandor\": {\r
+
+      \            \"userLogin\": \"fricahyonoa\",\r
+
+      \            \"employeeHDRID\": \"93B92E9A-C2C6-4140-9261-3A3CB05BBC32\",\r
+
+      \            \"employeeNumber\": \"2208775\",\r
+
+      \            \"employeeName\": \"Agus Fricahyono\",\r
+
+      \            \"roleID\": \"FEBA6E50-DFD2-4C2D-A9E3-38C932189F31\",\r
+
+      \            \"roleName\": \"MHR\",\r
+
+      \            \"allocationID\": \"DE5ACF3F-4F00-4FC0-B24C-CA161DBA90A3\",\r
+
+      \            \"allocationCode\": \"200723\",\r
+
+      \            \"allocationName\": \"Bongkar Tumbuhan Pengganggu - Manual\",\r
+
+      \            \"employeeDivisionID\": \"114071EE-CA33-4610-AF49-F6D1DE664F39\",\r
+
+      \            \"employeeDivisionName\": \"Division V\",\r
+
+      \            \"hours\": 7\r
+
+      \        }\r
+
+      \    },\r
+
+      \    \"businessLocationID\": \"8F54AB13-F946-42DF-98A8-D46DFAD67395\",\r
+
+      \    \"estate\": \"AP\",\r
+
+      \    \"date\": \"2026-02-03\",\r
+
+      \    \"interdivisionLentLabour\": 0,\r
+
+      \    \"workGroupHDRID\": \"8792FBDD-6644-4593-9E9B-F6B3A66C4C97\",\r
+
+      \    \"workGroupCode\": \"2026/BTPM/05/02\",\r
+
+      \    \"workingDivisionID\": \"114071EE-CA33-4610-AF49-F6D1DE664F39\",\r
+
+      \    \"workingDivisionName\": \"Division V\",\r
+
+      \    \"workingTaskID\": \"8F30C2B6-D1F1-4998-9248-20D8D3211B32\",\r
+
+      \    \"workingTaskName\": \"200723 Bongkar Tumbuhan Pengganggu - Manual HL (N7,N9)\"\r
+
+      }\r
+
+      }"
+  auth:
+    type: apikey
+    key: Authorization
+    value: "{{token}}"
+    placement: header
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

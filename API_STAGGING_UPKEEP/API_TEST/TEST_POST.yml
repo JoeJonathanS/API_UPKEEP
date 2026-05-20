@@ -1,0 +1,21 @@
+info:
+  name: TEST_POST
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: "{{base_url}}/api/test-post"
+  body:
+    type: multipart-form
+    data:
+      - name: EstateCode
+        type: text
+        value: TG
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

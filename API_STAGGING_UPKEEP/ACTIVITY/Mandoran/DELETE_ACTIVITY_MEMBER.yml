@@ -1,0 +1,42 @@
+info:
+  name: DELETE_ACTIVITY_MEMBER
+  type: http
+  seq: 5
+
+http:
+  method: POST
+  url: "{{base_url}}/api/activities/remove-activity-member"
+  body:
+    type: multipart-form
+    data:
+      - name: EstateCode
+        type: text
+        value: TG
+        description: estate code
+      - name: daily_activity_uuid
+        type: text
+        value: PCTOPT-1807426-20241112082659
+        description: uuid of transaction
+      - name: date
+        type: text
+        value: 2024-11-12
+        description: date
+      - name: EmployeeID
+        type: text
+        value: 9E1909B8-3FC7-4B90-8A9B-4591EC00F966
+        description: labour EmployeeID
+      - name: EmployeeNumber
+        type: text
+        value: "1806602"
+        description: labour EmployeeNumber
+      - name: CFNAllocationCode
+        type: text
+        value: "200723"
+        description: cfn allocationCode
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

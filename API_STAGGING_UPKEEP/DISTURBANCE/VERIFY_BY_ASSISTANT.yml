@@ -1,0 +1,35 @@
+info:
+  name: VERIFY_BY_ASSISTANT
+  type: http
+  seq: 7
+
+http:
+  method: POST
+  url: "{{base_url}}/api/disturbance-output/verify-assistant"
+  body:
+    type: multipart-form
+    data:
+      - name: EstateCode
+        type: text
+        value: TG
+      - name: DivisionCode
+        type: text
+        value: TG
+      - name: EmployeeNumber
+        type: text
+        value: "2602305"
+        description: asisten employee number
+      - name: EmployeeName
+        type: text
+        value: Joko
+        description: asisten employee name
+      - name: date
+        type: text
+        value: 2025-04-15
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

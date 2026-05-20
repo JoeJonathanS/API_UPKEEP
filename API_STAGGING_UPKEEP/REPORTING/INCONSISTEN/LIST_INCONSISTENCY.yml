@@ -1,0 +1,38 @@
+info:
+  name: LIST_INCONSISTENCY
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{base_url}}/api/report-adjustment/list-inconsistency"
+  body:
+    type: multipart-form
+    data:
+      - name: EmployeeNumber
+        type: text
+        value: "003732"
+        description: Assistant EmployeeNumber
+      - name: EstateID
+        type: text
+        value: 8F54AB13-F946-42DF-98A8-D46DFAD67395
+        description: EstateID
+      - name: EstateCode
+        type: text
+        value: AL
+        description: EstateCode
+      - name: WorkingDivisionCode
+        type: text
+        value: Div.II
+        description: WorkingDivisionCode
+      - name: TransactionDate
+        type: text
+        value: 2025-07-16
+        description: Transaction date
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

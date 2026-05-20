@@ -1,0 +1,30 @@
+info:
+  name: OILPALM_TREE_CENSUS
+  type: http
+  seq: 6
+
+http:
+  method: POST
+  url: "{{base_url}}/api/report-verification/history/oilpalm-tree-census"
+  body:
+    type: multipart-form
+    data:
+      - name: EstateCode
+        type: text
+        value: AP
+        description: EstateCode
+      - name: WorkingDivisionCode
+        type: text
+        value: Div. I
+        description: WorkingDivisionCode
+      - name: TransactionDate
+        type: text
+        value: 2025-09-29
+        description: Transaction date
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

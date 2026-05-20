@@ -1,0 +1,32 @@
+info:
+  name: GET_WORK_PLAN_ASSISTANT
+  type: http
+  seq: 6
+
+http:
+  method: GET
+  url: "{{base_url}}/api/work-plan/get-work-plan-assistant/?EstateCode=AP&EmployeeNumber=2439&rkh_date=2025-10-14"
+  params:
+    - name: EstateCode
+      value: AP
+      type: query
+    - name: EmployeeNumber
+      value: "2439"
+      type: query
+      description: ASSISTANT EMPLOYEENUMBER !!!
+    - name: rkh_date
+      value: 2025-10-14
+      type: query
+      description: use one date parameter
+    - name: date
+      value: 2025-02-28
+      type: query
+      description: use one date parameter
+      disabled: true
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

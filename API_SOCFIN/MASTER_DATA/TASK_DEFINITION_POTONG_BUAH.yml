@@ -1,0 +1,22 @@
+info:
+  name: TASK_DEFINITION_POTONG_BUAH
+  type: http
+  seq: 33
+
+http:
+  method: GET
+  url: "{{base_url_socfin}}/masterupkeep/task-definition-premi/{{ou}}"
+  headers:
+    - name: Authorization
+      value: a87d05ed76467a90314f40a1af4f6bde.c5e9f69752853e283b41584f7c566395
+  auth:
+    type: apikey
+    key: Authorization
+    value: "{{token}}"
+    placement: header
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

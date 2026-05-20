@@ -1,0 +1,54 @@
+info:
+  name: STORE_METEOROLOGY
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{base_url}}/api/meteorology/store-meteorology"
+  body:
+    type: multipart-form
+    data:
+      - name: uuid
+        type: text
+        value: A135sszz
+        description: uuid
+      - name: EmployeeNumber
+        type: text
+        value: "1807053"
+        description: Employee Number of user
+      - name: date
+        type: text
+        value: 2024-09-30
+      - name: rainfall[0][RainFallStationID]
+        type: text
+        value: 26AEDCA0-EED2-4C63-B382-818F7F2B135E
+        description: ID
+      - name: rainfall[0][StartRain]
+        type: text
+        value: 11:00
+      - name: rainfall[0][EndRain]
+        type: text
+        value: 12:00
+      - name: rainfall[0][notes]
+        type: text
+        value: :D
+      - name: rainfall[0][output]
+        type: text
+        value: "22"
+      - name: temperature[0][min_temperature]
+        type: text
+        value: "20"
+      - name: temperature[0][max_temperature]
+        type: text
+        value: "37"
+      - name: temperature[0][time_taken]
+        type: text
+        value: 12:21:17
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

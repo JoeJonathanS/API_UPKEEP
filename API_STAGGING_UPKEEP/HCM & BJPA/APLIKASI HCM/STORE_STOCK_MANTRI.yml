@@ -1,0 +1,92 @@
+info:
+  name: STORE_STOCK_MANTRI
+  type: http
+  seq: 5
+
+http:
+  method: POST
+  url: "{{base_url}}/api/hcm-application/set-hcm-stock-by-mantri"
+  body:
+    type: multipart-form
+    data:
+      - name: uuid
+        type: text
+        value: HCMAPP-...-...-2
+        description: UUID
+      - name: EstateID
+        type: text
+        value: BB
+        description: The Estate Detail
+      - name: EstateCode
+        type: text
+        value: BB
+      - name: EstateName
+        type: text
+        value: BB
+      - name: DivisionCode
+        type: text
+        value: Div.I
+        description: Div Detail
+      - name: date
+        type: text
+        value: 2026-02-15
+      - name: MantriEmployeeID
+        type: text
+        value: "1"
+      - name: MantriEmployeeNumber
+        type: text
+        value: "2"
+      - name: MantriEmployeeName
+        type: text
+        value: "3"
+      - name: WorkingDivisionID
+        type: text
+        value: Div.I
+      - name: WorkingDivisionCode
+        type: text
+        value: Div.I
+      - name: WorkingDivisionName
+        type: text
+        value: Div.I
+      - name: ProduksiInternal
+        type: text
+        value: "1"
+      - name: ProduksiEksternal
+        type: text
+        value: "2"
+      - name: KantongInternal
+        type: text
+        value: "3"
+      - name: KantongEksternal
+        type: text
+        value: "4"
+      - name: TemperaturMinimal
+        type: text
+        value: "5"
+      - name: TemperaturMinimalPhoto
+        type: file
+        value:
+          - /C:/Users/Asus/Pictures/Screenshots/Screenshot 2026-02-11 162209.png
+      - name: TemperaturMaksimal
+        type: text
+        value: "6"
+      - name: TemperaturMaksimalPhoto
+        type: file
+        value:
+          - /C:/Users/Asus/Pictures/Screenshots/Screenshot 2026-01-26 110335.png
+      - name: EKMati
+        type: text
+        value: "7"
+      - name: StokEK
+        type: text
+        value: "8"
+      - name: TotalProduksi
+        type: text
+        value: "8"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

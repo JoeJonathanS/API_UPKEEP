@@ -1,0 +1,22 @@
+info:
+  name: MANGKIR_BALANCE
+  type: http
+  seq: 22
+
+http:
+  method: GET
+  url: "{{base_url_socfin}}/masterupkeep/mangkir-balance/TG"
+  headers:
+    - name: Authorization
+      value: 79ce516be363d4e3ef96c8b58eb0c492.0a920875675c412ca65ff590f4bb8ac3
+  auth:
+    type: apikey
+    key: Authorization
+    value: 9fe89b51f7d1f4b4835f448fbcd7c600.c42ab5203e85bfb8a72e49be03181d92
+    placement: header
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

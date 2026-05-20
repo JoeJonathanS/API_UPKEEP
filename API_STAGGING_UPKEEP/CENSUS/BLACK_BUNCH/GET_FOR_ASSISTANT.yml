@@ -1,0 +1,26 @@
+info:
+  name: GET_FOR_ASSISTANT
+  type: http
+  seq: 7
+
+http:
+  method: POST
+  url: "{{base_url}}/api/cencus/black-bunch/get-by-assistant"
+  body:
+    type: multipart-form
+    data:
+      - name: EstateCode
+        type: text
+        value: MP
+        description: Assistant estate code
+      - name: DivisionCode
+        type: text
+        value: Div.I
+        description: Assistant div code
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

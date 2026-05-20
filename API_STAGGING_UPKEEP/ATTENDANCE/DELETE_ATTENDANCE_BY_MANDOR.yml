@@ -1,0 +1,34 @@
+info:
+  name: DELETE_ATTENDANCE_BY_MANDOR
+  type: http
+  seq: 8
+
+http:
+  method: POST
+  url: "{{base_url}}/api/attendance/delete-attendance-mandor"
+  body:
+    type: multipart-form
+    data:
+      - name: EstateCode
+        type: text
+        value: BB
+        description: Mandor User EstateCode
+      - name: attendance_date
+        type: text
+        value: 2025-05-31
+        description: transaction date
+      - name: LabourEmployeeNumber
+        type: text
+        value: "1502524"
+        description: EmployeeNumber yang mau dihapus
+      - name: MandorEmployeeNumber
+        type: text
+        value: "1502524"
+        description: "EmployeeNumber mandor "
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

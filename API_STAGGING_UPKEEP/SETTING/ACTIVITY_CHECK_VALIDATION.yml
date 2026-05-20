@@ -1,0 +1,21 @@
+info:
+  name: ACTIVITY_CHECK_VALIDATION
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: "{{base_url}}/api/setting/activity-check-validation"
+  body:
+    type: multipart-form
+    data:
+      - name: EstateCode
+        type: text
+        value: MP
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

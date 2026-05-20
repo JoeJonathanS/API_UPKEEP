@@ -1,0 +1,41 @@
+info:
+  name: POST_DAILY
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{base_url}}/api/harvest/generate-daily-attendance"
+  body:
+    type: multipart-form
+    data:
+      - name: EstateID
+        type: text
+        value: C1CFE70B-5CD4-419A-B5E7-76358B16EE14
+      - name: EstateCode
+        type: text
+        value: BB
+      - name: WorkingDivisionID
+        type: text
+        value: B46C8203-8B33-4FF8-9A12-1BA60E134AEE
+      - name: WorkingDivisionCode
+        type: text
+        value: Div.II
+      - name: WorkingDivisionName
+        type: text
+        value: Division II
+      - name: EmployeeNumber
+        type: text
+        value: "2665"
+        description: assistant number code
+      - name: TransactionDate
+        type: text
+        value: 2025-07-21
+        description: Today
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

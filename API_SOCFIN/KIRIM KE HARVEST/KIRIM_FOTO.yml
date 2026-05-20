@@ -1,0 +1,83 @@
+info:
+  name: KIRIM_FOTO
+  type: http
+  seq: 7
+
+http:
+  method: POST
+  url: "{{base_url_socfin_foto}}"
+  body:
+    type: multipart-form
+    data:
+      - name: estate
+        type: text
+        value: BB
+      - name: date
+        type: text
+        value: 2025-09-17
+      - name: recorderType
+        type: text
+        value: Mandor
+      - name: recorderNumber
+        type: text
+        value: "1807435"
+      - name: recorderName
+        type: text
+        value: Nanang Juansyah
+      - name: division
+        type: text
+        value: Division II
+      - name: assistantNumber
+        type: text
+        value: "3736"
+      - name: assistantName
+        type: text
+        value: Asqian Satria Anindito
+      - name: recorderID
+        type: text
+        value: B8681723-D003-4466-9CFB-0000021AD671
+      - name: recorderTime
+        type: text
+        value: 2025-09-12 13:16:48.547
+      - name: photoName
+        type: text
+        value: 1807555-Blok_021_06-050-1757683008.jpg
+      - name: photoType
+        type: text
+        value: inspection
+      - name: photoDetail
+        type: text
+        value: 17Ha
+      - name: photoTime
+        type: text
+        value: 20250912T131648
+      - name: value
+        type: text
+        value: "17"
+      - name: block
+        type: text
+        value: 021/06
+      - name: tph
+        type: text
+        value: "050"
+      - name: empNumber
+        type: text
+        value: "1807555"
+      - name: empName
+        type: text
+        value: Abdur Rahim
+      - name: photoFile
+        type: file
+        value:
+          - /C:/Users/Asus/Desktop/1745805240_52362fe10f9bff3a3793.jpg
+  auth:
+    type: apikey
+    key: Authorization
+    value: "{{token}}"
+    placement: header
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

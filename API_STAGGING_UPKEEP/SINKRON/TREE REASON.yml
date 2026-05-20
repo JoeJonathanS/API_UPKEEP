@@ -1,0 +1,25 @@
+info:
+  name: TREE REASON
+  type: http
+  seq: 39
+
+http:
+  method: GET
+  url: "{{base_url}}/api/sync/master-tree-reason/?EstateCode=MP&DivisionCode=Div.I&request_date=2025-10-19"
+  params:
+    - name: EstateCode
+      value: MP
+      type: query
+    - name: DivisionCode
+      value: Div.I
+      type: query
+    - name: request_date
+      value: 2025-10-19
+      type: query
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,32 @@
+info:
+  name: LIST
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{base_url}}/api/work-track/list-working-division"
+  body:
+    type: multipart-form
+    data:
+      - name: EstateCode
+        type: text
+        value: BB
+      - name: WorkingDivisionCode
+        type: text
+        value: Div.I
+      - name: EmployeeNumber
+        type: text
+        value: "1605373"
+        description: used when the mandor need to check his latest working division
+        disabled: true
+      - name: date
+        type: text
+        value: 2024-11-21
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

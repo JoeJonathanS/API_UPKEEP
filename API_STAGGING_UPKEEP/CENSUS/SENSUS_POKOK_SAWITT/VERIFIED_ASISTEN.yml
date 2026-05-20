@@ -1,0 +1,26 @@
+info:
+  name: VERIFIED_ASISTEN
+  type: http
+  seq: 6
+
+http:
+  method: POST
+  url: "{{base_url}}/api/cencus/tree/oil-palm/verified-by-assistant"
+  body:
+    type: multipart-form
+    data:
+      - name: EstateCode
+        type: text
+        value: AP
+        description: estate code
+      - name: DivisionCode
+        type: text
+        value: Div. V
+        description: division Code
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

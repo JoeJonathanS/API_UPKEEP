@@ -1,0 +1,7 @@
+info:
+  name: ACTIVITY_CHECKING
+  type: folder
+  seq: 7
+
+request:
+  auth: inherit

@@ -1,0 +1,41 @@
+info:
+  name: VERIFY_CONTRACTOR_ASS
+  type: http
+  seq: 8
+
+http:
+  method: POST
+  url: "{{base_url}}/api/activities-contractor/verify-contractor-by-assistant"
+  body:
+    type: multipart-form
+    data:
+      - name: EstateCode
+        type: text
+        value: BB
+        description: Estate Code (mandatory)
+      - name: DivisionCode
+        type: text
+        value: Div.IV
+        description: DivisionCode
+      - name: EmployeeID
+        type: text
+        value: joko
+        description: EmployeeID asisten
+      - name: EmployeeNumber
+        type: text
+        value: wibowo
+        description: EmployeeNumber asisten
+      - name: EmployeeName
+        type: text
+        value: mulyono
+        description: EmployeeName asisten
+      - name: date
+        type: text
+        value: 2025-11-11
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

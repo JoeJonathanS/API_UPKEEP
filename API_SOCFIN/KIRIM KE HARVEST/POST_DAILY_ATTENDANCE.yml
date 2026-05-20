@@ -1,0 +1,244 @@
+info:
+  name: POST_DAILY_ATTENDANCE
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{base_url_socfin}}/daily-att"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"dailyAttendance\": {\r
+
+      \        \"sheetNumber\": \"Div. I/01/3815/Leave\",\r
+
+      \        \"date\": \"2025-09-23\",\r
+
+      \        \"businessLocationID\": \"DDD4D637-56B8-414A-ACCA-C009685BE084\",\r
+
+      \        \"estate\": \"TB\",\r
+
+      \        \"interdivisionLentLabour\": 1,\r
+
+      \        \"workingDivisionID\": \"9D0F0BDB-46F2-40D6-88D9-487C074573A0\",\r
+
+      \        \"workingDivisionName\": \"Division I\",\r
+
+      \        \"vUserID\": \"SOCFIN-ID\\\\nasutionaa\",\r
+
+      \        \"details\": [\r
+
+      \            {\r
+
+      \                \"employeeHDRID\": \"D0DB27B0-4F85-4815-A321-51A0CFCD2902\",\r
+
+      \                \"employeeNumber\": \"1701824\",\r
+
+      \                \"employeeName\": \"Bangun P Hutasuhut\",\r
+
+      \                \"employeeDivisionID\": \"9D0F0BDB-46F2-40D6-88D9-487C074573A0\",\r
+
+      \                \"employeeDivisionName\": \"Division I\",\r
+
+      \                \"blockID\": null,\r
+
+      \                \"blockCode\": null,\r
+
+      \                \"hours\": 7,\r
+
+      \                \"allocationID\": \"B6FA1789-1D25-40F3-9A9C-23F1B84E8484\",\r
+
+      \                \"allocationCode\": \"SIO\",\r
+
+      \                \"allocationName\": \"Sakit Di Kebun\",\r
+
+      \                \"analysis\": null\r
+
+      \            },\r
+
+      \            {\r
+
+      \                \"employeeHDRID\": \"2B2EA748-93AE-41AA-9490-62FBCF10C793\",\r
+
+      \                \"employeeNumber\": \"1702037\",\r
+
+      \                \"employeeName\": \"Ikbal Ilfandi\",\r
+
+      \                \"employeeDivisionID\": \"9D0F0BDB-46F2-40D6-88D9-487C074573A0\",\r
+
+      \                \"employeeDivisionName\": \"Division I\",\r
+
+      \                \"blockID\": null,\r
+
+      \                \"blockCode\": null,\r
+
+      \                \"hours\": 7,\r
+
+      \                \"allocationID\": \"020EF423-018D-4FF7-AFDD-C505DAFAB6ED\",\r
+
+      \                \"allocationCode\": \"SIH\",\r
+
+      \                \"allocationName\": \"Sakit Di Rumah Sakit\",\r
+
+      \                \"analysis\": null\r
+
+      \            },\r
+
+      \            {\r
+
+      \                \"employeeHDRID\": \"0085E01E-F460-4E50-8179-66448EA789F3\",\r
+
+      \                \"employeeNumber\": \"1701976\",\r
+
+      \                \"employeeName\": \"Hardianto\",\r
+
+      \                \"employeeDivisionID\": \"9D0F0BDB-46F2-40D6-88D9-487C074573A0\",\r
+
+      \                \"employeeDivisionName\": \"Division I\",\r
+
+      \                \"blockID\": null,\r
+
+      \                \"blockCode\": null,\r
+
+      \                \"hours\": 7,\r
+
+      \                \"allocationID\": \"020EF423-018D-4FF7-AFDD-C505DAFAB6ED\",\r
+
+      \                \"allocationCode\": \"SIH\",\r
+
+      \                \"allocationName\": \"Sakit Di Rumah Sakit\",\r
+
+      \                \"analysis\": null\r
+
+      \            },\r
+
+      \            {\r
+
+      \                \"employeeHDRID\": \"68B3735B-6F67-48B2-96D3-9E07F1039E6D\",\r
+
+      \                \"employeeNumber\": \"1702023\",\r
+
+      \                \"employeeName\": \"Andika Putra\",\r
+
+      \                \"employeeDivisionID\": \"9D0F0BDB-46F2-40D6-88D9-487C074573A0\",\r
+
+      \                \"employeeDivisionName\": \"Division I\",\r
+
+      \                \"blockID\": null,\r
+
+      \                \"blockCode\": null,\r
+
+      \                \"hours\": 7,\r
+
+      \                \"allocationID\": \"B6FA1789-1D25-40F3-9A9C-23F1B84E8484\",\r
+
+      \                \"allocationCode\": \"SIO\",\r
+
+      \                \"allocationName\": \"Sakit Di Kebun\",\r
+
+      \                \"analysis\": null\r
+
+      \            },\r
+
+      \            {\r
+
+      \                \"employeeHDRID\": \"855B6CF6-4F0F-40D0-A030-CE0B24407053\",\r
+
+      \                \"employeeNumber\": \"1701881\",\r
+
+      \                \"employeeName\": \"M. Japar Saragih\",\r
+
+      \                \"employeeDivisionID\": \"9D0F0BDB-46F2-40D6-88D9-487C074573A0\",\r
+
+      \                \"employeeDivisionName\": \"Division I\",\r
+
+      \                \"blockID\": null,\r
+
+      \                \"blockCode\": null,\r
+
+      \                \"hours\": 7,\r
+
+      \                \"allocationID\": \"B6FA1789-1D25-40F3-9A9C-23F1B84E8484\",\r
+
+      \                \"allocationCode\": \"SIO\",\r
+
+      \                \"allocationName\": \"Sakit Di Kebun\",\r
+
+      \                \"analysis\": null\r
+
+      \            },\r
+
+      \            {\r
+
+      \                \"employeeHDRID\": \"6D2C7864-1510-406F-B96D-DF7CFB88967C\",\r
+
+      \                \"employeeNumber\": \"1701831\",\r
+
+      \                \"employeeName\": \"Selamet\",\r
+
+      \                \"employeeDivisionID\": \"9D0F0BDB-46F2-40D6-88D9-487C074573A0\",\r
+
+      \                \"employeeDivisionName\": \"Division I\",\r
+
+      \                \"blockID\": null,\r
+
+      \                \"blockCode\": null,\r
+
+      \                \"hours\": 7,\r
+
+      \                \"allocationID\": \"020EF423-018D-4FF7-AFDD-C505DAFAB6ED\",\r
+
+      \                \"allocationCode\": \"SIH\",\r
+
+      \                \"allocationName\": \"Sakit Di Rumah Sakit\",\r
+
+      \                \"analysis\": null\r
+
+      \            },\r
+
+      \            {\r
+
+      \                \"employeeHDRID\": \"BC1C03DD-B07A-44A4-9F63-EDC1E4288403\",\r
+
+      \                \"employeeNumber\": \"1700906\",\r
+
+      \                \"employeeName\": \"Sri Winarti\",\r
+
+      \                \"employeeDivisionID\": \"9D0F0BDB-46F2-40D6-88D9-487C074573A0\",\r
+
+      \                \"employeeDivisionName\": \"Division I\",\r
+
+      \                \"blockID\": null,\r
+
+      \                \"blockCode\": null,\r
+
+      \                \"hours\": 7,\r
+
+      \                \"allocationID\": \"B6FA1789-1D25-40F3-9A9C-23F1B84E8484\",\r
+
+      \                \"allocationCode\": \"SIO\",\r
+
+      \                \"allocationName\": \"Sakit Di Kebun\",\r
+
+      \                \"analysis\": null\r
+
+      \            }\r
+
+      \        ]\r
+
+      \    }\r
+
+      }"
+  auth:
+    type: apikey
+    key: Authorization
+    value: "{{token}}"
+    placement: header
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

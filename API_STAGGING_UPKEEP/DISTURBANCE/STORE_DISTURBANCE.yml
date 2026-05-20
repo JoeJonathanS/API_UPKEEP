@@ -1,0 +1,132 @@
+info:
+  name: STORE_DISTURBANCE
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{base_url}}/api/disturbance-output/store"
+  body:
+    type: multipart-form
+    data:
+      - name: uuid
+        type: text
+        value: A4
+        description: uuid
+      - name: EmployeeID
+        type: text
+        value: "1807053"
+        description: Employee Number of user
+      - name: EstateID
+        type: text
+        value: "-"
+        description: Mandatory
+      - name: EstateCode
+        type: text
+        value: TG
+        description: Mandatory
+      - name: EstateName
+        type: text
+        value: "-"
+        description: Mandatory
+      - name: DivisionID
+        type: text
+        value: "-"
+        description: Mandatory
+      - name: DivisionCode
+        type: text
+        value: Div.I
+        description: Mandatory
+      - name: DivisionName
+        type: text
+        value: "-"
+        description: Mandatory
+      - name: BlockID
+        type: text
+        value: "-"
+        description: Mandatory
+      - name: BlockCode
+        type: text
+        value: "-"
+        description: Mandatory
+      - name: BlockName
+        type: text
+        value: "-"
+        description: Mandatory
+      - name: DisturbanceTypeCode
+        type: text
+        value: "-"
+        description: Mandatory
+      - name: DisturbanceTypeName
+        type: text
+        value: "-"
+        description: Mandatory
+      - name: DisturbanceTypeLocationCode
+        type: text
+        value: "-"
+        description: Mandatory
+      - name: DisturbanceTypeLocationName
+        type: text
+        value: "-"
+        description: Mandatory
+      - name: DisturbanceTypeLocationUnit
+        type: text
+        value: --
+        description: Mandatory
+      - name: DisturbanceLocationCode
+        type: text
+        value: --
+        description: Mandatory
+      - name: DisturbanceLocationName
+        type: text
+        value: "-"
+        description: Mandatory
+      - name: DisturbanceLocationGroup
+        type: text
+        value: "-"
+        description: Mandatory
+      - name: DisturbanceTypeOther
+        type: text
+        value: ""
+        description: Mandatory
+      - name: jenis_banjir
+        type: text
+        value: ""
+        description: Mandatory
+      - name: uom
+        type: text
+        value: Mangkok
+        description: Mandatory
+      - name: DamagedCategory
+        type: text
+        value: "-"
+      - name: AreaDamaged
+        type: text
+        value: "0"
+      - name: Notes
+        type: text
+        value: "-"
+      - name: date
+        type: text
+        value: 2024-10-02
+      - name: EmployeeNumber
+        type: text
+        value: 0821abcd
+      - name: EmployeeName
+        type: text
+        value: 0821abcd
+      - name: image[0]
+        type: file
+        value:
+          - /C:/Users/Asus/Pictures/Screenshots/Screenshot (1).png
+      - name: image[1]
+        type: file
+        value:
+          - /C:/Users/Asus/Pictures/Screenshots/Screenshot (7).png
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

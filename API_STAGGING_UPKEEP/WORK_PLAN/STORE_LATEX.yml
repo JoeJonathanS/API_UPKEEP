@@ -1,0 +1,277 @@
+info:
+  name: STORE_LATEX
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: "{{base_url}}/api/work-plan/store-work-plan-latex"
+  body:
+    type: multipart-form
+    data:
+      - name: uuid
+        type: text
+        value: DWP-L-3735-S12
+        description: UUID
+      - name: EstateCode
+        type: text
+        value: TB
+        description: The Estate Code
+      - name: DivisionCode
+        type: text
+        value: Div. I
+        description: The Division Code
+      - name: AssistantEmployeeID
+        type: text
+        value: 13C88F76-F426-4289-BF39-51705720C3F7
+      - name: AssistantEmployeeNumber
+        type: text
+        value: "3735"
+      - name: AssistantEmployeeName
+        type: text
+        value: Rio Elvandari Lubis
+      - name: date
+        type: text
+        value: 2025-01-12
+      - name: rkh_date
+        type: text
+        value: 2025-01-12
+      - name: send_hour
+        type: text
+        value: 10:06:46.000
+      - name: day_flagging
+        type: text
+        value: "0"
+        description: 0 normal day, 1 friday
+      - name: EstimasiProduksi
+        type: text
+        value: "1021"
+      - name: TaksiranLateks
+        type: text
+        value: "1021"
+      - name: TaksiranScrap
+        type: text
+        value: "1021"
+      - name: TaksiranLumpCuka
+        type: text
+        value: "1021"
+      - name: TaksiranLumpExCuciMangkok
+        type: text
+        value: "1021"
+      - name: TaksiranTetesan
+        type: text
+        value: "1021"
+      - name: TaksiranLowerGrades
+        type: text
+        value: "1021"
+      - name: employee[0][EmployeeNumber]
+        type: text
+        value: "1701999"
+      - name: employee[0][Output]
+        type: text
+        value: "123"
+      - name: employee[0][JumlahAncakMandor]
+        type: text
+        value: "123"
+      - name: employee[0][details][0][PRSAllocationCode]
+        type: text
+        value: "520107"
+      - name: employee[0][details][0][UOMCode]
+        type: text
+        value: HA
+      - name: employee[0][details][0][Blocks][0][BlockCode]
+        type: text
+        value: 036C/19
+      - name: employee[0][details][0][Blocks][0][TargetLateks]
+        type: text
+        value: "5"
+      - name: employee[0][details][0][Blocks][0][JumlahPokok]
+        type: text
+        value: "5"
+      - name: employee[0][details][0][Blocks][0][PersenMasak]
+        type: text
+        value: "5"
+      - name: employee[0][details][0][Blocks][0][TaksasiJumlahBuahMasak]
+        type: text
+        value: "5"
+      - name: employee[0][details][0][Blocks][0][PokokSiapDeres]
+        type: text
+        value: "5"
+      - name: employee[0][details][0][Blocks][0][SectionID]
+        type: text
+        value: "5"
+      - name: employee[0][details][0][Blocks][0][SectionCode]
+        type: text
+        value: "5"
+      - name: employee[0][details][0][Blocks][0][Section]
+        type: text
+        value: "5"
+      - name: employee[0][details][0][Blocks][0][BorongDinas]
+        type: text
+        value: "5"
+      - name: employee[0][details][0][Blocks][0][LumpDRC]
+        type: text
+        value: "5"
+      - name: employee[0][details][0][Blocks][0][TotalKaryawan]
+        type: text
+        value: "5"
+      - name: employee[0][details][0][Blocks][0][BJR]
+        type: text
+        value: "5"
+      - name: employee[0][details][0][Blocks][0][SPH]
+        type: text
+        value: "5"
+      - name: employee[0][details][0][Blocks][0][TaksasiProduksi]
+        type: text
+        value: "1"
+      - name: employee[0][details][0][Blocks][0][Klon]
+        type: text
+        value: "5"
+      - name: employee[0][details][0][Blocks][0][SistemDeres]
+        type: text
+        value: "5"
+      - name: employee[0][details][0][Blocks][0][JlhAncak]
+        type: text
+        value: "5"
+      - name: employee[0][details][0][Blocks][0][PokokPerAncak]
+        type: text
+        value: "5"
+      - name: employee[0][details][0][Blocks][0][JumlahPokokDideres]
+        type: text
+        value: "5"
+      - name: employee[0][details][0][Blocks][0][Lateks]
+        type: text
+        value: "5"
+      - name: employee[0][details][0][Blocks][0][Scrap]
+        type: text
+        value: "5"
+      - name: employee[0][details][0][Blocks][0][LumpCuka]
+        type: text
+        value: "5"
+      - name: employee[0][details][0][Blocks][0][LowerGrades]
+        type: text
+        value: "5"
+      - name: employee[0][details][0][Blocks][0][LumpExCuciMangkok]
+        type: text
+        value: "5"
+      - name: employee[0][details][0][Blocks][0][Tetesan]
+        type: text
+        value: "5"
+      - name: employee[0][details][0][Blocks][0][TotalKKK]
+        type: text
+        value: "5"
+      - name: employee[0][details][0][Blocks][0][StimulasiPisauSatu]
+        type: text
+        value: "5"
+      - name: employee[0][details][0][Blocks][0][StimulasiPisauDua]
+        type: text
+        value: "5"
+      - name: employee[0][details][0][Blocks][0][StimulasiPisauTiga]
+        type: text
+        value: "5"
+      - name: employee[0][details][0][Blocks][0][PersenKenaikan]
+        type: text
+        value: "5"
+      - name: employee[0][details][0][Blocks][1][BlockCode]
+        type: text
+        value: 023/16
+      - name: employee[0][details][0][Blocks][1][TargetLateks]
+        type: text
+        value: "5"
+      - name: employee[0][details][0][Blocks][1][JumlahPokok]
+        type: text
+        value: "5"
+      - name: employee[0][details][0][Blocks][1][PersenMasak]
+        type: text
+        value: "5"
+      - name: employee[0][details][0][Blocks][1][TaksasiJumlahBuahMasak]
+        type: text
+        value: "5"
+      - name: employee[0][details][0][Blocks][1][PokokSiapDeres]
+        type: text
+        value: "5"
+      - name: employee[0][details][0][Blocks][1][SectionID]
+        type: text
+        value: "5"
+      - name: employee[0][details][0][Blocks][1][SectionCode]
+        type: text
+        value: "5"
+      - name: employee[0][details][0][Blocks][1][Section]
+        type: text
+        value: "5"
+      - name: employee[0][details][0][Blocks][1][BorongDinas]
+        type: text
+        value: "5"
+      - name: employee[0][details][0][Blocks][1][LumpDRC]
+        type: text
+        value: "5"
+      - name: employee[0][details][0][Blocks][1][TotalKaryawan]
+        type: text
+        value: "5"
+      - name: employee[0][details][0][Blocks][1][BJR]
+        type: text
+        value: "5"
+      - name: employee[0][details][0][Blocks][1][SPH]
+        type: text
+        value: "5"
+      - name: employee[0][details][0][Blocks][1][TaksasiProduksi]
+        type: text
+        value: "1"
+      - name: employee[0][details][0][Blocks][1][TaksasiProduksi]
+        type: text
+        value: "1"
+      - name: employee[0][details][0][Blocks][1][Klon]
+        type: text
+        value: "5"
+      - name: employee[0][details][0][Blocks][1][SistemDeres]
+        type: text
+        value: "5"
+      - name: employee[0][details][0][Blocks][1][JlhAncak]
+        type: text
+        value: "5"
+      - name: employee[0][details][0][Blocks][1][PokokPerAncak]
+        type: text
+        value: "5"
+      - name: employee[0][details][0][Blocks][1][JumlahPokokDideres]
+        type: text
+        value: "5"
+      - name: employee[0][details][0][Blocks][1][Lateks]
+        type: text
+        value: "5"
+      - name: employee[0][details][0][Blocks][1][Scrap]
+        type: text
+        value: "5"
+      - name: employee[0][details][0][Blocks][1][LumpCuka]
+        type: text
+        value: "5"
+      - name: employee[0][details][0][Blocks][1][LowerGrades]
+        type: text
+        value: "5"
+      - name: employee[0][details][0][Blocks][1][LumpExCuciMangkok]
+        type: text
+        value: "5"
+      - name: employee[0][details][0][Blocks][1][Tetesan]
+        type: text
+        value: "5"
+      - name: employee[0][details][0][Blocks][1][TotalKKK]
+        type: text
+        value: "5"
+      - name: employee[0][details][0][Blocks][1][StimulasiPisauSatu]
+        type: text
+        value: "5"
+      - name: employee[0][details][0][Blocks][1][StimulasiPisauDua]
+        type: text
+        value: "5"
+      - name: employee[0][details][0][Blocks][1][StimulasiPisauTiga]
+        type: text
+        value: "5"
+      - name: employee[0][details][0][Blocks][1][PersenKenaikan]
+        type: text
+        value: "5"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

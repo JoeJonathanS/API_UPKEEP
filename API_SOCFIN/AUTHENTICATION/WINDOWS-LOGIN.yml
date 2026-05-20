@@ -1,0 +1,28 @@
+info:
+  name: WINDOWS/LOGIN
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{base_url_socfin}}/windows/login"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"username\": \"ittesting3\",\r
+
+      \    \"password\": \"Init123!\"\r
+
+      }"
+  auth:
+    type: apikey
+    key: Authorization
+    value: "{{token}}"
+    placement: header
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

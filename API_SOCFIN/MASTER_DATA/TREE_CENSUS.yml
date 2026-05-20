@@ -1,0 +1,27 @@
+info:
+  name: TREE_CENSUS
+  type: http
+  seq: 36
+
+http:
+  method: GET
+  url: "{{base_url_socfin}}/masterupkeep/tree-census/{{ou}}"
+  headers:
+    - name: Authorization
+      value: a87d05ed76467a90314f40a1af4f6bde.c5e9f69752853e283b41584f7c566395
+  params:
+    - name: ""
+      value: ""
+      type: query
+      disabled: true
+  auth:
+    type: apikey
+    key: Authorization
+    value: "{{token}}"
+    placement: header
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

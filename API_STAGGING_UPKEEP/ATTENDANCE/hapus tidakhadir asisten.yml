@@ -1,0 +1,33 @@
+info:
+  name: hapus tidakhadir asisten
+  type: http
+  seq: 13
+
+http:
+  method: POST
+  url: "{{base_url}}/api/attendance/delete-batch-absence-assistant"
+  body:
+    type: multipart-form
+    data:
+      - name: EstateCode
+        type: text
+        value: LB
+        description: assistant User EstateCode
+      - name: DivisionCode
+        type: text
+        value: Div.I
+        description: assistant User Working Division Code
+      - name: date
+        type: text
+        value: 2025-04-22
+        description: transaction date
+      - name: labour[0][EmployeeNumber]
+        type: text
+        value: "1203128"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

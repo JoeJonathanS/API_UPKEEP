@@ -1,0 +1,21 @@
+info:
+  name: Katakan Peta
+  type: http
+  seq: 7
+
+http:
+  method: POST
+  url: "{{base_url}}/api/setting/get-map"
+  body:
+    type: multipart-form
+    data:
+      - name: EstateCode
+        type: text
+        value: AL
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

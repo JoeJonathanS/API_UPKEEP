@@ -1,0 +1,7 @@
+info:
+  name: SENSUS_POKOK_KARET
+  type: folder
+  seq: 6
+
+request:
+  auth: inherit

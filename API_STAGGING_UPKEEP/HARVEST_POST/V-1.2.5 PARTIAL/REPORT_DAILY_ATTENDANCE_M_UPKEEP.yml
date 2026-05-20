@@ -1,0 +1,38 @@
+info:
+  name: REPORT_DAILY_ATTENDANCE_M_UPKEEP
+  type: http
+  seq: 8
+
+http:
+  method: POST
+  url: "{{base_url}}/api/report-verification/report-daily-attendance-m-upkeep"
+  body:
+    type: multipart-form
+    data:
+      - name: EstateID
+        type: text
+        value: BBBC7F2E-E478-47D1-A9B7-DC4A479ABA65
+        description: EstateID
+      - name: EstateCode
+        type: text
+        value: AL
+        description: EstateCode
+      - name: WorkingDivisionCode
+        type: text
+        value: Div.V
+        description: WorkingDivisionCode
+      - name: EmployeeNumber
+        type: text
+        value: "3826"
+        description: Assistant EmployeeNumber
+      - name: TransactionDate
+        type: text
+        value: 2025-04-08
+        description: Transaction date
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

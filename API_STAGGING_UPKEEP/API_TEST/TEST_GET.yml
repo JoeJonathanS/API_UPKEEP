@@ -1,0 +1,14 @@
+info:
+  name: TEST_GET
+  type: http
+  seq: 1
+
+http:
+  method: GET
+  url: "{{base_url}}/api/test-get"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

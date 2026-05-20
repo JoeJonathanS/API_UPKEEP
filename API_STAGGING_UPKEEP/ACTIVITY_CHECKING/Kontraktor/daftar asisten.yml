@@ -1,0 +1,27 @@
+info:
+  name: daftar asisten
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: "{{base_url}}/api/activity-checking-contractor/record-assistant"
+  body:
+    type: multipart-form
+    data:
+      - name: EstateCode
+        type: text
+        value: AL
+      - name: DivisionCode
+        type: text
+        value: Div.I
+      - name: date
+        type: text
+        value: 2025-09-01
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

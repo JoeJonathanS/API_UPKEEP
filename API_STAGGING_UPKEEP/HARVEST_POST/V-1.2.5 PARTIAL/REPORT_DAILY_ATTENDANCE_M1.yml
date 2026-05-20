@@ -1,0 +1,41 @@
+info:
+  name: REPORT_DAILY_ATTENDANCE_M1
+  type: http
+  seq: 5
+
+http:
+  method: POST
+  url: "{{base_url}}/api/report-verification/report-daily-attendance-m1"
+  body:
+    type: multipart-form
+    data:
+      - name: EstateID
+        type: text
+        value: E7E731CD-BDDD-4B73-A947-F5AFCD0CB1E4
+        description: EstateID
+      - name: EstateCode
+        type: text
+        value: MP
+        description: EstateCode
+      - name: WorkingDivisionCode
+        type: text
+        value: Div.II
+        description: WorkingDivisionCode
+      - name: EmployeeNumber
+        type: text
+        value: "3727"
+        description: Assistant EmployeeNumber
+      - name: TransactionDate
+        type: text
+        value: 2026-02-16
+        description: Transaction date
+      - name: inijoe
+        type: text
+        value: "1"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

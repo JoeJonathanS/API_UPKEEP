@@ -1,0 +1,61 @@
+info:
+  name: LEAVE_OF_ABSENCE
+  type: http
+  seq: 34
+
+http:
+  method: GET
+  url: "{{base_url}}/api/sync/master-leave-of-absence/?EstateCode=AL&request_date=2025-09-18"
+  params:
+    - name: EstateCode
+      value: AL
+      type: query
+    - name: DivisionCode
+      value: Div.I
+      type: query
+      disabled: true
+    - name: request_date
+      value: 2025-09-18
+      type: query
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: pakai divisi
+    request:
+      url: "{{base_url}}/api/sync/master-leave-of-absence/?EstateCode=BB&DivisionCode=Div.IV&request_date=2025-07-15"
+      method: GET
+      params:
+        - name: EstateCode
+          value: BB
+          type: query
+        - name: DivisionCode
+          value: Div.IV
+          type: query
+        - name: request_date
+          value: 2025-07-15
+          type: query
+    response:
+      body:
+        type: text
+        data: ""
+  - name: tanpa divisi
+    request:
+      url: "{{base_url}}/api/sync/master-leave-of-absence/?EstateCode=TG&request_date=2025-01-23"
+      method: GET
+      params:
+        - name: EstateCode
+          value: TG
+          type: query
+        - name: request_date
+          value: 2025-01-23
+          type: query
+    response:
+      body:
+        type: text
+        data: ""

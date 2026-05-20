@@ -1,0 +1,30 @@
+info:
+  name: GET_RECORD_BY_ASS
+  type: http
+  seq: 6
+
+http:
+  method: POST
+  url: "{{base_url}}/api/activities-contractor/get-contractor-by-assistant"
+  body:
+    type: multipart-form
+    data:
+      - name: EstateCode
+        type: text
+        value: AL
+        description: Estate Code (mandatory)
+      - name: DivisionCode
+        type: text
+        value: Div.I
+        description: DivisionCode mandor
+      - name: date
+        type: text
+        value: 2024-09-26
+        description: transaction date
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,171 @@
+info:
+  name: simpan pemeriksaan mandor 1
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{base_url}}/api/activity-checking-contractor/store-mandor-1"
+  body:
+    type: multipart-form
+    data:
+      - name: uuid
+        type: text
+        value: PAKM1-1107494-20250815
+      - name: EstateID
+        type: text
+        value: D60334A7-6AD6-47CD-B7DA-82391CD2475B
+      - name: EstateCode
+        type: text
+        value: SY
+      - name: EstateName
+        type: text
+        value: Seumanyam
+      - name: DivisionID
+        type: text
+        value: 134D6419-6771-48C8-B2C6-9659D4FE6180
+      - name: DivisionCode
+        type: text
+        value: Div.I
+      - name: DivisionName
+        type: text
+        value: Division I
+      - name: WorkingDivisionID
+        type: text
+        value: 134D6419-6771-48C8-B2C6-9659D4FE6180
+      - name: WorkingDivisionCode
+        type: text
+        value: Div.I
+      - name: WorkingDivisionName
+        type: text
+        value: Division I
+      - name: MovedToAnotherDivision
+        type: text
+        value: "0"
+      - name: BlockID
+        type: text
+        value: 4F99F92B-24C8-4CA2-B80C-5D481808C66C
+      - name: BlockCode
+        type: text
+        value: 023/17
+      - name: BlockName
+        type: text
+        value: Block 023/17
+      - name: ContractID
+        type: text
+        value: 73D19A31-11BC-47E9-ABB3-526138AAB2DB
+      - name: ContractDate
+        type: text
+        value: 2025-04-07 00:00:00.000
+      - name: ContractNumber
+        type: text
+        value: CP-4-213
+      - name: PartyID
+        type: text
+        value: 50338A26-D513-4550-AA9E-BA30170B7637
+      - name: PartyCode
+        type: text
+        value: SY038
+      - name: PartyName
+        type: text
+        value: KOPERASI KARYAWAN DURA
+      - name: PersonName
+        type: text
+        value: ANIMAR
+      - name: ReferenceNumber
+        type: text
+        value: SY/04/SPK/BI/KOP/25
+      - name: AccountGroupID
+        type: text
+        value: B1B7F797-2D4D-447C-B146-67F9FCEE2919
+      - name: AccountGroupCode
+        type: text
+        value: "21080"
+      - name: AccountGroupName
+        type: text
+        value: Pruning (0)
+      - name: AccountID
+        type: text
+        value: 57007F31-1F4E-4C4C-87D9-B4E3DAC0625C
+      - name: AccountCode
+        type: text
+        value: "21081"
+      - name: AccountName
+        type: text
+        value: Pruning (0)
+      - name: AllocationGroupID
+        type: text
+        value: a
+      - name: AllocationGroupCode
+        type: text
+        value: b
+      - name: AllocationGroupName
+        type: text
+        value: c
+      - name: AllocationID
+        type: text
+        value: 07051362-70BD-4C02-B583-BC91DAA1F4FD
+      - name: AllocationCode
+        type: text
+        value: "200812"
+      - name: AllocationName
+        type: text
+        value: Tunas Umum
+      - name: date
+        type: text
+        value: 2025-08-15
+      - name: IsQualityCheck
+        type: text
+        value: "1"
+        description: 0 jika tidak perlu mutu ancak kontraktor, 1 jika perlu
+      - name: QualityCheckDate
+        type: text
+        value: 2025-08-16
+        description: jika tidak perlu mutu ancak kontraktor
+      - name: notes
+        type: text
+        value: ""
+      - name: IsManual
+        type: text
+        value: ""
+      - name: NoTS
+        type: text
+        value: ""
+      - name: Latitude
+        type: text
+        value: ""
+      - name: Longitude
+        type: text
+        value: ""
+      - name: created_hour
+        type: text
+        value: 13:55:01.000
+      - name: EmployeeNumber
+        type: text
+        value: "1107494"
+        description: Mandor EmployeeNumber
+      - name: EmployeeName
+        type: text
+        value: Ribut
+        description: Mandor EmployeeName
+      - name: image[0]
+        type: file
+        value:
+          - /C:/Users/Asus/Pictures/Screenshots/Screenshot 2024-11-18 112502.png
+      - name: image_path[0]
+        type: text
+        value: path/to/your/dir
+      - name: image[1]
+        type: file
+        value:
+          - /C:/Users/Asus/Pictures/Screenshots/Screenshot 2024-11-18 104135.png
+      - name: image_path[1]
+        type: text
+        value: path/to/your/dir
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

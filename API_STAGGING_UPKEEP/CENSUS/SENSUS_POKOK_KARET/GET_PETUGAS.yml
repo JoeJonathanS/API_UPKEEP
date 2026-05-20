@@ -1,0 +1,31 @@
+info:
+  name: GET_PETUGAS
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{base_url}}/api/cencus/tree/rubber/get-by-worker"
+  body:
+    type: multipart-form
+    data:
+      - name: EstateCode
+        type: text
+        value: TB
+      - name: DivisionCode
+        type: text
+        value: Div. I
+      - name: date
+        type: text
+        value: 2025-11-11
+      - name: EmployeeNumber
+        type: text
+        value: "1807058"
+        description: employee num of user
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

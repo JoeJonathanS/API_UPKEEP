@@ -1,0 +1,73 @@
+opencollection: 1.0.0
+
+info:
+  name: SOCFINDO - UPKEEP
+
+request:
+  auth:
+    type: apikey
+    key: Authorization
+    value: "{{token}}"
+    placement: header
+  variables:
+    - name: base_url_socfin
+      value: http://smashapisvr.socfin.co.id/api/smash-up/dev
+    - name: token
+      value: e8ef515daf821c518b5b4705773de5ee.15ed2625ea913aa994ab83916a51bfb2
+    - name: base_url_socfin
+      value: http://smashapisvr.socfin.co.id/api/smash-up/qa
+    - name: ou
+      value: BB
+    - name: request_date
+      value: 2025-05-31
+  scripts:
+    - type: before-request
+      code: "// const tokenUrl = pm.variables.get(\"base_url_socfin\")+\"/login\";\r
+
+        \r
+
+        // // const tokenUrl = \"https://smashdev.socfindo.co.id/login\";;\r
+
+        // const getTokenRequest = {\r
+
+        //   method: \"POST\",\r
+
+        //   url: tokenUrl,\r
+
+        //   header: {\r
+
+        //     mode: \"raw\",\r
+
+        //     raw: {\r
+
+        //         'username': 'iwkupkeep',\r
+
+        //         'password': 'Poligon8!2024',\r
+
+        //     }\r
+
+        //   },\r
+
+        // };\r
+
+        \r
+
+        // pm.sendRequest(getTokenRequest, (err, response) => {\r
+
+        //   const jsonResponse = response.json();\r
+
+        //   const newAccessToken = jsonResponse.token;\r
+
+        //   console.log(jsonResponse);\r
+
+        //   pm.variables.set(\"token\", newAccessToken);\r
+
+        //   pm.globals.set(\"token\", newAccessToken);\r
+
+        // });"
+bundled: false
+extensions:
+  bruno:
+    ignore:
+      - node_modules
+      - .git

@@ -1,0 +1,197 @@
+info:
+  name: STORE_BY_WORKER
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{base_url}}/api/cencus/black-bunch/store"
+  body:
+    type: multipart-form
+    data:
+      - name: EstateID
+        type: text
+        value: E7E731CD-BDDD-4B73-A947-F5AFCD0CB1E4
+      - name: EstateCode
+        type: text
+        value: MP
+      - name: DivisionID
+        type: text
+        value: 726ADDFA-9D3C-4A43-90EB-9B340C85A13D
+      - name: DivisionCode
+        type: text
+        value: Div.II
+      - name: DivisionName
+        type: text
+        value: Division II
+      - name: WorkingDivisionID
+        type: text
+        value: 726ADDFA-9D3C-4A43-90EB-9B340C85A13D
+      - name: WorkingDivisionCode
+        type: text
+        value: Div.II
+      - name: WorkingDivisionName
+        type: text
+        value: Division II
+      - name: MovedToAnotherDivision
+        type: text
+        value: "0"
+      - name: MandorEmployeeID
+        type: text
+        value: 49DDA463-E793-434A-ABF6-1E7CE9F51450
+        description: AllocationCode from Cencus Menu
+      - name: MandorEmployeeNumber
+        type: text
+        value: "2602305"
+        description: Mandor employee ID
+      - name: MandorEmployeeName
+        type: text
+        value: Yuslina
+        description: Mandor Employee number
+      - name: EmployeeID
+        type: text
+        value: 70B41BBD-E9E5-475A-B63E-CACA1E83FFE5
+        description: Mandor employee name
+      - name: EmployeeNumber
+        type: text
+        value: "1904133"
+        description: Labour employee ID
+      - name: EmployeeName
+        type: text
+        value: Ade Musliadi
+        description: Labour employee number
+      - name: date
+        type: text
+        value: 2025-03-03
+        description: Labour employee name
+      - name: details[0][BlockID]
+        type: text
+        value: E1F024B3-90FB-4E58-9D13-CC3FCCC8994B
+        description: employee type
+      - name: details[0][BlockCode]
+        type: text
+        value: 060/06
+        description: date
+      - name: details[0][BlockName]
+        type: text
+        value: Block 060/06
+      - name: details[0][NoLine]
+        type: text
+        value: Baris-12
+      - name: details[0][NoTS]
+        type: text
+        value: TS-121
+      - name: details[0][Latitude]
+        type: text
+        value: "30.000"
+      - name: details[0][Longitude]
+        type: text
+        value: "99.000"
+      - name: details[0][IsManual]
+        type: text
+        value: "0"
+      - name: details[0][IsManualNote]
+        type: text
+        value: Boleh kita menumpang mandi maka mandilah
+      - name: details[0][SensusParty]
+        type: text
+        value: "'[]'"
+        description: json encode data kelompok pekerja, jika kosong maka default = '[]'
+      - name: details[0][BJRMaster]
+        type: text
+        value: "0"
+      - name: details[0][BJR]
+        type: text
+        value: "0"
+      - name: details[0][NumberOfPlants]
+        type: text
+        value: "2"
+      - name: details[0][plants_detail][0][total_bunch]
+        type: text
+        value: "10"
+        description: jumlah janjang
+      - name: details[0][plants_detail][0][pokok_mati]
+        type: text
+        value: "0"
+        description: 0 jika pokok tidak mati, 1 jika mati
+      - name: details[0][plants_detail][1][total_bunch]
+        type: text
+        value: "1"
+        description: jumlah janjang
+      - name: details[0][plants_detail][1][pokok_mati]
+        type: text
+        value: "0"
+        description: 0 jika pokok tidak mati, 1 jika mati
+      - name: details[0][notes]
+        type: text
+        value: "keren, hanya ada 1 janjang pada 2 pokok pada baris ini "
+      - name: details[0][total_bunch]
+        type: text
+        value: "2"
+        description: jumlah total janjang pada ts
+      - name: details[1][BlockID]
+        type: text
+        value: E1F024B3-90FB-4E58-9D13-CC3FCCC8994B
+      - name: details[1][BlockCode]
+        type: text
+        value: 060/06
+      - name: details[1][BlockName]
+        type: text
+        value: Block 060/06
+      - name: details[1][NoLine]
+        type: text
+        value: Baris-13
+      - name: details[1][NoTS]
+        type: text
+        value: TS-123
+      - name: details[1][Latitude]
+        type: text
+        value: "31.000"
+      - name: details[1][Longitude]
+        type: text
+        value: "99.500"
+      - name: details[1][IsManual]
+        type: text
+        value: "0"
+      - name: details[1][IsManualNote]
+        type: text
+        value: jika ada sumur diladang maka
+      - name: details[0][SensusParty]
+        type: text
+        value: "'[]'"
+        description: json encode data kelompok pekerja, jika kosong maka default = '[]'
+      - name: details[1][BJRMaster]
+        type: text
+        value: "0"
+      - name: details[1][BJR]
+        type: text
+        value: "0"
+      - name: details[1][NumberOfPlants]
+        type: text
+        value: "2"
+      - name: details[1][plants_detail][0][total_bunch]
+        type: text
+        value: "100"
+      - name: details[1][plants_detail][0][pokok_mati]
+        type: text
+        value: "0"
+      - name: details[1][plants_detail][1][total_bunch]
+        type: text
+        value: "12"
+      - name: details[1][plants_detail][1][pokok_mati]
+        type: text
+        value: "1"
+      - name: details[1][notes]
+        type: text
+        value: ada 2 pokok, pokok pertama ada 1 janjang & pokok ke 2 ada 12 janjang
+      - name: details[1][total_bunch]
+        type: text
+        value: "12"
+        description: jumlah total janjang pada ts
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

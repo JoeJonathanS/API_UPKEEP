@@ -1,0 +1,7 @@
+info:
+  name: "> V-1.2.5 PARTIAL"
+  type: folder
+  seq: 2
+
+request:
+  auth: inherit

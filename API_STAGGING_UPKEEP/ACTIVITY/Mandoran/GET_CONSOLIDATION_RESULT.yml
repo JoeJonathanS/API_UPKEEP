@@ -1,0 +1,40 @@
+info:
+  name: GET_CONSOLIDATION_RESULT
+  type: http
+  seq: 7
+
+http:
+  method: GET
+  url: "{{base_url}}/api/activities/list-consolidation-result?EstateCode=SG&DivisionCode=Div.IV&date=2025-11-13&assignee_id=1002717"
+  params:
+    - name: EstateCode
+      value: SG
+      type: query
+      description: User Estate Code
+    - name: DivisionCode
+      value: Div.IV
+      type: query
+      description: User Division Code
+    - name: date
+      value: 2025-11-13
+      type: query
+      description: Transaction date
+    - name: is_verified_mandor
+      value: "1"
+      type: query
+      disabled: true
+    - name: assignee_id
+      value: "1002717"
+      type: query
+      description: Employee Number Mandor
+    - name: uuid
+      value: PCTOPT-1605247-20241126142818
+      type: query
+      disabled: true
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

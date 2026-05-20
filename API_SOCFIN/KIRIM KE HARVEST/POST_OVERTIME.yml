@@ -1,0 +1,22 @@
+info:
+  name: POST_OVERTIME
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{base_url_socfin}}/overtime"
+  body:
+    type: json
+    data: '{"unitContractWorkProgress":{"workProgressNumber":"WP\/AL\/CP-1-827\/CP-1-826","referenceNumber":"01\/SPK\/MLS\/I\/2026","estateID":"BBBC7F2E-E478-47D1-A9B7-DC4A479ABA65","estateCode":"AL","estate":"Aek Loba","date":"2026-01-18","vUserID":"SOCFIN-ID\\parinduriah","contractID":"95B9EF19-2C01-40D5-98C5-E864D3EC041C","contractNumber":"CP-1-826","details":[{"allocationID":"9A768AFD-CD45-46A8-85E0-2EED672CE7D2","allocationName":"Isi Tanah ke Polybag","allocationGroupID":"783F649E-F49D-4A07-8836-5FC279B4F2F2","allocationGroupName":"Preparation","workCompletionInPercentage":3,"workCompletionInFlat":280,"flatPercentageID":"5B0001DD-4674-4FF7-8461-55219FC43776","flatPercentageName":"%","UOMID":"C7F5394D-B498-4912-B680-E40329828B80","UOM":"Buah","fromDate":"2026-01-03 00:00:00.000","toDate":"2026-01-31 00:00:00.000","amount":"6770000.00000000","details":[{"divisionID":"E8DAB315-63AC-46BA-ACB8-E2FC9B00067B","divisionName":"Division VI","blockID":null,"blockCode":null,"quantity":280,"UOMID":"C7F5394D-B498-4912-B680-E40329828B80","UOM":"Buah","rate":24178.571428571428}]}]}}'
+  auth:
+    type: apikey
+    key: Authorization
+    value: d3af4f0220153783352bf547b925952c.b7e61d275def52e87b970a8f34c63f43
+    placement: header
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

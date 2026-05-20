@@ -1,0 +1,7 @@
+info:
+  name: MODULE_REPORT
+  type: folder
+  seq: 2
+
+request:
+  auth: inherit

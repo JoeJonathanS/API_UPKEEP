@@ -1,0 +1,38 @@
+info:
+  name: GET
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{base_url}}/api/rkb-hcm/getRKBHCMAssistant"
+  body:
+    type: multipart-form
+    data:
+      - name: EstateCode
+        type: text
+        value: AL
+        description: The Estate Code
+      - name: DivisionCode
+        type: text
+        value: Div.VIII
+        description: The Division Code
+      - name: AssistantEmployeeID
+        type: text
+        value: 13C88F76-F426-4289-BF39-51705720C3F7
+      - name: AssistantEmployeeNumber
+        type: text
+        value: "3735"
+      - name: AssistantEmployeeName
+        type: text
+        value: Rio Elvandari Lubis
+      - name: RKB_HCM_Year_Month
+        type: text
+        value: 2026-02
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,46 @@
+info:
+  name: DOWNLOAD_ALLOCATION_ACHIEVEMENT.pdf
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{base_url}}/api/report-achievement/download-achievement-by-allocation"
+  body:
+    type: multipart-form
+    data:
+      - name: EstateCode
+        type: text
+        value: SL
+        description: EstateCode
+      - name: DivisionCode
+        type: text
+        value: Div.I
+        description: DivisionCode
+      - name: TransactionDate
+        type: text
+        value: 2025-05-01
+        description: Transaction date
+      - name: CFNAllocationCode
+        type: text
+        value: 200972A
+        description: Allocation Code
+      - name: CFNAllocationName
+        type: text
+        value: Merawat Oryctes-Manual
+        description: Allocation Name
+      - name: AssistantEmployeeName
+        type: text
+        value: Muhammad Reza Nasution
+        description: Assistant name
+      - name: AssistantEmployeeNumber
+        type: text
+        value: "3749"
+        description: Assistant number
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

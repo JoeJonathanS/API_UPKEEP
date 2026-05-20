@@ -1,0 +1,70 @@
+info:
+  name: KIRIM FOTO
+  type: http
+  seq: 7
+
+http:
+  method: POST
+  url: "{{base_url}}/api/cencus/tree/oil-palm/store-photo"
+  body:
+    type: multipart-form
+    data:
+      - name: uuid
+        type: text
+        value: AP-NomorMandor-YMDHI
+      - name: EstateCode
+        type: text
+        value: AP
+      - name: DivisionCode
+        type: text
+        value: Div. V
+      - name: WorkingDivisionCode
+        type: text
+        value: Div. V
+      - name: MandorEmployeeID
+        type: text
+        value: 11FC5966-21F6-4E5C-91F0-F851862E8F28
+      - name: MandorEmployeeNumber
+        type: text
+        value: "2011356"
+      - name: MandorEmployeeName
+        type: text
+        value: Junaidi
+      - name: EmployeeID
+        type: text
+        value: 11FC5966-21F6-4E5C-91F0-F851862E8F28
+      - name: EmployeeNumber
+        type: text
+        value: "2011356"
+      - name: EmployeeName
+        type: text
+        value: Junaidi
+      - name: BlockCode
+        type: text
+        value: 127/11
+      - name: image_path
+        type: text
+        value: " .../.../...."
+      - name: baris_ke
+        type: text
+        value: "1"
+      - name: petak_ke
+        type: text
+        value: "1"
+      - name: send_batch
+        type: text
+        value: "1"
+      - name: tree_number
+        type: text
+        value: "1"
+      - name: image
+        type: file
+        value:
+          - /C:/Users/Asus/Desktop/1745805240_52362fe10f9bff3a3793.jpg
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

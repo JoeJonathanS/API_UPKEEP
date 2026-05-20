@@ -1,0 +1,27 @@
+info:
+  name: BLACK_BUNCH_CENCUS_DETAIL
+  type: http
+  seq: 7
+
+http:
+  method: POST
+  url: "{{base_url}}/api/report-per-module/report-bbc-detail"
+  body:
+    type: multipart-form
+    data:
+      - name: BlockID
+        type: text
+        value: 3DD85B7C-24A3-416E-ADCE-DAB9FA86CFFD
+      - name: BlockCode
+        type: text
+        value: 007/17
+      - name: TransactionDate
+        type: text
+        value: 2025-10-01
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

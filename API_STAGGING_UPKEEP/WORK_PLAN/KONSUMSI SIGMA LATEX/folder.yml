@@ -1,0 +1,7 @@
+info:
+  name: KONSUMSI SIGMA LATEX
+  type: folder
+  seq: 1
+
+request:
+  auth: inherit

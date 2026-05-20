@@ -1,0 +1,60 @@
+info:
+  name: STORE_ABSENCE_ASSISTANT
+  type: http
+  seq: 12
+
+http:
+  method: POST
+  url: "{{base_url}}/api/attendance/store-absence-assistant"
+  body:
+    type: multipart-form
+    data:
+      - name: EstateCode
+        type: text
+        value: LB
+        description: assistant User EstateCode
+      - name: DivisionCode
+        type: text
+        value: Div.I
+        description: assistant User Working Division Code
+      - name: EmployeeNumber
+        type: text
+        value: "3729"
+        description: Assistant User EmployeeNumber
+      - name: date
+        type: text
+        value: 2025-05-05
+        description: transaction date
+      - name: day_flagging
+        type: text
+        value: "0"
+        description: day flag, 1 if hari jumat, else 0
+      - name: uuid
+        type: text
+        value: PRSASTN-3729-20250505
+        description: transaction date
+      - name: labour[0][EmployeeNumber]
+        type: text
+        value: "1209609"
+      - name: labour[0][EmployeeName]
+        type: text
+        value: ""
+      - name: labour[0][LeaveCode]
+        type: text
+        value: P1
+      - name: labour[1][EmployeeNumber]
+        type: text
+        value: "1208720"
+      - name: labour[1][EmployeeName]
+        type: text
+        value: "1208720"
+      - name: labour[1][LeaveCode]
+        type: text
+        value: P4
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

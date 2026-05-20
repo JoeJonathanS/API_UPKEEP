@@ -1,0 +1,48 @@
+info:
+  name: GENERATE_RUBBER_TREE_CENSUS
+  type: http
+  seq: 14
+
+http:
+  method: POST
+  url: "{{base_url}}/api/report-verification/generate-rubber-tree-census"
+  body:
+    type: multipart-form
+    data:
+      - name: EstateID
+        type: text
+        value: 8F54AB13-F946-42DF-98A8-D46DFAD67395
+        description: EstateID
+      - name: EstateCode
+        type: text
+        value: AP
+        description: EstateCode
+      - name: EstateName
+        type: text
+        value: Aek Pamiengke
+        description: EstateName
+      - name: DivisionID
+        type: text
+        value: 62C1613F-04E9-4C5C-A316-8EDF3A1B6897
+        description: Working Division ID
+      - name: DivisionCode
+        type: text
+        value: Div. IV
+        description: Working Division Code
+      - name: DivisionName
+        type: text
+        value: Division IV
+        description: Working Division Name
+      - name: EmployeeNumber
+        type: text
+        value: "002440"
+      - name: TransactionDate
+        type: text
+        value: 2026-04-06
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

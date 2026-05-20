@@ -1,0 +1,84 @@
+info:
+  name: STORE_MANDORAN
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{base_url}}/api/activities/store-rkh-mandoran"
+  body:
+    type: multipart-form
+    data:
+      - name: uuid
+        type: text
+        value: PCTOPT-2012303-20260416
+      - name: EstateID
+        type: text
+        value: BBBC7F2E-E478-47D1-A9B7-DC4A479ABA65
+      - name: DivisionCode
+        type: text
+        value: Div.I
+      - name: DivisionName
+        type: text
+        value: Division I
+      - name: WorkingDivisionID
+        type: text
+        value: 88CCED05-6BF6-4FD8-BEF5-103C8AC8EDAD
+      - name: WorkingDivisionCode
+        type: text
+        value: Div.I
+      - name: WorkingDivisionName
+        type: text
+        value: Division I
+      - name: MovedToAnotherDivision
+        type: text
+        value: "0"
+      - name: BlockID
+        type: text
+        value: 54B234F8-4199-4105-B37F-2A495A904E54
+      - name: WorkgroupTaskDefinitionID
+        type: text
+        value: ""
+      - name: WorkgroupTaskDefinitionName
+        type: text
+        value: ""
+      - name: WorkgroupTaskDefinitionUOMCode
+        type: text
+        value: ""
+      - name: EmployeeID
+        type: text
+        value: "2011804"
+      - name: CFNAllocationCode
+        type: text
+        value: 300117B
+      - name: assignee_id
+        type: text
+        value: "2011804"
+      - name: day_flagging
+        type: text
+        value: "0"
+      - name: target
+        type: text
+        value: "8.0"
+      - name: labour[0][EmployeeID]
+        type: text
+        value: 3CBBA527-22C5-481A-9C09-711C889B51F2
+      - name: labour[0][output]
+        type: text
+        value: "1"
+      - name: labour[1][EmployeeID]
+        type: text
+        value: FFA9ADC2-9BA0-40C3-B113-6029B720481D
+      - name: labour[1][output]
+        type: text
+        value: "0.5"
+      - name: date
+        type: text
+        value: 2026-04-18
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

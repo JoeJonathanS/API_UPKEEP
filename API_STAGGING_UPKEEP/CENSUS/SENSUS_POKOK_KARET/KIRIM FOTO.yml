@@ -1,0 +1,70 @@
+info:
+  name: KIRIM FOTO
+  type: http
+  seq: 7
+
+http:
+  method: POST
+  url: "{{base_url}}/api/cencus/tree/rubber/store-photo"
+  body:
+    type: multipart-form
+    data:
+      - name: uuid
+        type: text
+        value: SNSPKK-1701756-001/02-20251110
+      - name: EstateCode
+        type: text
+        value: TB
+      - name: DivisionCode
+        type: text
+        value: Div. I
+      - name: WorkingDivisionCode
+        type: text
+        value: Div. I
+      - name: MandorEmployeeID
+        type: text
+        value: 11FC5966-21F6-4E5C-91F0-F851862E8F28
+      - name: MandorEmployeeNumber
+        type: text
+        value: "2011356"
+      - name: MandorEmployeeName
+        type: text
+        value: Junaidi
+      - name: EmployeeID
+        type: text
+        value: 11FC5966-21F6-4E5C-91F0-F851862E8F28
+      - name: EmployeeNumber
+        type: text
+        value: "2011356"
+      - name: EmployeeName
+        type: text
+        value: Junaidi
+      - name: BlockCode
+        type: text
+        value: 001/02
+      - name: image_path
+        type: text
+        value: /storage/emulated/0/Download/smash_u_qa/Sensus/SensusPokok/001(02)/1701756-SensusPokok-001-02-Petak-1-Baris-1-PokokKe-1.jpg
+      - name: baris_ke
+        type: text
+        value: "1"
+      - name: petak_ke
+        type: text
+        value: "1"
+      - name: send_batch
+        type: text
+        value: "1"
+      - name: tree_number
+        type: text
+        value: "1"
+      - name: image
+        type: file
+        value:
+          - /C:/Users/Asus/Downloads/Doc Socfindo/PETA HASIL SENSUS HAMA.jpeg
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

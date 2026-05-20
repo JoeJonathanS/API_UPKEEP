@@ -1,0 +1,54 @@
+info:
+  name: LABOUR
+  type: http
+  seq: 2
+
+http:
+  method: GET
+  url: "{{base_url}}/api/sync/master-labour/?EstateCode=AL"
+  params:
+    - name: WorkgroupRoleID
+      value: E9BADA46-0C0D-46EE-B987-B826D9BC661E
+      type: query
+      description: optional
+      disabled: true
+    - name: CategoryID
+      value: AD3D9B82-24EB-4768-8E10-B4A1BFD620F3
+      type: query
+      description: optional
+      disabled: true
+    - name: EmployeeID
+      value: 426C1094-8990-42E0-A939-FF12AD82636A
+      type: query
+      description: optional
+      disabled: true
+    - name: DivisionID
+      value: 9D0F0BDB-46F2-40D6-88D9-487C074573A0
+      type: query
+      disabled: true
+    - name: DivisionID
+      value: F9D59C37-73C7-4287-BDA6-A6DEB634AE23
+      type: query
+      disabled: true
+    - name: DivisionID
+      value: D9F25FA9-025D-47CA-9F0D-CF8EACD7E0A6
+      type: query
+      disabled: true
+    - name: DivisionCode
+      value: Div.I
+      type: query
+      disabled: true
+    - name: request_date
+      value: 2025-08-21
+      type: query
+      disabled: true
+    - name: EstateCode
+      value: AL
+      type: query
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

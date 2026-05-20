@@ -1,0 +1,61 @@
+info:
+  name: SET_INKONSISTEN
+  type: http
+  seq: 5
+
+http:
+  method: POST
+  url: "{{base_url}}/api/cencus/tree/rubber/set-inconsistencies-by-assistant"
+  body:
+    type: multipart-form
+    data:
+      - name: uuid
+        type: text
+        value: xxx-yyy-zzz
+        description: uuid transaksi
+      - name: EstateCode
+        type: text
+        value: AP
+        description: estate code
+      - name: DivisionCode
+        type: text
+        value: Div. V
+        description: division Code
+      - name: inFill
+        type: text
+        value: "0"
+        description: default 0
+      - name: EmployeeID
+        type: text
+        value: abc
+        description: asisten
+      - name: EmployeeNumber
+        type: text
+        value: "123"
+        description: asisten
+      - name: EmployeeName
+        type: text
+        value: Joko
+        description: asisten
+      - name: reason[0][TreeTypeID]
+        type: text
+        value: ""
+      - name: reason[0][TreeTypeCode]
+        type: text
+        value: ""
+      - name: reason[0][TreeTypeName]
+        type: text
+        value: ""
+      - name: reason[0][tree_count]
+        type: text
+        value: "10"
+        description: jumlah pokok
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+docs: API ini digunakan jika menambah & mengupdate inkonsistensi.

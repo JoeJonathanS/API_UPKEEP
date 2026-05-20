@@ -1,0 +1,27 @@
+info:
+  name: EQUIPMENT_&_MATERIAL
+  type: http
+  seq: 5
+
+http:
+  method: POST
+  url: "{{base_url}}/api/report-per-module/report-activity-equipment-material"
+  body:
+    type: multipart-form
+    data:
+      - name: EstateCode
+        type: text
+        value: AL
+      - name: DivisionCode
+        type: text
+        value: Div.I
+      - name: TransactionDate
+        type: text
+        value: 2025-07-15
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

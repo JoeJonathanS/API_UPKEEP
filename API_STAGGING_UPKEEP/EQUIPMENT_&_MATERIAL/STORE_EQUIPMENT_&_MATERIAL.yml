@@ -1,0 +1,282 @@
+info:
+  name: STORE_EQUIPMENT_&_MATERIAL
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{base_url}}/api/activity-equipment-and-material/store"
+  body:
+    type: multipart-form
+    data:
+      - name: uuid
+        type: text
+        value: EQPMTR-1304659-202505101819123
+        description: uuid
+      - name: daily_activity_uuid
+        type: text
+        value: PCTOPT-1304659-20250510140747
+        description: daily activity uuid
+      - name: EstateID
+        type: text
+        value: 0557B3E2-B268-4DCC-8EA5-48994C28878D
+        description: EstateID
+      - name: EstateCode
+        type: text
+        value: SL
+        description: EstateCode
+      - name: EstateName
+        type: text
+        value: Sei Liput
+        description: EstateName
+      - name: DivisionID
+        type: text
+        value: E4D70397-CA6F-41CA-8D94-EFA742DFCAFB
+        description: DivisionID
+      - name: DivisionCode
+        type: text
+        value: Div.II
+        description: DivisionCode
+      - name: DivisionName
+        type: text
+        value: Division II
+        description: DivisionName
+      - name: WorkingDivisionID
+        type: text
+        value: E4D70397-CA6F-41CA-8D94-EFA742DFCAFB
+        description: WorkingDivisionID
+      - name: WorkingDivisionCode
+        type: text
+        value: Div.II
+        description: WorkingDivisionCode
+      - name: WorkingDivisionName
+        type: text
+        value: Division II
+        description: WorkingDivisionName
+      - name: MovedToAnotherDivision
+        type: text
+        value: "1"
+        description: MovedToAnotherDivision
+      - name: EmployeeNumber
+        type: text
+        value: "1304659"
+        description: User Employee Number
+      - name: transaction_date
+        type: text
+        value: 2025-05-10
+        description: transaction date
+      - name: date
+        type: text
+        value: 2025-05-10
+        description: recording date
+      - name: equipment[0][HM_awal]
+        type: text
+        value: "1"
+        description: AllocationCode
+      - name: equipment[0][HM_akhir]
+        type: text
+        value: "1"
+        description: BlockID
+      - name: equipment[0][used_quantity]
+        type: text
+        value: "1"
+        description: date of transaction
+      - name: equipment[0][AllocationCode]
+        type: text
+        value: 200972A
+        description: date of transaction
+      - name: equipment[0][BlockID]
+        type: text
+        value: E0246F7A-23F7-44DF-A3EF-7E157DF961DF
+        description: date of transaction
+      - name: equipment[0][BlockCode]
+        type: text
+        value: 026/23
+        description: date of record
+      - name: equipment[0][BlockName]
+        type: text
+        value: Block 026/23
+      - name: equipment[0][AssetID]
+        type: text
+        value: 12AD90AD-8552-4C34-8A63-33EF24877253
+      - name: equipment[0][AssetType]
+        type: text
+        value: Equipment
+      - name: equipment[0][AssetCode]
+        type: text
+        value: KS
+      - name: equipment[0][AssetName]
+        type: text
+        value: Knapsack Sprayer
+      - name: equipment[0][UOMOutputName]
+        type: text
+        value: Jam
+      - name: equipment[0][UOMRunningUnitName]
+        type: text
+        value: Jam
+      - name: equipment[0][UOMRunningTimeName]
+        type: text
+        value: Jam
+      - name: material[0][DocumentNo]
+        type: text
+        value: GSIR/SL/25/05/1746742835833
+      - name: material[0][IssueNumber]
+        type: text
+        value: ISSUE/2025/5/411
+      - name: material[0][ItemID]
+        type: text
+        value: 01FCEAD0-F930-4ECF-9919-5F407E3BDA9E
+      - name: material[0][ItemCode]
+        type: text
+        value: "7016734"
+      - name: material[0][Date]
+        type: text
+        value: 2025-05-09
+      - name: material[0][ItemName]
+        type: text
+        value: SANTADOR 25 EC
+      - name: material[0][dosis]
+        type: text
+        value: "2.3"
+      - name: material[0][aplikasi_ke]
+        type: text
+        value: "1"
+      - name: material[0][hektar_aplikasi]
+        type: text
+        value: "100"
+      - name: material[0][pokok_aplikasi]
+        type: text
+        value: "100"
+      - name: material[0][notes_penggunaan]
+        type: text
+        value: ini notes penggunaan
+      - name: material[0][goni_awal]
+        type: text
+        value: "10"
+      - name: material[0][goni_kembali]
+        type: text
+        value: "10"
+      - name: material[0][notes_goni]
+        type: text
+        value: ini notes penggunaan
+      - name: material[0][remarks]
+        type: text
+        value: ini remarks
+      - name: material[0][used_quantity]
+        type: text
+        value: "0.39"
+      - name: material[0][CFNAllocationID]
+        type: text
+        value: 6A30290A-56C5-4D88-819B-E0F0BB5E1841
+      - name: material[0][PRSAllocationID]
+        type: text
+        value: 95D5E6C9-B0CB-4ACF-8162-B9730642CBAE
+      - name: material[0][AllocationCode]
+        type: text
+        value: 200972A
+      - name: material[0][AllocationName]
+        type: text
+        value: Merawat Oryctes-Manual
+      - name: material[0][BlockID]
+        type: text
+        value: E0246F7A-23F7-44DF-A3EF-7E157DF961DF
+      - name: material[0][BlockCode]
+        type: text
+        value: 026/23
+      - name: material[0][QtyIssue]
+        type: text
+        value: "0.95"
+      - name: material[0][AvailableQuantity]
+        type: text
+        value: "0.39"
+      - name: material[0][UOMID]
+        type: text
+        value: 440CD15A-3510-45CD-9075-65C934930263
+      - name: material[0][UOM]
+        type: text
+        value: Liter
+      - name: material[1][DocumentNo]
+        type: text
+        value: GSIR/SL/25/05/1746742835833
+      - name: material[1][IssueNumber]
+        type: text
+        value: ISSUE/2025/5/411
+      - name: material[1][ItemID]
+        type: text
+        value: CA96D746-673B-4F62-ACF7-54D718534765
+      - name: material[1][ItemCode]
+        type: text
+        value: "7074706"
+      - name: material[1][Date]
+        type: text
+        value: 2025-05-09
+      - name: material[1][ItemName]
+        type: text
+        value: KAO A-134
+      - name: material[1][dosis]
+        type: text
+        value: "2.3"
+      - name: material[1][aplikasi_ke]
+        type: text
+        value: "1"
+      - name: material[1][pokok_aplikasi]
+        type: text
+        value: "100"
+      - name: material[1][hektar_aplikasi]
+        type: text
+        value: "100"
+      - name: material[1][notes_penggunaan]
+        type: text
+        value: ini notes penggunaan
+      - name: material[1][goni_awal]
+        type: text
+        value: "10"
+      - name: material[1][goni_kembali]
+        type: text
+        value: "10"
+      - name: material[1][notes_goni]
+        type: text
+        value: ini notes penggunaan
+      - name: material[1][used_quantity]
+        type: text
+        value: "0.03"
+      - name: material[1][remarks]
+        type: text
+        value: ini remarksmaterial[1][used_quantity]:0.03
+      - name: material[1][CFNAllocationID]
+        type: text
+        value: 6A30290A-56C5-4D88-819B-E0F0BB5E1841
+      - name: material[1][PRSAllocationID]
+        type: text
+        value: 95D5E6C9-B0CB-4ACF-8162-B9730642CBAE
+      - name: material[1][AllocationCode]
+        type: text
+        value: 200972A
+      - name: material[1][AllocationName]
+        type: text
+        value: Merawat Oryctes-Manual
+      - name: material[1][BlockID]
+        type: text
+        value: E0246F7A-23F7-44DF-A3EF-7E157DF961DF
+      - name: material[1][BlockCode]
+        type: text
+        value: 026/23
+      - name: material[1][QtyIssue]
+        type: text
+        value: "0.09"
+      - name: material[1][AvailableQuantity]
+        type: text
+        value: "0.03"
+      - name: material[1][UOMID]
+        type: text
+        value: 4C17CCE3-F304-42B1-8151-EE7B0F0C2A8D
+      - name: material[1][UOM]
+        type: text
+        value: Kilogram
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

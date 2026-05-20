@@ -1,0 +1,22 @@
+info:
+  name: SWAP_DAY
+  type: http
+  seq: 14
+
+http:
+  method: GET
+  url: "{{base_url_socfin}}/masterupkeep/swap-day/MP"
+  headers:
+    - name: Authorization
+      value: 28f2bf7286126f044e5af7aa036a67d7.0a05d55af3949db13053dce3f942a0fe
+  auth:
+    type: apikey
+    key: Authorization
+    value: "{{token}}"
+    placement: header
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,48 @@
+info:
+  name: GENERATE_OVERTIME_LATEX
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{base_url}}/api/report-verification/latex/generate-latex-overtime"
+  body:
+    type: multipart-form
+    data:
+      - name: EstateCode
+        type: text
+        value: AP
+        description: EstateCode
+      - name: EstateName
+        type: text
+        value: AP
+        description: EstateCode
+      - name: WorkingDivisionID
+        type: text
+        value: Div. I
+        description: Transaction date
+      - name: WorkingDivisionCode
+        type: text
+        value: Div. I
+        description: Transaction date
+      - name: WorkingDivisionName
+        type: text
+        value: Div. I
+        description: Transaction date
+      - name: EmployeeNumber
+        type: text
+        value: "3764"
+        description: assistant
+      - name: WeekdayName
+        type: text
+        value: Friday
+      - name: TransactionDate
+        type: text
+        value: 2025-09-29
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

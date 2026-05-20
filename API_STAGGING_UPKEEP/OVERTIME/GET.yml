@@ -1,0 +1,38 @@
+info:
+  name: GET
+  type: http
+  seq: 5
+
+http:
+  method: GET
+  url: "{{base_url}}/api/overtime/get?EstateID=BBBC7F2E-E478-47D1-A9B7-DC4A479ABA65&overtime_date=2025-07-09"
+  params:
+    - name: EstateID
+      value: BBBC7F2E-E478-47D1-A9B7-DC4A479ABA65
+      type: query
+    - name: DivisionID
+      value: ""
+      type: query
+      disabled: true
+    - name: assignee_id
+      value: 13990BCA-AB42-4554-AC7D-398DBA42100F
+      type: query
+      disabled: true
+    - name: mandor_id
+      value: "1903956"
+      type: query
+      disabled: true
+    - name: overtime_date
+      value: 2025-07-09
+      type: query
+    - name: uuid
+      value: O-1
+      type: query
+      disabled: true
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

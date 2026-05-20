@@ -1,0 +1,59 @@
+info:
+  name: UPDATE_INCONSISTENCY
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{base_url}}/api/report-adjustment/update-inconsistency"
+  body:
+    type: multipart-form
+    data:
+      - name: EmployeeNumber
+        type: text
+        value: "3804"
+        description: Assistant EmployeeNumber
+      - name: EstateID
+        type: text
+        value: C1CFE70B-5CD4-419A-B5E7-76358B16EE14
+        description: EstateID
+      - name: EstateCode
+        type: text
+        value: BB
+        description: EstateCode
+      - name: WorkingDivisionCode
+        type: text
+        value: Div.III
+        description: WorkingDivisionCode
+      - name: TransactionDate
+        type: text
+        value: 2024-11-26
+        description: Transaction date
+      - name: WeekdayName
+        type: text
+        value: Thursday
+        description: nama hari
+      - name: Module[0][name]
+        type: text
+        value: absence
+      - name: Module[0][uuid]
+        type: text
+        value: PRSMDR-1502500-20241126
+      - name: Module[0][EmployeeNumber]
+        type: text
+        value: "1605062"
+        description: EmployeeNumber of worker
+      - name: Module[0][status]
+        type: text
+        value: "1"
+        description: 1 if active 0 if inactive
+      - name: Module[0][result]
+        type: text
+        value: "4"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

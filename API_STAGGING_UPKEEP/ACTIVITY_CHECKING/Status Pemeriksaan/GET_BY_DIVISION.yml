@@ -1,0 +1,31 @@
+info:
+  name: GET_BY_DIVISION
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{base_url}}/api/status-activity-checking/get-by-division"
+  body:
+    type: multipart-form
+    data:
+      - name: EstateCode
+        type: text
+        value: AL
+      - name: date
+        type: text
+        value: 2026-04-24
+      - name: DivisionCode
+        type: text
+        value: Div.I
+        disabled: true
+      - name: WorkingDivisionCode
+        type: text
+        value: Div.I
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

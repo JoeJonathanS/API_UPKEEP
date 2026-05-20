@@ -1,0 +1,47 @@
+info:
+  name: LIST_RECORD_ASSISTANT
+  type: http
+  seq: 5
+
+http:
+  method: POST
+  url: "{{base_url}}/api/activity-equipment-and-material/list-record-assistant"
+  body:
+    type: multipart-form
+    data:
+      - name: EstateCode
+        type: text
+        value: NL
+      - name: DivisionCode
+        type: text
+        value: Div.I
+      - name: EmployeeNumber
+        type: text
+        value: "3806"
+        description: Assistant Employee Number
+      - name: date
+        type: text
+        value: 2026-01-19
+        description: optional, use to get specific record by date. if using date range read description below.
+      - name: start_date
+        type: text
+        value: 2025-01-07
+        description: optional, use to get record using date range. both start_date and end_date is required when using this.
+        disabled: true
+      - name: end_date
+        type: text
+        value: 2025-01-24
+        description: dont use "date" when using range ! choose 1 in 1 request
+        disabled: true
+      - name: is_verified_assistant
+        type: text
+        value: "1"
+        description: use to get data which is verified or not verified by the assistant, 0 not verified yet, 1 verified
+        disabled: true
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

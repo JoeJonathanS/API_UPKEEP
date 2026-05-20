@@ -1,0 +1,30 @@
+info:
+  name: GET_BY_MANDOR
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{base_url}}/api/cencus/pest/get-by-mandor"
+  body:
+    type: multipart-form
+    data:
+      - name: EstateCode
+        type: text
+        value: AL
+      - name: WorkingDivisionCode
+        type: text
+        value: Div.VI
+      - name: MandorEmployeeNumber
+        type: text
+        value: "2010686"
+      - name: date
+        type: text
+        value: 2026-02-09
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

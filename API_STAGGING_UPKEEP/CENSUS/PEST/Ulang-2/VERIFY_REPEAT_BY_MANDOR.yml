@@ -1,0 +1,37 @@
+info:
+  name: VERIFY_REPEAT_BY_MANDOR
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: "{{base_url}}/api/cencus/pest/verified-repeat-2-by-mandor"
+  body:
+    type: multipart-form
+    data:
+      - name: EstateCode
+        type: text
+        value: AL
+      - name: WorkingDivisionCode
+        type: text
+        value: Div.VI
+      - name: MandorEmployeeNumber
+        type: text
+        value: "2602305"
+      - name: MandorEmployeeName
+        type: text
+        value: Joko
+      - name: date
+        type: text
+        value: 2025-03-15
+      - name: EmployeeNumber
+        type: text
+        value: "1807638"
+        disabled: true
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

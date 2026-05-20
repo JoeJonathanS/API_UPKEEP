@@ -1,0 +1,123 @@
+info:
+  name: STORE_CENSUS_WORKER
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{base_url}}/api/cencus/disease/store"
+  body:
+    type: multipart-form
+    data:
+      - name: EstateID
+        type: text
+        value: BBBC7F2E-E478-47D1-A9B7-DC4A479ABA65
+      - name: EstateCode
+        type: text
+        value: AL
+      - name: EstateName
+        type: text
+        value: Aek Loba
+      - name: DivisionID
+        type: text
+        value: 88CCED05-6BF6-4FD8-BEF5-103C8AC8EDAD
+      - name: DivisionCode
+        type: text
+        value: Div.I
+      - name: DivisionName
+        type: text
+        value: Division I
+      - name: WorkingDivisionID
+        type: text
+        value: 88CCED05-6BF6-4FD8-BEF5-103C8AC8EDAD
+      - name: WorkingDivisionCode
+        type: text
+        value: Div.I
+      - name: WorkingDivisionName
+        type: text
+        value: Division I
+      - name: MovedToAnotherDivision
+        type: text
+        value: "0"
+      - name: MandorEmployeeID
+        type: text
+        value: 11FC5966-21F6-4E5C-91F0-F851862E8F28
+      - name: MandorEmployeeNumber
+        type: text
+        value: "2011356"
+      - name: MandorEmployeeName
+        type: text
+        value: Junaidi
+      - name: EmployeeID
+        type: text
+        value: E73187C1-585F-4C9F-8DA0-AE80090652BF
+      - name: EmployeeNumber
+        type: text
+        value: "2012781"
+      - name: EmployeeName
+        type: text
+        value: Nova Widia Astutik
+      - name: date
+        type: text
+        value: 2025-06-04
+      - name: data[0][uuid]
+        type: text
+        value: SNSSICK-2012781-20250604115400
+      - name: data[0][BarisKe]
+        type: text
+        value: "1"
+      - name: data[0][PetakKe]
+        type: text
+        value: "1"
+      - name: data[0][BlockCode]
+        type: text
+        value: 001/04
+      - name: data[0][BlockID]
+        type: text
+        value: 5ED55A01-EC9C-408E-88FE-6304B2452E9A
+      - name: data[0][NumberOfPlants]
+        type: text
+        value: "2047"
+      - name: data[0][MaturedArea]
+        type: text
+        value: "19.97"
+      - name: data[0][LubangDisisip]
+        type: text
+        value: "5"
+      - name: data[0][TumbangPerluDibongkar]
+        type: text
+        value: "5"
+      - name: data[0][Content]
+        type: text
+        value: ""
+      - name: data[0][Lat]
+        type: text
+        value: "3.5844887"
+      - name: data[0][Long]
+        type: text
+        value: "98.6500219"
+      - name: data[0][NoTS]
+        type: text
+        value: TS-1
+      - name: data[0][IsManual]
+        type: text
+        value: "1"
+      - name: data[0][IsManualNote]
+        type: text
+        value: "1"
+      - name: data[0][SensusParty]
+        type: text
+        value: '"[]"'
+      - name: data[0][PokokSakit]
+        type: text
+        value: "54"
+      - name: data[0][Note]
+        type: text
+        value: asd
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

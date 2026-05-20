@@ -1,0 +1,26 @@
+info:
+  name: GET_FOR_MANDOR
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{base_url}}/api/cencus/black-bunch/get-by-mandor"
+  body:
+    type: multipart-form
+    data:
+      - name: EstateCode
+        type: text
+        value: AL
+        description: estate code
+      - name: WorkingDivisionCode
+        type: text
+        value: Div.I
+        description: Working division code
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

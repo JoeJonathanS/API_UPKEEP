@@ -1,0 +1,34 @@
+info:
+  name: DOWNLOAD_CENCUS_REPORT.pdf
+  type: http
+  seq: 12
+
+http:
+  method: POST
+  url: "{{base_url}}/api/report-per-module/download-report-pest-cencus"
+  body:
+    type: multipart-form
+    data:
+      - name: EstateCode
+        type: text
+        value: TG
+      - name: uuid
+        type: text
+        value: SensusHama-TG-Div.III-058/10-1807286-20260305
+      - name: AssistantEmployeeName
+        type: text
+        value: Sudi Widodo
+      - name: AssistantEmployeeNumber
+        type: text
+        value: "3333"
+      - name: inijoe
+        type: text
+        value: "1"
+        disabled: true
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

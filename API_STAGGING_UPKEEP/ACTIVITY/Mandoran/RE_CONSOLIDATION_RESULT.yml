@@ -1,0 +1,37 @@
+info:
+  name: RE_CONSOLIDATION_RESULT
+  type: http
+  seq: 11
+
+http:
+  method: POST
+  url: "{{base_url}}/api/activities/re-consolidation"
+  body:
+    type: multipart-form
+    data:
+      - name: EmployeeID
+        type: text
+        value: "3736"
+        description: User EmployeeNumber
+      - name: EstateCode
+        type: text
+        value: BB
+        description: mandatory
+      - name: DivisionCode
+        type: text
+        value: Div.I
+        description: mandatory
+      - name: WorkingDivisionCode
+        type: text
+        value: Div.I
+        description: mandatoy
+      - name: date
+        type: text
+        value: 2024-12-20
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

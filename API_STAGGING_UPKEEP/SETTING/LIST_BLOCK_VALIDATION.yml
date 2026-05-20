@@ -1,0 +1,24 @@
+info:
+  name: LIST_BLOCK_VALIDATION
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{base_url}}/api/setting/block-validation"
+  body:
+    type: multipart-form
+    data:
+      - name: EstateCode
+        type: text
+        value: LB
+      - name: TransactionDate
+        type: text
+        value: 2025-05-02
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

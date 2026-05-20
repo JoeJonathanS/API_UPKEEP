@@ -1,0 +1,44 @@
+info:
+  name: UPLOAD_KMZ
+  type: http
+  seq: 9
+
+http:
+  method: POST
+  url: "{{base_url}}/api/hcm-application/upload-kmz"
+  body:
+    type: multipart-form
+    data:
+      - name: uuid
+        type: text
+        value: APKHCM-1605247-20260313
+        description: The Estate Code
+      - name: EstateCode
+        type: text
+        value: BB
+      - name: WorkingDivisionCode
+        type: text
+        value: Div.IV
+      - name: BlockID
+        type: text
+        value: 11F42697-D80E-4790-9F31-F2A8C09600FC
+      - name: BlockCode
+        type: text
+        value: 091/09
+      - name: BlockName
+        type: text
+        value: Block 091/09
+      - name: date
+        type: text
+        value: 2026-03-13
+      - name: Block_File_KMZ
+        type: file
+        value:
+          - /C:/Users/Asus/Downloads/Doc Socfindo/Patroli Sore - Copy.kmz
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

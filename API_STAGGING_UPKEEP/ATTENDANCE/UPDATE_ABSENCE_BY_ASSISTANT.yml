@@ -1,0 +1,48 @@
+info:
+  name: UPDATE_ABSENCE_BY_ASSISTANT
+  type: http
+  seq: 11
+
+http:
+  method: POST
+  url: "{{base_url}}/api/attendance/update-absence-assistant"
+  body:
+    type: multipart-form
+    data:
+      - name: EmployeeNumber
+        type: text
+        value: "3405"
+        description: Assistant User EmployeeNumber
+      - name: EstateCode
+        type: text
+        value: MP
+        description: assistant User EstateCode
+      - name: DivisionCode
+        type: text
+        value: Div.III
+        description: assistant User Working Division Code
+      - name: date
+        type: text
+        value: 2025-02-01
+        description: transaction date
+      - name: labour[0][EmployeeNumber]
+        type: text
+        value: "1405612"
+      - name: labour[0][LeaveCode]
+        type: text
+        value: P1
+      - name: labour[1][EmployeeNumber]
+        type: text
+        value: "18140123"
+        disabled: true
+      - name: labour[1][LeaveCode]
+        type: text
+        value: P4
+        disabled: true
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

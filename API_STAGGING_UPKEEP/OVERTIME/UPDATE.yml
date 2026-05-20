@@ -1,0 +1,112 @@
+info:
+  name: UPDATE
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{base_url}}/api/overtime/update"
+  body:
+    type: multipart-form
+    data:
+      - name: uuid
+        type: text
+        value: O-1
+      - name: assignee_id
+        type: text
+        value: "301001"
+        description: Mandoran ID
+      - name: overtime_date
+        type: text
+        value: 2027-01-13
+        description: Lembur Date
+      - name: BlockID
+        type: text
+        value: 9E923FF2-9B87-493B-884C-03B9DFDBD5AD
+        description: Block ID ( target lembur )
+      - name: EmployeeNumber
+        type: text
+        value: "10010"
+        description: User Employee ID
+      - name: mandor_id
+        type: text
+        value: asd
+        description: mandor_id
+      - name: EstateID
+        type: text
+        value: C1CFE70B-5CD4-419A-B5E7-76358B16EE14
+      - name: labour[0][EmployeeID]
+        type: text
+        value: L4
+        description: uuid
+      - name: labour[0][AnalysisCodeID]
+        type: text
+        value: ""
+        description: if needed
+      - name: labour[0][AnalysisCode
+        type: text
+        value: ""
+        description: if needed
+      - name: labour[0][CFNAllocationID
+        type: text
+        value: ""
+        description: if needed
+      - name: labour[0][CFNAllocationCode
+        type: text
+        value: ""
+        description: if needed
+      - name: labour[0][CFNAllocationName]
+        type: text
+        value: ""
+        description: if needed
+      - name: labour[0][output_duration_start]
+        type: text
+        value: 13:00
+        description: worker employee id
+      - name: labour[0][output_duration_end]
+        type: text
+        value: 15:00
+      - name: labour[0][output_total_duration]
+        type: text
+        value: "2"
+      - name: labour[0][image]
+        type: file
+        value:
+          - /C:/Users/joena/Downloads/JUG.jpg
+      - name: labour[1][EmployeeID]
+        type: text
+        value: L51
+      - name: labour[1][output_duration_start]
+        type: text
+        value: 13:00
+      - name: labour[1][output_duration_end]
+        type: text
+        value: |+
+          16:00
+
+
+
+
+
+
+
+      - name: labour[1][output_total_duration]
+        type: text
+        value: "3.5"
+      - name: labour[1][labour_change_employee_id]
+        type: text
+        value: L5
+      - name: labour[1][labour_change_employee_name]
+        type: text
+        value: joko
+      - name: labour[1][image]
+        type: file
+        value:
+          - /C:/Users/joena/Downloads/SF.jpg
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

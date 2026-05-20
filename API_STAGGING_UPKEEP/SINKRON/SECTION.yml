@@ -1,0 +1,25 @@
+info:
+  name: SECTION
+  type: http
+  seq: 37
+
+http:
+  method: GET
+  url: "{{base_url}}/api/sync/master-section/?EstateCode=MP&DivisionCode=Div.I&request_date=2025-10-09"
+  params:
+    - name: EstateCode
+      value: MP
+      type: query
+    - name: DivisionCode
+      value: Div.I
+      type: query
+    - name: request_date
+      value: 2025-10-09
+      type: query
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

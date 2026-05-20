@@ -1,0 +1,105 @@
+info:
+  name: STORE
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{base_url}}/api/rkb-hcm/store"
+  body:
+    type: multipart-form
+    data:
+      - name: uuid
+        type: text
+        value: RKBHCM-...-...
+        description: UUID
+      - name: EstateID
+        type: text
+        value: BB
+        description: The Estate Detail
+      - name: EstateCode
+        type: text
+        value: BB
+      - name: EstateName
+        type: text
+        value: BB
+      - name: DivisionID
+        type: text
+        value: Div.I
+        description: Div Detail
+      - name: DivisionCode
+        type: text
+        value: Div.I
+      - name: DivisionName
+        type: text
+        value: Div.I
+      - name: AssistantEmployeeID
+        type: text
+        value: 13C88F76-F426-4289-BF39-51705720C3F7
+      - name: AssistantEmployeeNumber
+        type: text
+        value: "3735"
+      - name: AssistantEmployeeName
+        type: text
+        value: Rio Elvandari Lubis
+      - name: RKB_HCM_Created_Date
+        type: text
+        value: 2026-02-03
+      - name: RKB_HCM_Year_Month
+        type: text
+        value: 2026-02
+      - name: send_hour
+        type: text
+        value: 10:06:46.000
+      - name: dataBJPA
+        type: text
+        value: "''"
+      - name: KantongInternal
+        type: text
+        value: "100"
+      - name: JumlahBJPAPerKantongInternal
+        type: text
+        value: "100"
+      - name: KantongEksternal
+        type: text
+        value: "99"
+      - name: JumlahBJPAPerKantongEksternal
+        type: text
+        value: "99"
+      - name: Blocks[0][BlockID]
+        type: text
+        value: BlockID1
+      - name: Blocks[0][BlockCode]
+        type: text
+        value: BlockCode1
+      - name: Blocks[0][BlockName]
+        type: text
+        value: BlockName1
+      - name: Blocks[0][LuasBlock]
+        type: text
+        value: "123"
+      - name: Blocks[0][LuasHCM]
+        type: text
+        value: "123"
+      - name: Blocks[1][BlockID]
+        type: text
+        value: BlockID2
+      - name: Blocks[1][BlockCode]
+        type: text
+        value: BlockCode2
+      - name: Blocks[1][BlockName]
+        type: text
+        value: BlockName2
+      - name: Blocks[1][LuasBlock]
+        type: text
+        value: "1234"
+      - name: Blocks[1][LuasHCM]
+        type: text
+        value: "1234"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

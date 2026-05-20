@@ -1,0 +1,209 @@
+info:
+  name: STORE
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{base_url}}/api/status-activity-checking/store"
+  body:
+    type: multipart-form
+    data:
+      - name: uuid
+        type: text
+        value: PemeriksaanCheck-1807856-2026-04-14
+      - name: EstateID
+        type: text
+        value: BB
+      - name: EstateCode
+        type: text
+        value: BB
+      - name: EstateName
+        type: text
+        value: BB
+      - name: MandorEmployeeID
+        type: text
+        value: MDR001
+      - name: MandorEmployeeName
+        type: text
+        value: MDR001
+      - name: MandorEmployeeNumber
+        type: text
+        value: MDR001
+      - name: start_date
+        type: text
+        value: 2026-04-14
+      - name: Year
+        type: text
+        value: "2026"
+        description: CFNAllocationID, from AllocationID in mandoran master data
+      - name: Month
+        type: text
+        value: "12"
+        description: PRSAllocationCode
+      - name: finished_at
+        type: text
+        value: "null"
+        description: WorkgroupID
+      - name: is_finished
+        type: text
+        value: "0"
+        description: WorkgroupCode
+      - name: employee_checked[0][uuid]
+        type: text
+        value: PemeriksaanCheck-1807856-2026-04-14
+      - name: employee_checked[0][EmployeeID]
+        type: text
+        value: "123"
+      - name: employee_checked[0][EmployeeName]
+        type: text
+        value: Budi
+      - name: employee_checked[0][EmployeeNumber]
+        type: text
+        value: EMP001
+        description: Mandor EmployeeNumber
+      - name: employee_checked[0][MandorEmployeeNumber]
+        type: text
+        value: MDR001
+      - name: employee_checked[0][MandorEmployeID]
+        type: text
+        value: MDR001
+      - name: employee_checked[0][MandorEmployeName]
+        type: text
+        value: MDR001
+      - name: employee_checked[0][EstateID]
+        type: text
+        value: 8F54AB13
+      - name: employee_checked[0][EstateCode]
+        type: text
+        value: AP
+      - name: employee_checked[0][EstateName]
+        type: text
+        value: AekPamienke
+      - name: employee_checked[0][DivisionID]
+        type: text
+        value: D02
+      - name: employee_checked[0][DivisionCode]
+        type: text
+        value: DIV02
+      - name: employee_checked[0][DivisionName]
+        type: text
+        value: Divisi2
+      - name: employee_checked[0][WorkingDivisionID]
+        type: text
+        value: WD2
+      - name: employee_checked[0][WorkingDivisionCode]
+        type: text
+        value: WD02
+      - name: employee_checked[0][WorkingDivisionName]
+        type: text
+        value: WorkingDiv2
+      - name: employee_checked[0][BlockID]
+        type: text
+        value: B0
+      - name: employee_checked[0][BlockCode]
+        type: text
+        value: B0
+      - name: employee_checked[0][BlockName]
+        type: text
+        value: B0
+      - name: employee_checked[0][PRSAllocationID]
+        type: text
+        value: PRS0
+      - name: employee_checked[0][PRSAllocationCode]
+        type: text
+        value: PRS0
+      - name: employee_checked[0][PRSAllocationName]
+        type: text
+        value: PRS0
+      - name: employee_checked[0][date]
+        type: text
+        value: 2026-04-21
+      - name: employee_checked[0][finished_at]
+        type: text
+        value: "null"
+      - name: employee_checked[0][is_finished]
+        type: text
+        value: "0"
+      - name: employee_checked[1][uuid]
+        type: text
+        value: PemeriksaanCheck-1807856-2026-04-14
+      - name: employee_checked[1][EmployeeID]
+        type: text
+        value: "123"
+      - name: employee_checked[1][EmployeeName]
+        type: text
+        value: Budi
+      - name: employee_checked[1][EmployeeNumber]
+        type: text
+        value: EMP001
+      - name: employee_checked[1][MandorEmployeeNumber]
+        type: text
+        value: MDR001
+      - name: employee_checked[1][MandorEmployeID]
+        type: text
+        value: MDR001
+      - name: employee_checked[1][MandorEmployeName]
+        type: text
+        value: MDR001
+      - name: employee_checked[1][EstateCode]
+        type: text
+        value: AP
+      - name: employee_checked[1][EstateID]
+        type: text
+        value: 8F54AB13
+      - name: employee_checked[1][EstateName]
+        type: text
+        value: AekPamienke
+      - name: employee_checked[1][DivisionCode]
+        type: text
+        value: DIV02
+      - name: employee_checked[1][DivisionName]
+        type: text
+        value: Divisi2
+      - name: employee_checked[1][DivisionID]
+        type: text
+        value: D02
+      - name: employee_checked[1][WorkingDivisionCode]
+        type: text
+        value: WD02
+      - name: employee_checked[1][WorkingDivisionName]
+        type: text
+        value: WorkingDiv2
+      - name: employee_checked[1][WorkingDivisionID]
+        type: text
+        value: WD2
+      - name: employee_checked[1][BlockID]
+        type: text
+        value: "null"
+      - name: employee_checked[1][BlockCode]
+        type: text
+        value: "null"
+      - name: employee_checked[1][BlockName]
+        type: text
+        value: "null"
+      - name: employee_checked[1][PRSAllocationID]
+        type: text
+        value: PRS1
+      - name: employee_checked[1][PRSAllocationCode]
+        type: text
+        value: PRS1
+      - name: employee_checked[1][PRSAllocationName]
+        type: text
+        value: PRS1
+      - name: employee_checked[1][date]
+        type: text
+        value: 2026-04-21
+      - name: employee_checked[1][finished_at]
+        type: text
+        value: "null"
+      - name: employee_checked[1][is_finished]
+        type: text
+        value: "0"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,25 @@
+info:
+  name: Kebutuhan Taksasi Produk
+  type: http
+  seq: 2
+
+http:
+  method: GET
+  url: "{{base_url}}/api/latex/kebutuhan-taksasi-produk/?EstateCode=AP&DivisionCode=Div. IV&date=2026-03-13"
+  params:
+    - name: EstateCode
+      value: AP
+      type: query
+    - name: DivisionCode
+      value: Div. IV
+      type: query
+    - name: date
+      value: 2026-03-13
+      type: query
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

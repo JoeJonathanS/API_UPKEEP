@@ -1,0 +1,38 @@
+info:
+  name: VERIFY_BY_ASSISTANT
+  type: http
+  seq: 7
+
+http:
+  method: POST
+  url: "{{base_url}}/api/activity-equipment-and-material/verify-assistant-material-and-equipment"
+  body:
+    type: multipart-form
+    data:
+      - name: uuid
+        type: text
+        value: O-3
+        description: uuid
+      - name: AssistantEmployeeNumber
+        type: text
+        value: "1807053"
+        description: Employee Number of user
+      - name: date
+        type: text
+        value: 2024-10-04
+      - name: transaction_date
+        type: text
+        value: 2024-10-04
+      - name: EstateCode
+        type: text
+        value: TG
+      - name: DivisionCode
+        type: text
+        value: Div.I
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

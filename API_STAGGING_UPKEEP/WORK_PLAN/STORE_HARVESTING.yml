@@ -1,0 +1,310 @@
+info:
+  name: STORE_HARVESTING
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{base_url}}/api/work-plan/store-work-plan-harvesting"
+  body:
+    type: multipart-form
+    data:
+      - name: uuid
+        type: text
+        value: DWP-H-3735-S12
+        description: UUID
+      - name: EstateCode
+        type: text
+        value: BB
+        description: The Estate Code
+      - name: DivisionCode
+        type: text
+        value: Div.I
+        description: The Division Code
+      - name: AssistantEmployeeID
+        type: text
+        value: 13C88F76-F426-4289-BF39-51705720C3F7
+      - name: AssistantEmployeeNumber
+        type: text
+        value: "3735"
+      - name: AssistantEmployeeName
+        type: text
+        value: Rio Elvandari Lubis
+      - name: date
+        type: text
+        value: 2025-01-12
+      - name: rkh_date
+        type: text
+        value: 2025-01-12
+      - name: send_hour
+        type: text
+        value: 10:06:46.000
+      - name: day_flagging
+        type: text
+        value: "0"
+        description: 0 normal day, 1 friday
+      - name: employee[0][EmployeeNumber]
+        type: text
+        value: "1505230"
+      - name: employee[0][details][0][PRSAllocationCode]
+        type: text
+        value: "300117"
+      - name: employee[0][details][0][UOMCode]
+        type: text
+        value: HA
+      - name: employee[0][details][0][AllocationTarget]
+        type: text
+        value: "2000"
+      - name: employee[0][details][0][Blocks][0][BlockCode]
+        type: text
+        value: 072/19
+      - name: employee[0][details][0][Blocks][0][TargetPanen]
+        type: text
+        value: "5"
+      - name: employee[0][details][0][Blocks][0][SPH]
+        type: text
+        value: "5"
+      - name: employee[0][details][0][Blocks][0][JumlahPokok]
+        type: text
+        value: "5"
+      - name: employee[0][details][0][Blocks][0][TotalKaryawan]
+        type: text
+        value: "5"
+      - name: employee[0][details][0][Blocks][0][PersenMatang]
+        type: text
+        value: "5"
+      - name: employee[0][details][0][Blocks][0][OutputPanen]
+        type: text
+        value: "5"
+      - name: employee[0][details][0][Blocks][0][BuahMasak]
+        type: text
+        value: "5"
+        disabled: true
+      - name: employee[0][details][0][Blocks][0][TaksasiJumlahBuahMasak]
+        type: text
+        value: "5"
+      - name: employee[0][details][0][Blocks][0][Taksasi]
+        type: text
+        value: "5"
+      - name: employee[0][details][0][Blocks][0][Basis]
+        type: text
+        value: "5"
+      - name: employee[0][details][0][Blocks][0][BorongDinasJanjang]
+        type: text
+        value: "5"
+        disabled: true
+      - name: employee[0][details][0][Blocks][0][KaryawanDiperlukan]
+        type: text
+        value: "5"
+        disabled: true
+      - name: employee[0][details][0][Blocks][0][Pusingan]
+        type: text
+        value: "1"
+      - name: employee[0][details][0][Blocks][1][BlockCode]
+        type: text
+        value: 073/19
+      - name: employee[0][details][0][Blocks][1][TargetPanen]
+        type: text
+        value: "5"
+      - name: employee[0][details][0][Blocks][1][SPH]
+        type: text
+        value: "5"
+      - name: employee[0][details][0][Blocks][1][JumlahPokok]
+        type: text
+        value: "5"
+      - name: employee[0][details][0][Blocks][1][TotalKaryawan]
+        type: text
+        value: "5"
+      - name: employee[0][details][0][Blocks][1][PersenMatang]
+        type: text
+        value: "5"
+      - name: employee[0][details][0][Blocks][0][OutputPanen]
+        type: text
+        value: "5"
+      - name: employee[0][details][0][Blocks][1][BuahMasak]
+        type: text
+        value: "5"
+        disabled: true
+      - name: employee[0][details][0][Blocks][1][TaksasiJumlahBuahMasak]
+        type: text
+        value: "5"
+      - name: employee[0][details][0][Blocks][1][Taksasi]
+        type: text
+        value: "5"
+      - name: employee[0][details][0][Blocks][1][Basis]
+        type: text
+        value: "5"
+      - name: employee[0][details][0][Blocks][1][BorongDinasJanjang]
+        type: text
+        value: "5"
+        disabled: true
+      - name: employee[0][details][0][Blocks][1][KaryawanDiperlukan]
+        type: text
+        value: "5"
+        disabled: true
+      - name: employee[0][details][0][Blocks][1][Pusingan]
+        type: text
+        value: "1"
+      - name: employee[0][details][1][PRSAllocationCode]
+        type: text
+        value: "200962"
+      - name: employee[0][details][1][UOMCode]
+        type: text
+        value: HA
+      - name: employee[0][details][1][AllocationTarget]
+        type: text
+        value: "15"
+      - name: employee[0][details][1][Blocks][0][BlockCode]
+        type: text
+        value: 081/18
+      - name: employee[0][details][1][Blocks][0][TargetPanen]
+        type: text
+        value: "5"
+      - name: employee[0][details][1][Blocks][0][SPH]
+        type: text
+        value: "5"
+      - name: employee[0][details][1][Blocks][0][JumlahPokok]
+        type: text
+        value: "5"
+      - name: employee[0][details][1][Blocks][0][TotalKaryawan]
+        type: text
+        value: "5"
+      - name: employee[0][details][1][Blocks][0][PersenMatang]
+        type: text
+        value: "5"
+      - name: employee[0][details][1][Blocks][0][OutputPanen]
+        type: text
+        value: "5"
+      - name: employee[0][details][1][Blocks][0][BuahMasak]
+        type: text
+        value: "5"
+        disabled: true
+      - name: employee[0][details][1][Blocks][0][TaksasiJumlahBuahMasak]
+        type: text
+        value: "5"
+      - name: employee[0][details][1][Blocks][0][Taksasi]
+        type: text
+        value: "5"
+      - name: employee[0][details][1][Blocks][0][Basis]
+        type: text
+        value: "5"
+      - name: employee[0][details][1][Blocks][0][BorongDinasJanjang]
+        type: text
+        value: "5"
+        disabled: true
+      - name: employee[0][details][1][Blocks][0][KaryawanDiperlukan]
+        type: text
+        value: "5"
+        disabled: true
+      - name: employee[0][details][1][Blocks][0][Pusingan]
+        type: text
+        value: "1"
+      - name: employee[1][EmployeeNumber]
+        type: text
+        value: "1505678"
+      - name: employee[1][details][0][PRSAllocationCode]
+        type: text
+        value: "300117"
+      - name: employee[1][details][0][UOMCode]
+        type: text
+        value: HA
+      - name: employee[1][details][0][AllocationTarget]
+        type: text
+        value: "8574"
+      - name: employee[1][details][0][Blocks][0][BlockCode]
+        type: text
+        value: 075/10
+      - name: employee[1][details][0][Blocks][0][TargetPanen]
+        type: text
+        value: "5"
+      - name: employee[1][details][0][Blocks][0][SPH]
+        type: text
+        value: "5"
+      - name: employee[1][details][0][Blocks][0][JumlahPokok]
+        type: text
+        value: "5"
+      - name: employee[1][details][0][Blocks][0][TotalKaryawan]
+        type: text
+        value: "5"
+      - name: employee[1][details][0][Blocks][0][PersenMatang]
+        type: text
+        value: "5"
+      - name: employee[1][details][0][Blocks][0][OutputPanen]
+        type: text
+        value: "5"
+      - name: employee[1][details][0][Blocks][0][BuahMasak]
+        type: text
+        value: "5"
+        disabled: true
+      - name: employee[1][details][0][Blocks][0][TaksasiJumlahBuahMasak]
+        type: text
+        value: "5"
+      - name: employee[1][details][0][Blocks][0][Taksasi]
+        type: text
+        value: "5"
+      - name: employee[1][details][0][Blocks][0][Basis]
+        type: text
+        value: "5"
+      - name: employee[1][details][0][Blocks][0][BorongDinasJanjang]
+        type: text
+        value: "5"
+        disabled: true
+      - name: employee[1][details][0][Blocks][0][KaryawanDiperlukan]
+        type: text
+        value: "5"
+        disabled: true
+      - name: employee[1][details][0][Blocks][0][Pusingan]
+        type: text
+        value: "1"
+      - name: employee[1][details][0][Blocks][1][BlockCode]
+        type: text
+        value: 077/13
+      - name: employee[1][details][0][Blocks][1][TargetPanen]
+        type: text
+        value: "5"
+      - name: employee[1][details][0][Blocks][1][SPH]
+        type: text
+        value: "5"
+      - name: employee[1][details][0][Blocks][1][JumlahPokok]
+        type: text
+        value: "5"
+      - name: employee[1][details][0][Blocks][1][TotalKaryawan]
+        type: text
+        value: "5"
+      - name: employee[1][details][0][Blocks][1][PersenMatang]
+        type: text
+        value: "5"
+      - name: employee[1][details][0][Blocks][1][OutputPanen]
+        type: text
+        value: "5"
+      - name: employee[1][details][0][Blocks][1][BuahMasak]
+        type: text
+        value: "5"
+        disabled: true
+      - name: employee[1][details][0][Blocks][1][TaksasiJumlahBuahMasak]
+        type: text
+        value: "5"
+      - name: employee[1][details][0][Blocks][1][Taksasi]
+        type: text
+        value: "5"
+      - name: employee[1][details][0][Blocks][1][Basis]
+        type: text
+        value: "5"
+      - name: employee[1][details][0][Blocks][1][BorongDinasJanjang]
+        type: text
+        value: "5"
+        disabled: true
+      - name: employee[1][details][0][Blocks][1][KaryawanDiperlukan]
+        type: text
+        value: "5"
+        disabled: true
+      - name: employee[1][details][0][Blocks][1][Pusingan]
+        type: text
+        value: "1"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

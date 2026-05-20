@@ -1,0 +1,42 @@
+info:
+  name: GENERATE_FROM_ALPHA_METEOROLOGY
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{base_url}}/api/report-meteorology-alpha/generate-post-harvest"
+  body:
+    type: multipart-form
+    data:
+      - name: EstateID
+        type: text
+        value: C1CFE70B-5CD4-419A-B5E7-76358B16EE14
+      - name: EstateCode
+        type: text
+        value: BB
+      - name: EstateName
+        type: text
+        value: Bangun Bandar
+      - name: DivisionID
+        type: text
+        value: FBE65292-5272-46F8-A829-9A307E49356D
+      - name: DivisionCode
+        type: text
+        value: Div.IV
+      - name: DivisionName
+        type: text
+        value: Division IV
+      - name: EmployeeNumber
+        type: text
+        value: "3815"
+      - name: TransactionYear
+        type: text
+        value: "2026"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

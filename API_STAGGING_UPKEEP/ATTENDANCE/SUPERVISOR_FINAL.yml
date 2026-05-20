@@ -1,0 +1,71 @@
+info:
+  name: SUPERVISOR_FINAL
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{base_url}}/api/attendance/supervisor-final"
+  body:
+    type: multipart-form
+    data:
+      - name: EstateID
+        type: text
+        value: qwjdnkajs-asd-ads123
+      - name: uuid
+        type: text
+        value: XXX-XXX-XXXXXXXXX
+        description: uuid
+      - name: EmployeeID
+        type: text
+        value: "501001"
+      - name: attendance_date
+        type: text
+        value: 2027-02-05
+        description: attendance date
+      - name: check_in
+        type: text
+        value: 11:30:25.000
+        description: check in time
+      - name: face_status_in
+        type: text
+        value: "1"
+        description: boolean, 0 if using manual cam, otherwise 1
+      - name: face_image_in
+        type: file
+        value:
+          - /C:/Users/joena/Downloads/JUG.jpg
+        description: "image file "
+      - name: long_in
+        type: text
+        value: "90.09"
+        description: image file
+      - name: lat_in
+        type: text
+        value: "3.232135165"
+        description: longitude check out
+      - name: check_out
+        type: text
+        value: 14:30:25.000
+        description: latitude check out
+      - name: long_out
+        type: text
+        value: "90.09"
+      - name: lat_out
+        type: text
+        value: "3.232135165"
+      - name: face_status_out
+        type: text
+        value: "1"
+      - name: face_image_out
+        type: file
+        value:
+          - /C:/Users/joena/Downloads/SF.jpg
+        description: image file
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,31 @@
+info:
+  name: GET_CONSOLIDATION_RESULT_ASSISTANT
+  type: http
+  seq: 8
+
+http:
+  method: GET
+  url: "{{base_url}}/api/activities/list-consolidation-result-assistant?EstateCode=BB&WorkingDivisionCode=Div.IV&date=2026-01-15&is_verified_mandor=1"
+  params:
+    - name: EstateCode
+      value: BB
+      type: query
+      description: User Estate Code (mandatory)
+    - name: WorkingDivisionCode
+      value: Div.IV
+      type: query
+      description: User Working Division Code (mandatory)
+    - name: date
+      value: 2026-01-15
+      type: query
+      description: Transaction date (mandatory)
+    - name: is_verified_mandor
+      value: "1"
+      type: query
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

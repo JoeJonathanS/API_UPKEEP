@@ -1,0 +1,27 @@
+info:
+  name: MATERIAL_REQUEST
+  type: http
+  seq: 12
+
+http:
+  method: GET
+  url: "{{base_url}}/api/sync/master-material-request?EstateCode=AL"
+  params:
+    - name: EstateCode
+      value: AL
+      type: query
+    - name: DivisionID
+      value: D9F25FA9-025D-47CA-9F0D-CF8EACD7E0A6
+      type: query
+      disabled: true
+    - name: BlockID
+      value: C2F2D12A-15A6-4742-AE8C-D3B98966F8C0
+      type: query
+      disabled: true
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

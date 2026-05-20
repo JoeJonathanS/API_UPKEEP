@@ -1,0 +1,27 @@
+info:
+  name: GET_ASSISTANT
+  type: http
+  seq: 6
+
+http:
+  method: POST
+  url: "{{base_url}}/api/bjpa/get-by-assistant"
+  body:
+    type: multipart-form
+    data:
+      - name: EstateCode
+        type: text
+        value: BB
+      - name: WorkingDivisionCode
+        type: text
+        value: Div.IV
+      - name: date
+        type: text
+        value: 2026-07-09
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

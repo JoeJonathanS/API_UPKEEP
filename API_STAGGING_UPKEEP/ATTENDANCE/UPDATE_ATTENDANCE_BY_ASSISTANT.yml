@@ -1,0 +1,46 @@
+info:
+  name: UPDATE_ATTENDANCE_BY_ASSISTANT
+  type: http
+  seq: 10
+
+http:
+  method: POST
+  url: "{{base_url}}/api/attendance/update-attendance-assistant"
+  body:
+    type: multipart-form
+    data:
+      - name: uuid
+        type: text
+        value: ""
+      - name: EmployeeID
+        type: text
+        value: ""
+        description: emp id pekerja
+      - name: BlockID
+        type: text
+        value: ""
+      - name: BlockCode
+        type: text
+        value: ""
+      - name: allocationId
+        type: text
+        value: ""
+      - name: allocationName
+        type: text
+        value: ""
+      - name: allocationCode
+        type: text
+        value: ""
+      - name: AnalysisCodeId
+        type: text
+        value: ""
+      - name: AnalysisCode
+        type: text
+        value: ""
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

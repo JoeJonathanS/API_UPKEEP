@@ -1,0 +1,42 @@
+info:
+  name: LIST
+  type: http
+  seq: 6
+
+http:
+  method: GET
+  url: "{{base_url}}/api/attendance/list?WorkingDivisionCode=Div.I&date=2025-08-15&EstateID=D60334A7-6AD6-47CD-B7DA-82391CD2475B"
+  params:
+    - name: DivisionID
+      value: D9F25FA9-025D-47CA-9F0D-CF8EACD7E0A6
+      type: query
+      disabled: true
+    - name: WorkingDivisionID
+      value: B46C8203-8B33-4FF8-9A12-1BA60E134AEE
+      type: query
+      description: USED FOR ASSISTANT
+      disabled: true
+    - name: re_fetch
+      value: "1"
+      type: query
+      disabled: true
+    - name: WorkingDivisionCode
+      value: Div.I
+      type: query
+    - name: date
+      value: 2025-08-15
+      type: query
+    - name: EstateID
+      value: D60334A7-6AD6-47CD-B7DA-82391CD2475B
+      type: query
+    - name: created_by
+      value: "1405259"
+      type: query
+      disabled: true
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

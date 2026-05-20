@@ -1,0 +1,30 @@
+info:
+  name: PEST_DISEASE_LEVEL
+  type: http
+  seq: 18
+
+http:
+  method: GET
+  url: "{{base_url}}/api/sync/master-pest-disease-level?EstateCode=MP&request_date=2025-09-08"
+  params:
+    - name: EmployeeID
+      value: "20010"
+      type: query
+      disabled: true
+    - name: TypeID
+      value: 8523F169-C8CF-4BF7-AA5A-A053A8A75F8C
+      type: query
+      disabled: true
+    - name: EstateCode
+      value: MP
+      type: query
+    - name: request_date
+      value: 2025-09-08
+      type: query
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

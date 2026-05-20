@@ -1,0 +1,38 @@
+info:
+  name: send late document
+  type: http
+  seq: 8
+
+http:
+  method: POST
+  url: "{{base_url}}/api/report-verification/history/send-late"
+  body:
+    type: multipart-form
+    data:
+      - name: EstateCode
+        type: text
+        value: LB
+        description: EstateCode
+      - name: WorkingDivisionCode
+        type: text
+        value: Div.I
+        description: WorkingDivisionCode
+      - name: Module
+        type: text
+        value: DailyAttendance
+        description: DailyAttendance/WorkgroupAttendance/Overtime
+      - name: SheetNumber
+        type: text
+        value: 01/1209152
+        description: Data Sheet Number
+      - name: TransactionDate
+        type: text
+        value: 2025-07-30
+        description: Transaction date
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

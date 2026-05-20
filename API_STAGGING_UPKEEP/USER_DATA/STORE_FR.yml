@@ -1,0 +1,53 @@
+info:
+  name: STORE_FR
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{base_url}}/api/user-face/store"
+  body:
+    type: multipart-form
+    data:
+      - name: EmployeeID
+        type: text
+        value: "101001"
+      - name: employee[0][EmployeeID]
+        type: text
+        value: "301001"
+      - name: employee[0][DivisionID]
+        type: text
+        value: FBE65292-5272-46F8-A829-9A307E49356D
+      - name: employee[0][EstateCode]
+        type: text
+        value: TG
+      - name: employee[0][image_bit]
+        type: text
+        value: "2"
+      - name: employee[0][image]
+        type: file
+        value:
+          - /C:/Users/joena/Downloads/JUG.jpg
+      - name: employee[1][EmployeeID]
+        type: text
+        value: "201001"
+      - name: employee[1][DivisionID]
+        type: text
+        value: FBE65292-5272-46F8-A829-9A307E49356D
+      - name: employee[1][EstateCode]
+        type: text
+        value: TG
+      - name: employee[1][image_bit]
+        type: text
+        value: "2"
+      - name: employee[1][image]
+        type: file
+        value:
+          - /C:/Users/joena/OneDrive/Pictures/img003.jpg
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

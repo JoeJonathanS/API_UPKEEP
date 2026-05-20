@@ -1,0 +1,35 @@
+info:
+  name: VERIFY_SPECIAL_BY_ASSISTANT
+  type: http
+  seq: 7
+
+http:
+  method: POST
+  url: "{{base_url}}/api/cencus/pest/verified-special-by-assistant"
+  body:
+    type: multipart-form
+    data:
+      - name: EstateCode
+        type: text
+        value: AL
+      - name: WorkingDivisionCode
+        type: text
+        value: Div.I
+      - name: EmployeeNumber
+        type: text
+        value: "2602305"
+        description: nomor pekerja asisten
+      - name: EmployeeName
+        type: text
+        value: Joko dok
+        description: nama pekerja asisten
+      - name: date
+        type: text
+        value: 2025-07-03
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

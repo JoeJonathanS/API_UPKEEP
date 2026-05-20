@@ -1,0 +1,122 @@
+info:
+  name: UPDATE_BY_ASSISTANT
+  type: http
+  seq: 6
+
+http:
+  method: POST
+  url: "{{base_url}}/api/activity-equipment-and-material/update-material-equipment"
+  body:
+    type: multipart-form
+    data:
+      - name: EstateCode
+        type: text
+        value: TB
+        description: "required : EstateCode"
+      - name: DivisionID
+        type: text
+        value: 9D0F0BDB-46F2-40D6-88D9-487C074573A0
+        description: "required : DivisionID"
+      - name: DivisionCode
+        type: text
+        value: Div. I
+        description: "required : DivisionCode"
+      - name: uuid
+        type: text
+        value: EQPMTR-1701823-20250130182843
+        description: "required : uuid of equipment transaction"
+      - name: daily_activity_uuid
+        type: text
+        value: EQPMTR-1701823-20250130182843
+        description: "required : daily activity uuid of output transaction"
+      - name: EmployeeNumber
+        type: text
+        value: "1701823"
+        description: "required : Employee Number of Mandor who create the record"
+      - name: AssistantEmployeeNumber
+        type: text
+        value: "3815"
+        description: "required : Employee Number of Assistant who update the record"
+      - name: date
+        type: text
+        value: 2025-01-30
+        description: "required : record date"
+      - name: transaction_date
+        type: text
+        value: 2025-01-30
+        description: "required : transaction date of record"
+      - name: material[0][BlockCode]
+        type: text
+        value: 040/23
+        description: "optional key : recorded material BlockCode"
+      - name: material[0][CFNAllocationID]
+        type: text
+        value: 95907FF0-CBB5-4EDC-8AFE-8363B3EE2208
+        description: "optional key : recorded material CFNAllocationID"
+      - name: material[0][PRSAllocationID]
+        type: text
+        value: 95907FF0-CBB5-4EDC-8AFE-8363B3EE2208
+        description: "optional key : recorded material PRSAllocationID"
+      - name: material[0][AllocationCode]
+        type: text
+        value: "200721"
+        description: "optional key : recorded material AllocationCode"
+      - name: material[0][DocumentNo]
+        type: text
+        value: GSIR/TB/25/01/1735948716791
+        description: "optional key : recorded material DocumentNo"
+      - name: material[0][ItemID]
+        type: text
+        value: A40B4FD7-CC7F-49E9-AFF3-3F7A72C867FF
+        description: "optional key : recorded material ItemID"
+      - name: material[0][ItemCode]
+        type: text
+        value: "7022760"
+        description: "optional key : recorded material ItemCode"
+      - name: material[0][NewQuantity]
+        type: text
+        value: "5.4"
+        description: "optional key : new quantity of material"
+      - name: material[0][goni_awal]
+        type: text
+        value: "5.4"
+        description: "optional key : BlockCode"
+      - name: material[0][goni_kembali]
+        type: text
+        value: "5.4"
+        description: "optional key : AllocationCode"
+      - name: equipment[0][BlockCode]
+        type: text
+        value: 040/23
+        description: "optional key : AssetID"
+      - name: equipment[0][AllocationCode]
+        type: text
+        value: "200721"
+        description: "optional key : AssetType"
+      - name: equipment[0][AssetID]
+        type: text
+        value: 66497A7B-63D2-4016-8D77-864D1F837D6B
+        description: "optional key : AssetCode"
+      - name: equipment[0][AssetType]
+        type: text
+        value: Machinery
+        description: "optional key : new quantity equipment"
+      - name: equipment[0][AssetCode]
+        type: text
+        value: TBBM
+      - name: equipment[0][NewQuantity]
+        type: text
+        value: "4"
+      - name: equipment[0][HM_awal]
+        type: text
+        value: "4"
+      - name: equipment[0][HM_akhir]
+        type: text
+        value: "4"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
