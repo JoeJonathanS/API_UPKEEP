@@ -1,0 +1,9 @@
+name: _Joe_Local
+color: "#C77A0F"
+variables:
+  - name: base_url
+    value: http://127.0.0.1:81
+  - name: base_url_socfin
+    value: ""
+  - name: base_url_socfin_foto
+    value: ""

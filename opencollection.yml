@@ -2,6 +2,17 @@ opencollection: 1.0.0
 
 info:
   name: SOCFINDO - UPKEEP
+config:
+  proxy:
+    inherit: true
+    config:
+      protocol: http
+      hostname: ""
+      port: ""
+      auth:
+        username: ""
+        password: ""
+      bypassProxy: ""
 
 request:
   auth:
@@ -22,49 +33,29 @@ request:
       value: 2025-05-31
   scripts:
     - type: before-request
-      code: "// const tokenUrl = pm.variables.get(\"base_url_socfin\")+\"/login\";\r
+      code: |-
+        // const tokenUrl = pm.variables.get("base_url_socfin")+"/login";
 
-        \r
+        // const tokenUrl = "https://smashdev.socfindo.co.id/login";;
+        // const getTokenRequest = {
+        //   method: "POST",
+        //   url: tokenUrl,
+        //   header: {
+        //     mode: "raw",
+        //     raw: {
+        //         'username': 'iwkupkeep',
+        //         'password': 'Poligon8!2024',
+        //     }
+        //   },
+        // };
 
-        // // const tokenUrl = \"https://smashdev.socfindo.co.id/login\";;\r
-
-        // const getTokenRequest = {\r
-
-        //   method: \"POST\",\r
-
-        //   url: tokenUrl,\r
-
-        //   header: {\r
-
-        //     mode: \"raw\",\r
-
-        //     raw: {\r
-
-        //         'username': 'iwkupkeep',\r
-
-        //         'password': 'Poligon8!2024',\r
-
-        //     }\r
-
-        //   },\r
-
-        // };\r
-
-        \r
-
-        // pm.sendRequest(getTokenRequest, (err, response) => {\r
-
-        //   const jsonResponse = response.json();\r
-
-        //   const newAccessToken = jsonResponse.token;\r
-
-        //   console.log(jsonResponse);\r
-
-        //   pm.variables.set(\"token\", newAccessToken);\r
-
-        //   pm.globals.set(\"token\", newAccessToken);\r
-
-        // });"
+        // pm.sendRequest(getTokenRequest, (err, response) => {
+        //   const jsonResponse = response.json();
+        //   const newAccessToken = jsonResponse.token;
+        //   console.log(jsonResponse);
+        //   pm.variables.set("token", newAccessToken);
+        //   pm.globals.set("token", newAccessToken);
+        // });
 bundled: false
 extensions:
   bruno:

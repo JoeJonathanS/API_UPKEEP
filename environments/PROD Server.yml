@@ -1,0 +1,9 @@
+name: PROD Server
+color: "#2E8A54"
+variables:
+  - name: base_url
+    value: https://smashuprd.socfindo.co.id/
+  - name: base_url_socfin
+    value: ""
+  - name: base_url_socfin_foto
+    value: ""

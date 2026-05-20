@@ -8,13 +8,11 @@ http:
   url: "{{base_url_socfin}}/login"
   body:
     type: json
-    data: "{\r
-
-      \    \"username\": \"iwkupkeep\",\r
-
-      \    \"password\": \"Poligon8!2024\"\r
-
-      }"
+    data: |
+      {
+          "username": "iwkupkeep",
+          "password": "Poligon8!2024"
+      }
   auth:
     type: apikey
     key: Authorization

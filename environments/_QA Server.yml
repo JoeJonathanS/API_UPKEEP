@@ -1,0 +1,9 @@
+name: _QA Server
+color: "#346AB2"
+variables:
+  - name: base_url
+    value: http://192.168.0.57:888
+  - name: base_url_socfin
+    value: ""
+  - name: base_url_socfin_foto
+    value: ""

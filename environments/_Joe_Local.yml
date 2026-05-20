@@ -1,0 +1,9 @@
+name: _Dev Server
+color: "#CE4F3B"
+variables:
+  - name: base_url
+    value: http://127.0.0.1:81
+  - name: base_url_socfin
+    value: ""
+  - name: base_url_socfin_foto
+    value: ""
