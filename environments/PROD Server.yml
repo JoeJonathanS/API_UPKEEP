@@ -4,6 +4,6 @@ variables:
   - name: base_url
     value: https://smashuprd.socfindo.co.id/
   - name: base_url_socfin
-    value: ""
+    value: http://smashapisvr.socfin.co.id/api/smash-up/prd
   - name: base_url_socfin_foto
     value: ""

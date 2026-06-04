@@ -24,7 +24,7 @@ request:
     - name: base_url_socfin
       value: http://smashapisvr.socfin.co.id/api/smash-up/dev
     - name: token
-      value: e8ef515daf821c518b5b4705773de5ee.15ed2625ea913aa994ab83916a51bfb2
+      value: 6dcefa89b02ec929e56eef3bacebe19a.470deac29c2fdb5f9145b4798ed53cf2
     - name: base_url_socfin
       value: http://smashapisvr.socfin.co.id/api/smash-up/qa
     - name: ou

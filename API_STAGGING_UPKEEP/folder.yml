@@ -6,4 +6,4 @@ info:
 request:
   auth:
     type: bearer
-    token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ1cGtlZXAtYXBpIiwic3ViIjoibG9naW50b2tlbiIsImlhdCI6MTc3OTA4NjI0OCwiZXhwIjoxNzc5NjkxMDQ4LCJ1c2VybmFtZSI6IjM4MTYifQ.7OImwxGwDO3ad8iqQ5-8hUGx7QVkYjmEnDFGdh2T9os
+    token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ1cGtlZXAtYXBpIiwic3ViIjoibG9naW50b2tlbiIsImlhdCI6MTc3OTk1MjUyNywiZXhwIjoxNzgwNTU3MzI3LCJ1c2VybmFtZSI6IjM4MTYifQ.tc8f7-rFSg7NDl9wd3236hwt8BGIYKM4vuh3R22NrLk

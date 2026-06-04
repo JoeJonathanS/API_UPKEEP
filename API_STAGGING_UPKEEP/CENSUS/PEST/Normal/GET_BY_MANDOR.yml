@@ -14,13 +14,13 @@ http:
         value: AL
       - name: WorkingDivisionCode
         type: text
-        value: Div.VI
+        value: Div.III
       - name: MandorEmployeeNumber
         type: text
         value: "2010686"
       - name: date
         type: text
-        value: 2026-02-09
+        value: 2026-05-26
   auth: inherit
 
 settings:

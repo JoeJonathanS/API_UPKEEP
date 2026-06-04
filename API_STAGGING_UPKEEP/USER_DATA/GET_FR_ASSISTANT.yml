@@ -5,16 +5,16 @@ info:
 
 http:
   method: GET
-  url: "{{base_url}}/api/user-face/list-assistant/?EstateCode=MP&DivisionID=21BB709F-3507-420F-AE27-0DA6053E399E"
+  url: "{{base_url}}/api/user-face/list-assistant/?EstateCode=TG"
   params:
     - name: EstateCode
-      value: MP
+      value: TG
       type: query
-      description: C1CFE70B-5CD4-419A-B5E7-76358B16EE14
     - name: DivisionID
-      value: 21BB709F-3507-420F-AE27-0DA6053E399E
+      value: 9FF84633-0306-4D85-A173-9A3BF395E60A
       type: query
       description: FBE65292-5272-46F8-A829-9A307E49356D
+      disabled: true
   auth: inherit
 
 runtime:

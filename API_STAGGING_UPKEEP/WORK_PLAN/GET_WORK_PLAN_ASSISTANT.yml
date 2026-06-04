@@ -5,17 +5,17 @@ info:
 
 http:
   method: GET
-  url: "{{base_url}}/api/work-plan/get-work-plan-assistant/?EstateCode=AP&EmployeeNumber=2439&rkh_date=2025-10-14"
+  url: "{{base_url}}/api/work-plan/get-work-plan-assistant/?EstateCode=TB&EmployeeNumber=3815&rkh_date=2026-05-26"
   params:
     - name: EstateCode
-      value: AP
+      value: TB
       type: query
     - name: EmployeeNumber
-      value: "2439"
+      value: "3815"
       type: query
       description: ASSISTANT EMPLOYEENUMBER !!!
     - name: rkh_date
-      value: 2025-10-14
+      value: 2026-05-26
       type: query
       description: use one date parameter
     - name: date

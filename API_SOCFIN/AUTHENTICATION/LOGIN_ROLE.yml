@@ -5,7 +5,7 @@ info:
 
 http:
   method: GET
-  url: "{{base_url_socfin}}/masterupkeep/login-role/AL/drivertest5bb"
+  url: "{{base_url_socfin}}/masterupkeep/login-role/TG/sinagaab"
   auth:
     type: apikey
     key: Authorization

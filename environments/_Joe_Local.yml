@@ -1,8 +1,8 @@
-name: _Dev Server
+name: _Joe_Local
 color: "#CE4F3B"
 variables:
   - name: base_url
-    value: http://127.0.0.1:81
+    value: http://socfindo-upkeep.local/
   - name: base_url_socfin
     value: ""
   - name: base_url_socfin_foto
