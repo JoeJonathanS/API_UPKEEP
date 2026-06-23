@@ -1,14 +1,17 @@
 info:
-  name: GET_MANTRI
+  name: DELETE_MANTRI
   type: http
-  seq: 4
+  seq: 5
 
 http:
   method: POST
-  url: "{{base_url}}/api/cencus/tree/oil-palm/get-by-mandor"
+  url: "{{base_url}}/api/cencus/tree/oil-palm/delete-pokok-mandor"
   body:
     type: multipart-form
     data:
+      - name: uuid
+        type: text
+        value: AP-NomorMandor-YMDHI
       - name: EstateCode
         type: text
         value: AP
@@ -21,6 +24,12 @@ http:
       - name: EmployeeNumber
         type: text
         value: "2012164"
+      - name: TreeData[0][id]
+        type: text
+        value: "26988"
+      - name: TreeData[1][id]
+        type: text
+        value: "26989"
   auth: inherit
 
 settings:
