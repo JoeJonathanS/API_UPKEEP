@@ -1,0 +1,51 @@
+info:
+  name: SET_BARIS_PETAK_MANTRI
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: "{{base_url}}/api/cencus/tree/oil-palm/update-baris-petak-mandor"
+  body:
+    type: multipart-form
+    data:
+      - name: uuid
+        type: text
+        value: AP-NomorMandor-YMDHI
+      - name: EstateCode
+        type: text
+        value: AP
+      - name: WorkingDivisionCode
+        type: text
+        value: Div. V
+      - name: EmployeeName
+        type: text
+        value: Muhammadsyah
+      - name: EmployeeNumber
+        type: text
+        value: "2012164"
+      - name: TreeData[0][id]
+        type: text
+        value: "26988"
+      - name: TreeData[0][baris_ke]
+        type: text
+        value: "1"
+      - name: TreeData[0][petak_ke]
+        type: text
+        value: "1"
+      - name: TreeData[1][id]
+        type: text
+        value: "26989"
+      - name: TreeData[1][baris_ke]
+        type: text
+        value: "2"
+      - name: TreeData[1][petak_ke]
+        type: text
+        value: "2"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,7 +1,7 @@
 info:
   name: SET_INKONSISTEN
   type: http
-  seq: 5
+  seq: 6
 
 http:
   method: POST
