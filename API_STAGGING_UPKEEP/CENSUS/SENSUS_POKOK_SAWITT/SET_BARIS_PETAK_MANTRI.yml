@@ -1,7 +1,7 @@
 info:
   name: SET_BARIS_PETAK_MANTRI
   type: http
-  seq: 4
+  seq: 6
 
 http:
   method: POST
