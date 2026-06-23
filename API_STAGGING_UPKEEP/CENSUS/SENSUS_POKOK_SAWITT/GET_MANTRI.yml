@@ -1,0 +1,33 @@
+info:
+  name: GET_MANTRI
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: "{{base_url}}/api/cencus/tree/oil-palm/get-by-mandor"
+  body:
+    type: multipart-form
+    data:
+      - name: uuid
+        type: text
+        value: AP-NomorMandor-YMDHI
+      - name: EstateCode
+        type: text
+        value: AP
+      - name: WorkingDivisionCode
+        type: text
+        value: Div. V
+      - name: EmployeeName
+        type: text
+        value: Muhammadsyah
+      - name: EmployeeNumber
+        type: text
+        value: "2012164"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
