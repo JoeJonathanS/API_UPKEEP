@@ -5,19 +5,18 @@ info:
 
 http:
   method: GET
-  url: "{{base_url}}/api/sync/master-tree-type/?EstateCode=TB"
+  url: "{{base_url}}/api/sync/master-tree-type/?EstateCode=SG&request_date=2026-06-09"
   params:
     - name: EstateCode
-      value: TB
+      value: SG
       type: query
     - name: DivisionCode
       value: Div.I
       type: query
       disabled: true
     - name: request_date
-      value: 2025-10-10
+      value: 2026-06-09
       type: query
-      disabled: true
   auth: inherit
 
 settings:

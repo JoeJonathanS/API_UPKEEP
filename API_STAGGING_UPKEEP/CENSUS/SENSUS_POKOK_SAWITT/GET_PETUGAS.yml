@@ -11,20 +11,19 @@ http:
     data:
       - name: EstateCode
         type: text
-        value: AL
+        value: AP
       - name: DivisionCode
         type: text
-        value: Div.VI
+        value: Div. V
       - name: WorkingDivisionCode
         type: text
-        value: Div.VI
+        value: Div. V
       - name: date
         type: text
         value: 2026-05-18
       - name: EmployeeNumber
         type: text
-        value: "2012301"
-        description: employee num of user
+        value: "123"
   auth: inherit
 
 settings:

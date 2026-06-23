@@ -13,11 +13,6 @@ http:
       disabled: true
   body:
     type: multipart-form
-    data:
-      - name: worker_id
-        type: text
-        value: "1"
-        disabled: true
   auth: inherit
 
 settings:

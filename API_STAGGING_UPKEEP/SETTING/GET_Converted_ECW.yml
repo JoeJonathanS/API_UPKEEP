@@ -1,17 +1,20 @@
 info:
-  name: Katakan Peta
+  name: GET_Converted_ECW
   type: http
-  seq: 7
+  seq: 8
 
 http:
   method: POST
-  url: "{{base_url}}/api/setting/get-map"
+  url: "{{base_url}}/api/get-converted-ECW"
   body:
     type: multipart-form
     data:
       - name: EstateCode
         type: text
         value: SG
+      - name: DivisionCode
+        type: text
+        value: Div.III
       - name: BlockCode
         type: text
         value: 047/92

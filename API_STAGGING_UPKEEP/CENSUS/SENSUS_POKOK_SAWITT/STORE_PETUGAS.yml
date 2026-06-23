@@ -66,15 +66,12 @@ http:
       - name: MandorEmployeeName
         type: text
         value: jokowow
-        description: Tree type id
       - name: EmployeeID
         type: text
         value: asd
-        description: Tree type code
       - name: EmployeeNumber
         type: text
         value: "123"
-        description: Tree type name
       - name: EmployeeName
         type: text
         value: jokowow
@@ -84,76 +81,52 @@ http:
       - name: TreeCensusRefNumber
         type: text
         value: TRCEN/2025/1/019
-      - name: BarisPetak[0][baris_ke]
+      - name: TreeData[0][lat]
         type: text
         value: "1"
-      - name: BarisPetak[0][petak_ke]
+      - name: TreeData[0][long]
         type: text
         value: "1"
-      - name: BarisPetak[0][tree_counted]
-        type: text
-        value: "2"
-      - name: BarisPetak[0][normal_tree_counted]
-        type: text
-        value: "0"
-      - name: BarisPetak[0][sick_tree_counted]
-        type: text
-        value: "2"
-      - name: BarisPetak[0][send_batch]
-        type: text
-        value: "1"
-      - name: BarisPetak[0][Detail][0][tree_number]
-        type: text
-        value: "1"
-      - name: BarisPetak[0][Detail][0][lat]
-        type: text
-        value: "1"
-      - name: BarisPetak[0][Detail][0][long]
-        type: text
-        value: "1"
-      - name: BarisPetak[0][Detail][0][TreeTypeID]
+      - name: TreeData[0][TreeTypeID]
         type: text
         value: 882EF297-2B1F-496D-B3AE-2DC123F72358
-      - name: BarisPetak[0][Detail][0][TreeTypeCode]
+      - name: TreeData[0][TreeTypeCode]
         type: text
         value: "20523702"
-      - name: BarisPetak[0][Detail][0][TreeTypeName]
+      - name: TreeData[0][TreeTypeName]
         type: text
         value: Bark Necrosis/BN - Tetap disadap
-      - name: BarisPetak[0][Detail][0][notes]
+      - name: TreeData[0][notes]
         type: text
         value: " daun menguning dan getah berkurang meski dipuding"
-      - name: BarisPetak[0][Detail][0][photo_name]
+      - name: TreeData[0][photo_name]
         type: text
         value: 14567.jpg
-      - name: BarisPetak[0][Detail][0][photo_path]
+      - name: TreeData[0][photo_path]
         type: text
         value: " .../.../...."
-      - name: BarisPetak[0][Detail][1][tree_number]
+      - name: TreeData[1][lat]
         type: text
         value: "2"
-      - name: BarisPetak[0][Detail][1][lat]
+      - name: TreeData[1][long]
         type: text
         value: "2"
-      - name: BarisPetak[0][Detail][1][long]
-        type: text
-        value: "2"
-      - name: BarisPetak[0][Detail][1][TreeTypeID]
+      - name: TreeData[1][TreeTypeID]
         type: text
         value: 882EF297-2B1F-496D-B3AE-2DC123F72358
-      - name: BarisPetak[0][Detail][1][TreeTypeCode]
+      - name: TreeData[1][TreeTypeCode]
         type: text
         value: "20523702"
-      - name: BarisPetak[0][Detail][1][TreeTypeName]
+      - name: TreeData[1][TreeTypeName]
         type: text
         value: Bark Necrosis/BN - Tetap disadap
-      - name: BarisPetak[0][Detail][1][notes]
+      - name: TreeData[1][notes]
         type: text
         value: " daun menguning dan getah berkurang meski dipuding"
-      - name: BarisPetak[0][Detail][1][photo_name]
+      - name: TreeData[1][photo_name]
         type: text
         value: 14567.jpg
-      - name: BarisPetak[0][Detail][1][photo_path]
+      - name: TreeData[1][photo_path]
         type: text
         value: " .../.../...."
   auth: inherit
