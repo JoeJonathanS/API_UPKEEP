@@ -81,6 +81,21 @@ http:
       - name: TreeCensusRefNumber
         type: text
         value: TRCEN/2025/1/019
+      - name: BalanceTreeCount
+        type: text
+        value: "2309"
+      - name: TreesCarriedForward
+        type: text
+        value: "2309"
+      - name: NumberOfInfill
+        type: text
+        value: "2309"
+      - name: NumberOfCasualties
+        type: text
+        value: "2309"
+      - name: SensusParty
+        type: text
+        value: "[]"
       - name: TreeData[0][lat]
         type: text
         value: "1"

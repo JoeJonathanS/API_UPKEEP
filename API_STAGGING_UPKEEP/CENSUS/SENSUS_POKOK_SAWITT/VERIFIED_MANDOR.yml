@@ -1,0 +1,43 @@
+info:
+  name: VERIFIED_MANDOR
+  type: http
+  seq: 6
+
+http:
+  method: POST
+  url: "{{base_url}}/api/cencus/tree/oil-palm/verified-by-mandor"
+  body:
+    type: multipart-form
+    data:
+      - name: uuid
+        type: text
+        value: SNSPKK-2012164-128/08-20260225
+      - name: EstateCode
+        type: text
+        value: AL
+      - name: WorkingDivisionCode
+        type: text
+        value: Div.VI
+      - name: finish_status
+        type: text
+        value: "1"
+        description: 1 jika sensus selesai, 0 jika belum
+      - name: DivisionCode
+        type: text
+        value: Div.VI
+      - name: EmployeeName
+        type: text
+        value: Muhammadsyah
+      - name: EmployeeNumber
+        type: text
+        value: "2012164"
+      - name: date
+        type: text
+        value: 2026-03-17
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
