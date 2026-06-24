@@ -1,7 +1,7 @@
 info:
   name: VERIFIED_ASISTEN
   type: http
-  seq: 7
+  seq: 10
 
 http:
   method: POST
