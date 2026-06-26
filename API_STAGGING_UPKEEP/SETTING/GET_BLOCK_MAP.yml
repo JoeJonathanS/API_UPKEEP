@@ -1,0 +1,27 @@
+info:
+  name: GET_BLOCK_MAP
+  type: http
+  seq: 9
+
+http:
+  method: POST
+  url: "{{base_url}}/api/setting/get-block-map"
+  body:
+    type: multipart-form
+    data:
+      - name: EstateCode
+        type: text
+        value: SG
+      - name: DivisionCode
+        type: text
+        value: Div. I
+      - name: BlockCode
+        type: text
+        value: 047/92
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
