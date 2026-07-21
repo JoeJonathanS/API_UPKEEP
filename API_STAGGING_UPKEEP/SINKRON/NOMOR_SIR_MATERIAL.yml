@@ -5,7 +5,7 @@ info:
 
 http:
   method: GET
-  url: "{{base_url}}/api/sync/master-sir/?EstateCode=TB"
+  url: "{{base_url}}/api/sync/master-sir/?EstateCode=NL"
   params:
     - name: DivisionID
       value: D9F25FA9-025D-47CA-9F0D-CF8EACD7E0A6
@@ -16,7 +16,7 @@ http:
       type: query
       disabled: true
     - name: EstateCode
-      value: TB
+      value: NL
       type: query
   auth: inherit
 

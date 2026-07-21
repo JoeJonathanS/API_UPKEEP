@@ -11,10 +11,10 @@ http:
     data:
       - name: uuid
         type: text
-        value: PCTOPT-2012303-20260416
+        value: PCTOPT-1605247-20260528135839
       - name: EstateID
         type: text
-        value: BBBC7F2E-E478-47D1-A9B7-DC4A479ABA65
+        value: C1CFE70B-5CD4-419A-B5E7-76358B16EE14
       - name: DivisionCode
         type: text
         value: Div.I
@@ -23,58 +23,58 @@ http:
         value: Division I
       - name: WorkingDivisionID
         type: text
-        value: 88CCED05-6BF6-4FD8-BEF5-103C8AC8EDAD
+        value: B46C8203-8B33-4FF8-9A12-1BA60E134AEE
       - name: WorkingDivisionCode
         type: text
-        value: Div.I
+        value: Div.II
       - name: WorkingDivisionName
         type: text
-        value: Division I
+        value: Division II
       - name: MovedToAnotherDivision
         type: text
-        value: "0"
+        value: "1"
       - name: BlockID
         type: text
-        value: 54B234F8-4199-4105-B37F-2A495A904E54
+        value: D32A1369-7B54-4E22-A6A2-57364DD1AA44
       - name: WorkgroupTaskDefinitionID
         type: text
-        value: ""
+        value: FA28294B-0794-42B6-B837-B68CB63ADB9A
       - name: WorkgroupTaskDefinitionName
         type: text
-        value: ""
+        value: 300117A-Pupuk Compound/Mixture-Manual (N1,N2,N3,N9)
       - name: WorkgroupTaskDefinitionUOMCode
         type: text
-        value: ""
+        value: HA
       - name: EmployeeID
         type: text
-        value: "2011804"
+        value: "1605247"
       - name: CFNAllocationCode
         type: text
-        value: 300117B
+        value: 300117A
       - name: assignee_id
         type: text
-        value: "2011804"
+        value: "1605247"
       - name: day_flagging
         type: text
         value: "0"
       - name: target
         type: text
-        value: "8.0"
+        value: "6"
       - name: labour[0][EmployeeID]
         type: text
-        value: 3CBBA527-22C5-481A-9C09-711C889B51F2
+        value: 28EFD48D-5058-4DDF-8A01-F8CF3F4368BB
       - name: labour[0][output]
         type: text
         value: "1"
       - name: labour[1][EmployeeID]
         type: text
-        value: FFA9ADC2-9BA0-40C3-B113-6029B720481D
+        value: BD66DC9E-EEB1-4A36-8716-EE865E9ADBEF
       - name: labour[1][output]
         type: text
-        value: "0.5"
+        value: "1.5"
       - name: date
         type: text
-        value: 2026-04-18
+        value: 2026-05-28
   auth: inherit
 
 settings:

@@ -11,10 +11,10 @@ http:
     data:
       - name: EstateCode
         type: text
-        value: AL
+        value: MP
       - name: uuid
         type: text
-        value: SensusHama-AL-Div.I-006/04-2007654-20260609
+        value: SensusHama-MP-Div.II-034/11-1405642-20260627-Ulang-1
       - name: AssistantEmployeeName
         type: text
         value: Sudi Widodo

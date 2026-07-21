@@ -5,25 +5,26 @@ info:
 
 http:
   method: GET
-  url: "{{base_url}}/api/activities/get-activity-output/?EstateID=CCFE3CA1-E76A-47B9-BB91-0584CCBA2F23&date=2025-11-13&assignee_id=1002717&DivisionCode=Div.IV&is_consolidation=1"
+  url: "{{base_url}}/api/activities/get-activity-output/?EstateID=C1CFE70B-5CD4-419A-B5E7-76358B16EE14&date=2026-05-28&assignee_id=1605247&DivisionCode=Div.II"
   params:
     - name: EstateID
-      value: CCFE3CA1-E76A-47B9-BB91-0584CCBA2F23
+      value: C1CFE70B-5CD4-419A-B5E7-76358B16EE14
       type: query
     - name: date
-      value: 2025-11-13
+      value: 2026-05-28
       type: query
     - name: assignee_id
-      value: "1002717"
+      value: "1605247"
       type: query
       description: User EmployeeNumber
     - name: DivisionCode
-      value: Div.IV
+      value: Div.II
       type: query
     - name: is_consolidation
       value: "1"
       type: query
       description: 1 if get data for consolidation. provide work summary
+      disabled: true
   auth: inherit
 
 settings:

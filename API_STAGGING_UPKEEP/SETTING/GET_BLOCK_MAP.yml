@@ -14,10 +14,10 @@ http:
         value: SG
       - name: DivisionCode
         type: text
-        value: Div. I
+        value: Div.I
       - name: BlockCode
         type: text
-        value: 047/92
+        value: 043/19
   auth: inherit
 
 settings:

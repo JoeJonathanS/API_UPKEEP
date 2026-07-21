@@ -5,13 +5,13 @@ info:
 
 http:
   method: GET
-  url: "{{base_url}}/api/activities/get-activity/?date=2025-07-10&assignee_id=2011804&work_type=1"
+  url: "{{base_url}}/api/activities/get-activity/?date=2026-05-28&assignee_id=1605247&work_type=1"
   params:
     - name: date
-      value: 2025-07-10
+      value: 2026-05-28
       type: query
     - name: assignee_id
-      value: "2011804"
+      value: "1605247"
       type: query
     - name: work_type
       value: "1"

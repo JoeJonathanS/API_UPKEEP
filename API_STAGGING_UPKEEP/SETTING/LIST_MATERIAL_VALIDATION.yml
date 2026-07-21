@@ -11,10 +11,10 @@ http:
     data:
       - name: EstateCode
         type: text
-        value: BB
+        value: NL
       - name: TransactionDate
         type: text
-        value: 2026-04-29
+        value: 2026-07-01
       - name: EmployeeNumber
         type: text
         value: "1701716"

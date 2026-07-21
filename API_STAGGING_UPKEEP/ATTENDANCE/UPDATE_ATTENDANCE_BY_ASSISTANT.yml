@@ -11,11 +11,10 @@ http:
     data:
       - name: uuid
         type: text
-        value: ""
+        value: PRSHRN-1001946-20250521
       - name: EmployeeID
         type: text
-        value: ""
-        description: emp id pekerja
+        value: DE74CAAC-B578-4B5E-A437-768E6CD5CDB7
       - name: BlockID
         type: text
         value: ""
@@ -24,19 +23,19 @@ http:
         value: ""
       - name: allocationId
         type: text
-        value: ""
+        value: E116ED78-5BB0-4208-A7E7-A6CFEB14D04C
       - name: allocationName
         type: text
-        value: ""
+        value: Upah Centeng
       - name: allocationCode
         type: text
-        value: ""
+        value: "016101"
       - name: AnalysisCodeId
         type: text
-        value: ""
+        value: 61B688BF-0680-4E3D-AF6D-FBF1C61FB28D
       - name: AnalysisCode
         type: text
-        value: ""
+        value: FLAP
   auth: inherit
 
 settings:

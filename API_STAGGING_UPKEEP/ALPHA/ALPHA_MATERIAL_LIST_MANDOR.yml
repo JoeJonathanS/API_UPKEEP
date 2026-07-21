@@ -12,9 +12,6 @@ http:
       - name: EstateCode
         type: text
         value: LB
-      - name: WorkingDivisionCode
-        type: text
-        value: Div.IV
       - name: TransactionYear
         type: text
         value: "2026"

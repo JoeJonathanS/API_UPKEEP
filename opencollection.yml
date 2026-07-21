@@ -24,11 +24,11 @@ request:
     - name: base_url_socfin
       value: http://smashapisvr.socfin.co.id/api/smash-up/dev
     - name: token
-      value: 6dcefa89b02ec929e56eef3bacebe19a.470deac29c2fdb5f9145b4798ed53cf2
+      value: a75cc2b69d23b059f882ba7809de4131.0a6ef6476e9dae982cd5b1608cfb9fdb
     - name: base_url_socfin
       value: http://smashapisvr.socfin.co.id/api/smash-up/qa
     - name: ou
-      value: BB
+      value: TB
     - name: request_date
       value: 2025-05-31
   scripts:

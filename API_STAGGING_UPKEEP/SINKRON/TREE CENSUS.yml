@@ -5,7 +5,7 @@ info:
 
 http:
   method: GET
-  url: "{{base_url}}/api/sync/master-tree-census/?EstateCode=AL&DivisionID=E8DAB315-63AC-46BA-ACB8-E2FC9B00067B&request_date=2026-05-18"
+  url: "{{base_url}}/api/sync/master-tree-census/?EstateCode=AL&DivisionID=E8DAB315-63AC-46BA-ACB8-E2FC9B00067B&request_date=2026-07-09"
   params:
     - name: EstateCode
       value: AL
@@ -14,7 +14,7 @@ http:
       value: E8DAB315-63AC-46BA-ACB8-E2FC9B00067B
       type: query
     - name: request_date
-      value: 2026-05-18
+      value: 2026-07-09
       type: query
   auth: inherit
 
