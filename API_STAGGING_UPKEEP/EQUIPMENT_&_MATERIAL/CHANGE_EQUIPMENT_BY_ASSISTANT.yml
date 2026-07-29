@@ -1,0 +1,75 @@
+info:
+  name: CHANGE_EQUIPMENT_BY_ASSISTANT
+  type: http
+  seq: 7
+
+http:
+  method: POST
+  url: "{{base_url}}/api/activity-equipment-and-material/change-material-equipment-assistant"
+  body:
+    type: multipart-form
+    data:
+      - name: EstateCode
+        type: text
+        value: TB
+      - name: DivisionCode
+        type: text
+        value: Div. I
+      - name: equipment[0][id]
+        type: text
+        value: "55"
+      - name: equipment[0][uuid]
+        type: text
+        value: EQPMTR-1701814-20250212131717
+      - name: equipment[0][HM_awal]
+        type: text
+        value: "0"
+      - name: equipment[0][HM_akhir]
+        type: text
+        value: "0"
+      - name: equipment[0][used_quantity]
+        type: text
+        value: "7"
+      - name: equipment[0][AllocationCode]
+        type: text
+        value: 200972A
+      - name: equipment[0][BlockID]
+        type: text
+        value: E0246F7A-23F7-44DF-A3EF-7E157DF961DF
+      - name: equipment[0][BlockCode]
+        type: text
+        value: 026/23
+      - name: equipment[0][BlockName]
+        type: text
+        value: Block 026/23
+      - name: equipment[0][AssetID]
+        type: text
+        value: 12AD90AD-8552-4C34-8A63-33EF24877253
+      - name: equipment[0][AssetType]
+        type: text
+        value: Equipment
+      - name: equipment[0][AssetName]
+        type: text
+        value: KS
+      - name: equipment[0][AssetCode]
+        type: text
+        value: KS
+      - name: equipment[0][UOMRunningUnitName]
+        type: text
+        value: Jam
+      - name: equipment[0][UOMRunningTimeName]
+        type: text
+        value: Jam
+      - name: equipment[0][UOMOutputName]
+        type: text
+        value: jam
+      - name: AssistantEmployeeNumber
+        type: text
+        value: "3806"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
