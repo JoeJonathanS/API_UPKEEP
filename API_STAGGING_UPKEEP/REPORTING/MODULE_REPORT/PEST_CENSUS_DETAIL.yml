@@ -1,7 +1,7 @@
 info:
   name: PEST_CENSUS_DETAIL
   type: http
-  seq: 11
+  seq: 12
 
 http:
   method: POST
@@ -25,3 +25,4 @@ settings:
   timeout: 0
   followRedirects: true
   maxRedirects: 5
+  forwardAuthorizationHeader: true

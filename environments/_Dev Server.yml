@@ -1,9 +1,9 @@
-name: _Joe_Local
+name: _Dev Server
 color: "#C77A0F"
 variables:
   - name: base_url
     value: http://127.0.0.1:81
   - name: base_url_socfin
-    value: ""
+    value: http://smashapisvr.socfin.co.id/api/smash-up/dev
   - name: base_url_socfin_foto
     value: ""

@@ -11,49 +11,49 @@ http:
     data:
       - name: EstateCode
         type: text
-        value: TB
+        value: AL
       - name: DivisionCode
         type: text
-        value: Div. I
+        value: Div.VIII
       - name: equipment[0][id]
         type: text
         value: "55"
       - name: equipment[0][uuid]
         type: text
-        value: EQPMTR-1701814-20250212131717
+        value: EQPMTR-2012675-20260521162817
       - name: equipment[0][HM_awal]
         type: text
-        value: "0"
+        value: "84.0"
       - name: equipment[0][HM_akhir]
         type: text
-        value: "0"
+        value: "86.7"
       - name: equipment[0][used_quantity]
         type: text
-        value: "7"
+        value: "1"
       - name: equipment[0][AllocationCode]
         type: text
-        value: 200972A
+        value: 300117B
       - name: equipment[0][BlockID]
         type: text
-        value: E0246F7A-23F7-44DF-A3EF-7E157DF961DF
+        value: 44762E29-2474-4C2D-92D0-D19FA22DD432
       - name: equipment[0][BlockCode]
         type: text
-        value: 026/23
+        value: 820/10
       - name: equipment[0][BlockName]
         type: text
-        value: Block 026/23
+        value: Block 820/10
       - name: equipment[0][AssetID]
         type: text
-        value: 12AD90AD-8552-4C34-8A63-33EF24877253
+        value: 581F7946-B624-4409-B05D-75F699AFB0BF
       - name: equipment[0][AssetType]
         type: text
         value: Equipment
       - name: equipment[0][AssetName]
         type: text
-        value: KS
+        value: Knapsack Sprayer Div. III
       - name: equipment[0][AssetCode]
         type: text
-        value: KS
+        value: KS Div III
       - name: equipment[0][UOMRunningUnitName]
         type: text
         value: Jam

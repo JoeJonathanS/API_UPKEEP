@@ -8,13 +8,11 @@ http:
   url: "{{base_url_socfin}}/windows/login"
   body:
     type: json
-    data: "{\r
-
-      \    \"username\": \"ittesting3\",\r
-
-      \    \"password\": \"Init123!\"\r
-
-      }"
+    data: |-
+      {
+          "username": "Suriana3159",
+          "password": "Sep2026!"
+      }
   auth:
     type: apikey
     key: Authorization
@@ -26,3 +24,4 @@ settings:
   timeout: 0
   followRedirects: true
   maxRedirects: 5
+  forwardAuthorizationHeader: true

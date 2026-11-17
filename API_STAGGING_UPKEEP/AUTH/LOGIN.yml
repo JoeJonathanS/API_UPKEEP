@@ -8,13 +8,13 @@ http:
   url: "{{base_url}}/api/auth/login"
   headers:
     - name: USER_CREDENTIALS
-      value: '{"APKVersion":"0.4.3"}'
+      value: '{"APKVersion":"1.6.1"}'
   body:
     type: multipart-form
     data:
       - name: username
         type: text
-        value: "3816"
+        value: "2278"
       - name: password
         type: text
         value: bypass_ajalah
@@ -33,6 +33,7 @@ settings:
   timeout: 0
   followRedirects: true
   maxRedirects: 5
+  forwardAuthorizationHeader: true
 
 docs: |-
   This is a POST request, submitting data to an API via the request body. This request submits JSON data, and the data is reflected in the response.

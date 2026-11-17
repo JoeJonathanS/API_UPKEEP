@@ -5,7 +5,7 @@ info:
 
 http:
   method: GET
-  url: "{{base_url_socfin}}/masterupkeep/login-role/TG/sinagaab"
+  url: "{{base_url_socfin}}/masterupkeep/login-role/LB/Suriana3159"
   auth:
     type: apikey
     key: Authorization
@@ -17,5 +17,6 @@ settings:
   timeout: 0
   followRedirects: true
   maxRedirects: 5
+  forwardAuthorizationHeader: true
 
 docs: Gets information about a collection. For a complete list of this endpoint's possible values, use the [collection.json schema file](https://schema.postman.com/json/collection/v2.1.0/collection.json).
